@@ -1,7 +1,7 @@
 
 import React from "react";
 import Navbar from "../compunentIndex/Navbar";
-// import Detail from "../CompunentIndex/Detail";
+import Slider from "../compunentIndex/Slider";
 import Footer from "../compunentIndex/Footer";
 
 import 'flowbite';
@@ -11,7 +11,7 @@ function Index(){
        <div >
            <Navbar />
 
-            {/* <Detail title="images"/> */}
+            <Slider />
 
             <Footer />
         </div>
