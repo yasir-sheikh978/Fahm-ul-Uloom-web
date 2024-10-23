@@ -11,7 +11,7 @@ export default function App() {
 
   const router = createBrowserRouter([
     // { path: "/", element: (<Loading />) },
-    { path: "/Index", element: (<Index />) },
+    { path: "/", element: (<Index />) },
 
 
   ]);
