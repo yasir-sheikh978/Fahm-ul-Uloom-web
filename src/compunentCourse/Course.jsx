@@ -17,22 +17,34 @@ const [hid , sethid] = useState("flex");
 
     return(
         <div>
-            <div className={`w-full ${hid} h-screen  z-40 fixed bottom-0 backdrop-blur-xl justify-center items-center `}>
-                <div>
-                <div className="text-end text-6xl cursor-pointer" onClick={e => sethid("hidden")}>
-                    x
-                </div>
-                <div className="w-[90vw] h-[85vh] flex justify-around bg-gray-300 items-center rounded-sm">
-                    <div>
-                        <h1>{CourseDtails[id].name}</h1>
-                        <p></p>
-                        <p></p>
-                    </div>
-                    <div>
-                        <img src={CourseDtails[id].img} alt="" />
-                    </div>
-                </div>
-                </div>
+            <div className={`w-full ${hid} h-screen  z-40 fixed bottom-0 backdrop-blur-sm justify-center items-center `}>
+            <div className={`fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center ${hid}`}>
+  <div className="relative bg-white w-[90vw] md:w-[70vw] h-[85vh] md:h-[75vh] flex flex-col md:flex-row justify-around items-center p-6 rounded-sm">
+    {/* Close Button */}
+    <div className="absolute top-4 right-4 text-4xl md:text-6xl cursor-pointer text-gray-700" onClick={() => sethid("hidden")}>
+      &times;
+    </div>
+
+
+
+    <div className="w-full md:w-1/2 flex justify-center p-4">
+      <img src={CourseDtails[id].img} alt="" className="w-full md:w-3/4 object-contain rounded-lg" />
+    </div>
+
+
+
+    {/* Course Details */}
+    <div className="w-full md:w-1/2 text-center md:text-left px-4">
+      <h1 className="text-2xl md:text-4xl font-semibold mb-4">{CourseDtails[id].name}</h1>
+      <p className="mb-4">{CourseDtails[id].dscpt}</p>
+      <p>{CourseDtails[id].name}</p>
+    </div>
+    
+    
+   
+  </div>
+</div>
+
             </div>
 
         <div className="bg-gray-300 flex flex-wrap gap-4 justify-center ">
