@@ -1,33 +1,61 @@
-import React from "react";
+import React, { useState } from "react";
+import { Card } from "flowbite-react";
+import { Button } from "flowbite-react";
+
 
 export default function Course(){
     const CourseDtails = [
         {name: 'Habib', img:'https://dawateislami.org/uploads/img/Haji%20Abdul%20Habib%20Attari.jpg', dscpt:'my name is habib'},
-        {name: 'Habib', img:'https://dawateislami.org/uploads/img/Haji%20Abdul%20Habib%20Attari.jpg', dscpt:'my name is habib'},
-        {name: 'Habib', img:'https://dawateislami.org/uploads/img/Haji%20Abdul%20Habib%20Attari.jpg', dscpt:'my name is habib'},
-        {name: 'Habib', img:'https://dawateislami.org/uploads/img/Haji%20Abdul%20Habib%20Attari.jpg', dscpt:'my name is habib'},
+        {name: 'zain', img:'https://dawateislami.org/uploads/img/Haji%20Abdul%20Habib%20Attari.jpg', dscpt:'my name is habib'},
+        {name: 'fakhar', img:'https://dawateislami.org/uploads/img/Haji%20Abdul%20Habib%20Attari.jpg', dscpt:'my name is habib'},
+        {name: 'fahad', img:'https://dawateislami.org/uploads/img/Haji%20Abdul%20Habib%20Attari.jpg', dscpt:'my name is habib'},
+        {name: 'haris', img:'https://dawateislami.org/uploads/img/Haji%20Abdul%20Habib%20Attari.jpg', dscpt:'my name is habib'},
     ]
+const [id , setid] = useState(0);
+const [hid , sethid] = useState("flex");
+
 
     return(
-        <div className="bg-gray-300">
+        <div>
+            <div className={`w-full ${hid} h-screen  z-40 fixed bottom-0 backdrop-blur-xl justify-center items-center `}>
+                <div>
+                <div className="text-end text-6xl cursor-pointer" onClick={e => sethid("hidden")}>
+                    x
+                </div>
+                <div className="w-[90vw] h-[85vh] flex justify-around bg-gray-300 items-center rounded-sm">
+                    <div>
+                        <h1>{CourseDtails[id].name}</h1>
+                        <p></p>
+                        <p></p>
+                    </div>
+                    <div>
+                        <img src={CourseDtails[id].img} alt="" />
+                    </div>
+                </div>
+                </div>
+            </div>
+
+        <div className="bg-gray-300 flex flex-wrap gap-4 justify-center ">
   {CourseDtails.map((items, index) => (
-    <div
-      key={index}
-      className="h-auto md:h-[80vh] flex flex-col md:flex-row items-center justify-between px-4 py-8"
-    >
-      <div
-        className="w-full md:w-[50%] flex justify-center"
-        data-aos="fade-up"
-        data-aos-anchor-placement="center-bottom"
-      >
-        <img src={items.img} alt="" className="w-[80%] md:w-full" />
-      </div>
-      <div className="w-full h-80 md:w-[50%] " data-aos="fade-left">
-        <h1 className="text-2xl h-20 md:text-4xl font-semibold pt-6 md:pt-0 text-center">{items.name}</h1>
-        <p className="px-4 md:px-2 text-center md:text-start">{items.dscpt}</p>
-      </div>
-    </div>
+    <Card key={index}
+    className="max-w-sm"
+    imgAlt="Meaningful alt text for an image that is not purely decorative"
+    imgSrc={items.img}
+  >
+    <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+      {items.name}
+    </h5>
+    <p className="font-normal text-gray-700 dark:text-gray-400">
+      Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.
+    </p>
+    <Button color="blue" onClick={e => {
+        setid(index)
+        sethid("flex")
+    }} key={index}>Details</Button>
+  </Card>
   ))}
 </div>
+</div>
+
     )
 }
