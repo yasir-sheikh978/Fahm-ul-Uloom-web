@@ -12,7 +12,7 @@ export default function Course(){
         {name: 'haris', img:'https://dawateislami.org/uploads/img/Haji%20Abdul%20Habib%20Attari.jpg', dscpt:'my name is habib'},
     ]
 const [id , setid] = useState(0);
-const [hid , sethid] = useState("flex");
+const [hid , sethid] = useState("hidden");
 
 
     return(
