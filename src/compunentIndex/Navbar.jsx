@@ -5,12 +5,13 @@ import 'aos/dist/aos.css';
 import Typewriter from 'typewriter-effect';
 import { Dropdown } from "flowbite-react";
 import '../App.css'
+import logoOne from '../assets/logo/logoOne.png'
 // import { Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 export default function Navbarr(){
   const Navigate = useNavigate();
-const co = ()=>{
-  Navigate('./course')
+const cone = ()=>{
+  Navigate('/courseone')
 }
 const ho = ()=>{
   Navigate('/')
@@ -23,7 +24,7 @@ const ho = ()=>{
       }, []);
     
     return(
-        <div  className="bg-gray-300">
+        <div data-aos="fade-down" className="bg-gray-300">
             <div className="bg-blue-950 z-10 text-white sm:text-2xl text-md items-center flex justify-center px-6 w-full h-[60px] ">
                 
         
@@ -46,12 +47,12 @@ const ho = ()=>{
             </div>
 
             <div data-aos="zoom-in" className="h-[150px] w-full flex justify-center p-4">
-                <img src="https://resources.dawateislami.net/global/globalhomeweb/resources/assets/images/main-img/logo.jpg" className="h-[100px]" alt="" />
+                <img src={logoOne} className="h-[100px]" alt="" />
             </div>
 
           <div className="ha">
 
-        <Navbar data-aos="fade-up" fluid rounded className="bg-blue-950 cursor-pointer   z-20 w-full">
+        <Navbar  fluid rounded className="bg-blue-950 cursor-pointer   z-20 w-full">
         <Navbar.Brand href="https://flowbite-react.com">
           <img src="/favicon.svg" className="mr-3 h-6 sm:h-9" alt="Fahm Ul Alum" />
         </Navbar.Brand>
@@ -69,7 +70,11 @@ const ho = ()=>{
       <Dropdown.Item>Founder</Dropdown.Item>
       <Dropdown.Item>Our Mission</Dropdown.Item>
     </Dropdown></Navbar>
-        <Navbar.Link onClick={co} className='  border-black  text-white hover:bg-blue-950  rounded-md md:p-2   font-semibold text-2xl'>Course</Navbar.Link>
+    <Navbar className='bg-blue-950 hh  text-white hover:text-black  rounded-md md:p-2  font-semibold text-2xl'>
+           <Dropdown label="Course" inline>
+      <Dropdown.Item onClick={cone}>Long Course</Dropdown.Item>
+      <Dropdown.Item>Short Course</Dropdown.Item>
+    </Dropdown></Navbar>
         <Navbar className='bg-blue-950 hh  text-center  text-white hover:text-black   rounded-md   font-semibold text-2xl ' >
            <Dropdown label="Meet The Team"  inline className="hh">
       <Dropdown.Item>Our Treacher</Dropdown.Item>

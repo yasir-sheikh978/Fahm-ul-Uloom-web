@@ -9,8 +9,8 @@ function Stats() {
   ];
 
   return (
-    <div className='h-fit py-16 bg-gray-300' >
-   <div className="bg-blue-950 text-white py-10" data-aos="zoom-in">
+    <div className='h-96 py-16 bg-gray-300' >
+   <div className="bg-blue-950 text-white  py-10" data-aos="zoom-in">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {stats.map((stat) => (
           <div key={stat.id} className="flex flex-col items-center space-y-2">

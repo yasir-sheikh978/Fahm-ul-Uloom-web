@@ -3,11 +3,11 @@ import React from "react";
 import Navbar from "../compunentIndex/Navbar";
 import Slider from "../compunentIndex/Slider";
 import Footer from "../compunentIndex/Footer";
-import Detail from "../compunentCourse/Detail";
-import Course from "../compunentCourse/Course";
+import Detail from "../compunentCourse/CourseOne/Detail";
+// import Course from "../compunentCourse/Course";
 
 import 'flowbite';
-function Index(){
+function CourseTwo(){
 
     return(
        <div >
@@ -17,7 +17,7 @@ function Index(){
 
             <Detail />
 
-            <Course />
+            {/* <Course /> */}
 
             <Footer />
 
@@ -27,4 +27,4 @@ function Index(){
         
     )
 }
-export default Index;
+export default CourseTwo;

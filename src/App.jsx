@@ -1,7 +1,8 @@
 import * as React from "react";
 // import Loading from "./loader";
 import Index from "./routes/Index";
-import Course from "./routes/Course";
+import CourseOne from './routes/CourseOne'
+import CourseTwo from './routes/CourseTwo'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -13,7 +14,8 @@ export default function App() {
   const router = createBrowserRouter([
     // { path: "/", element: (<Loading />) },
     { path: "/", element: (<Index />) },
-    { path: "/course", element: (<Course />) },
+    { path: "/courseone", element: (<CourseOne />) },
+    { path: "/coursetwo", element: (<CourseTwo />) },
 
 
   ]);

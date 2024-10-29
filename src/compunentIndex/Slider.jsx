@@ -1,8 +1,8 @@
 
 import React from "react";
 import '../routes/Index';
-import pic from '../assets/sliderone.jpg';
-import pic2 from '../assets/slidertwo.jpg';
+import pic from '../assets/slider/sliderone.jpg';
+import pic2 from '../assets/slider/slidertwo.jpg';
 import '../App.css'
 
 import { Zoom } from 'react-slideshow-image';
