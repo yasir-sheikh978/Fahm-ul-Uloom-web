@@ -8,7 +8,7 @@ const Bannersection = () => {
                     {/* image container */}
                     <img src="https://charitytruth.com/wp-content/uploads/2018/04/Starting-a-charity-concept.jpg" alt="" className='mx-auto w-full p-4 md:max-w-full h-[300px] md:h-[350px] object-cover rounded-3xl' />
                     {/* text container */}
-                    <div className='lg:max-w[400px]'>
+                    <div className='lg:max-w[400px] '>
                         <h1 className='text-2xl font-semibold  md:text-4xl mb-4'>Help the Needy people</h1>
                         <ul className='flex list-inside list-disc flex-col gap-2 md:gap-4'>
                             <li className='font-medium'>
@@ -21,7 +21,7 @@ const Bannersection = () => {
                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem modi dolore, rerum repudiandae reprehenderit incidunt?
                             </li>
                         </ul>
-                        <button className="btn-primary">
+                        <button className="bg-blue-500 p-4 rounded-xl">
                             Get Started
                         </button>
                     </div>

@@ -11,7 +11,7 @@ function Statistics() {
   ];
 
   return (
-    <div className=" py-10 px-4">
+    <div className=" py-10 px-4 bg-gray-300">
       <div data-aos="zoom-in" className=" bg-blue-950 py-6 container mx-auto flex flex-col md:flex-row justify-around items-center space-y-6 md:space-y-0">
         {stats.map((stat, index) => (
           <div key={index} className="flex flex-col items-center text-center text-white">

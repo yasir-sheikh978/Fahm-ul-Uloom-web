@@ -6,7 +6,7 @@ const Bannersection2 = () => {
             <div className='container md:h-[500px] flex items-center justify-center py-10'>
                 <div className='grid grid-cols-1 items-center gap-4 sm:grid-cols-2'>
                     {/* text container */}
-                    <div className='lg:max-w[400px] space-y-6'>
+                    <div className='lg:max-w[400px] space-y-6 px-6'>
                         <h1 className='text-2xl font-semibold  md:text-4xl mb-4'>Help the Needy people</h1>
                         <ul className='flex list-inside list-disc flex-col gap-2 md:gap-4'>
                             <li className='font-medium'>
@@ -19,7 +19,7 @@ const Bannersection2 = () => {
                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem modi dolore, rerum repudiandae reprehenderit incidunt?
                             </li>
                         </ul>
-                        <button className="btn-primary">
+                        <button className="bg-blue-500 p-4 rounded-xl ">
                             Get Started
                         </button>
                     </div>

@@ -39,7 +39,7 @@ const Blogsection = () => {
         <h1 className='mb-8 border-l-8 pl-2 text-center text-3xl font-bold'>
           Our Latest Blogs
         </h1>
-        <div className='grid grid cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3'>
+        <div className='grid  cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3'>
           {BlogData.map((blogs) =>(
             <BlogCard
             key={blogs.title}
