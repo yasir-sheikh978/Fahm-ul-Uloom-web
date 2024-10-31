@@ -1,5 +1,5 @@
 import { easeInOut } from "framer-motion";
-import DonationForm from "../Donation/Donation-form";
+import DonationForm from "../Donation/Donation-Form";
 import Heroimage from "../Images/world-.jpg"
 import { motion } from "framer-motion";
 
@@ -53,7 +53,7 @@ const Hero = () => {
             {/* form section */}
             <div>
               <motion.div initial={{ opacity: 0, x: 100 }} animate={{ opacity: 1, x: 0 }} transition={{ type: "spring", stiffness: 100 }} className=" flex items-center justify-center ">
-                <DonationForm/>
+                <DonationForm />
               </motion.div>
             </div>
 
