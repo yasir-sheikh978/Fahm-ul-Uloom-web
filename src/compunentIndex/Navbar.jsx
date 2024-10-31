@@ -16,6 +16,9 @@ const cone = ()=>{
 const ho = ()=>{
   Navigate('/')
 }
+const don = ()=>{
+  Navigate('/donation')
+}
 
     useEffect(() => {
         AOS.init({
@@ -81,7 +84,7 @@ const ho = ()=>{
       <Dropdown.Item>IT Team</Dropdown.Item>
       <Dropdown.Item>Our Muftis</Dropdown.Item>
     </Dropdown></Navbar>
-        <Navbar.Link  className='  border-black  text-white hover:bg-blue-950  rounded-md md:p-2  font-semibold text-2xl'>Donatio</Navbar.Link>
+        <Navbar.Link  onClick={don} className='  border-black  text-white hover:bg-blue-950  rounded-md md:p-2  font-semibold text-2xl'>Donatio</Navbar.Link>
         <Navbar.Link  className='  border-black   text-white hover:bg-blue-950  rounded-md md:p-2  font-semibold text-2xl'>Contact</Navbar.Link>
       </Navbar.Collapse>
       </Navbar>
