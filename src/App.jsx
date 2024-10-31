@@ -3,7 +3,6 @@ import * as React from "react";
 import Index from "./routes/Index";
 import CourseOne from './routes/CourseOne'
 import CourseTwo from './routes/CourseTwo'
-import Donation from './routes/Donation'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -17,7 +16,6 @@ export default function App() {
     { path: "/", element: (<Index />) },
     { path: "/courseone", element: (<CourseOne />) },
     { path: "/coursetwo", element: (<CourseTwo />) },
-    { path: "/donation", element: (<Donation />) },
 
 
   ]);
