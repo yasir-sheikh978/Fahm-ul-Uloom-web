@@ -46,11 +46,14 @@ const don = ()=>{
             <div className="w-full h-20 flex justify-around items-center">
                 <button data-aos="fade-right" className="bg-blue-950 text-white rounded-md p-2 font-semibold uppercase ">quran</button>
                 <button data-aos="zoom-in" className="bg-blue-950 text-white rounded-md p-2 font-semibold uppercase ">hadith</button>
-                <button data-aos="fade-left" className="bg-blue-950 text-white rounded-md p-2 font-semibold uppercase ">books</button>
             </div>
 
             <div data-aos="zoom-in" className="h-[150px] w-full flex justify-center p-4">
                 <img src={logoOne} className="h-[100px]" alt="" />
+            </div>
+            <div className="w-full h-20 flex justify-around items-center">
+                <button data-aos="fade-right" className="bg-blue-950 text-white rounded-md p-2 font-semibold uppercase ">books</button>
+                <button data-aos="zoom-in" className="bg-blue-950 text-white rounded-md p-2 font-semibold uppercase ">fatwa</button>
             </div>
 
           <div className="ha">
