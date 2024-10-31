@@ -1,6 +1,7 @@
 
 
 const Bannersection = () => {
+    
     return (
         <div className='bg-slate-100 dark:bg-slate-900 dark:text-white'>
             <div className='container md:h-[500px] flex items-center justify-center py-10'>
