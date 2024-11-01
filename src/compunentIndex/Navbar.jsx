@@ -19,6 +19,9 @@ const ho = ()=>{
 const don = ()=>{
   Navigate('/donation')
 }
+const fat = ()=>{
+  Navigate('/fatwa')
+}
 
     useEffect(() => {
         AOS.init({
@@ -53,7 +56,7 @@ const don = ()=>{
             </div>
             <div className="w-full h-14 flex justify-around items-center">
                 <button data-aos="fade-right"  className="bg-blue-950 text-white rounded-md p-2 font-semibold uppercase "><a href="https://www.dawateislami.net/bookslibrary/" target="blank">books</a></button>
-                <button data-aos="fade-left" className="bg-blue-950 text-white rounded-md p-2 font-semibold uppercase ">ask mufti</button>
+                <button data-aos="fade-left" onClick={fat} className="bg-blue-950 text-white rounded-md p-2 font-semibold uppercase ">ask mufti</button>
             </div>
 
           <div className="ha">
