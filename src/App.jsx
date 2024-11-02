@@ -5,6 +5,7 @@ import CourseOne from './routes/CourseOne'
 import CourseTwo from './routes/CourseTwo'
 import Donation from './routes/Donation'
 import Fatwa from './routes/Fatwa'
+import Quran from './routes/Quran'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -20,6 +21,7 @@ export default function App() {
     { path: "/coursetwo", element: (<CourseTwo />) },
     { path: "/donation", element: (<Donation />) },
     { path: "/fatwa", element: (<Fatwa />) },
+    { path: "/quran", element: (<Quran />) },
 
 
   ]);
