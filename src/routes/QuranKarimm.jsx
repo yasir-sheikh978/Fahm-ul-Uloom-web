@@ -33,13 +33,13 @@ export default function Book(){
                         <div className={` w-full ${hid} h-screen z-40 fixed bottom-0 backdrop-blur-sm justify-center items-center `}>
 
              <div className={`fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center`}>
-             <div className="absolute top-0 right-10 text-4xl md:text-7xl cursor-pointer text-black" onClick={() =>{
+             <div className="absolute top-12 right-12 text-xl md:text-8xl cursor-pointer text-black" onClick={() =>{
                  sethid("hidden")
                  setflx("flex")
                 }}>
       &times;
     </div>
-    <div className=" bg-blue-950 text-white sm:leading-loose font-serif tracking-wider leading-loose text-2xl sm:text-4xl pt-4 overflow-scroll h-[100vh]">
+    <div className=" bg-gray-300 text-white sm:leading-loose font-serif tracking-wider leading-loose text-2xl sm:text-4xl pt-8 w-full overflow-scroll h-[100vh]">
         {booklink[id].link}
     </div> 
   </div>

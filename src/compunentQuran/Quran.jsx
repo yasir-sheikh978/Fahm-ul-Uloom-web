@@ -1,7 +1,6 @@
 import React from "react";
 // import Quran from '../assets/quran/surahfatiha.png'
 import { useNavigate,Navigate } from "react-router-dom";
-import { div } from "framer-motion/client";
 import Quran from '../assets/quran/Quran.jpg'
 
 export default function TarjamaQuran(){
