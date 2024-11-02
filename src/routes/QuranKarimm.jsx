@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { Card } from "flowbite-react";
 import { Button } from "flowbite-react";
-import SurahBaqara from './surah/SurahBaqara'
-import SurahFatiha from './surah/SurahFatiha'
+import SurahBaqara from '../compunentQuran/surah/SurahBaqara'
+import SurahFatiha from '../compunentQuran/surah/SurahFatiha'
 import fatiha from '../assets/quran/surahfatiha.png'
 import baqarah from '../assets/quran/surahbaqara.jpg'
+import QuranBg from '../assets/quran/Quran-bg.jpg'
+import Navbar from '../compunentIndex/Navbar'
 
 
 export default function Book(){
@@ -21,7 +23,13 @@ export default function Book(){
     ]
 
     return(
-        <div>
+      <div>
+      <Navbar />
+      <div data-aos="zoom-in">
+        <img src={QuranBg} className="w-full h-[80vh]" />
+      </div>
+      
+      
                         <div className={` w-full ${hid} h-screen z-40 fixed bottom-0 backdrop-blur-sm justify-center items-center `}>
 
              <div className={`fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center`}>
@@ -31,7 +39,7 @@ export default function Book(){
                 }}>
       &times;
     </div>
-    <div className=" bg-blue-950 text-white sm:leading-loose font-serif tracking-wider  leading-loose text-2xl sm:text-4xl pt-4 overflow-scroll h-[100vh]">
+    <div className=" bg-blue-950 text-white sm:leading-loose font-serif tracking-wider leading-loose text-2xl sm:text-4xl pt-4 overflow-scroll h-[100vh]">
         {booklink[id].link}
     </div> 
   </div>

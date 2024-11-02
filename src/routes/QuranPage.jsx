@@ -3,9 +3,8 @@ import React from "react";
 import Navbar from "../compunentIndex/Navbar";
 import Slider from "../compunentIndex/Slider";
 import Footer from "../compunentIndex/Footer";
-import Quran from '../compunentQuran/QuranKarimm'
-
 import 'flowbite';
+import Quran from "../compunentQuran/Quran";
 function CourseOne(){
 
     return(

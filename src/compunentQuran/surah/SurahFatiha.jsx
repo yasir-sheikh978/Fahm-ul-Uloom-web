@@ -2,7 +2,7 @@ import React from "react";
 
 export default function QuranKarim(){
     return(
-        <div className="pt-12 text-center">
+        <div className="pt-12 text-center ">
             <h1>
                 
             بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِیْمِ

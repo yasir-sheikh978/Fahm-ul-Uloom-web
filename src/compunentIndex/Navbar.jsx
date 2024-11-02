@@ -49,18 +49,17 @@ const qur = ()=>{
       </h1>
               
             </div>
-            <div className="w-full h-14 flex justify-around items-center">
+            <div className="w-full h-16 flex justify-around items-center">
                 <button data-aos="fade-right" onClick={qur} className="bg-blue-950 text-white hover:bg-blue-800 rounded-md p-2 font-semibold uppercase ">quran</button>
                 <button data-aos="fade-left" className="bg-blue-950 text-white hover:bg-blue-800 rounded-md p-2 font-semibold uppercase ">hadith</button>
+                <button data-aos="fade-right"  className="bg-blue-950 text-white hover:bg-blue-800 rounded-md p-2 font-semibold uppercase "><a href="https://www.dawateislami.net/bookslibrary/" target="blank">books</a></button>
+                <button data-aos="fade-left" onClick={fat} className="bg-blue-950 text-white hover:bg-blue-800 rounded-md p-2 font-semibold uppercase ">ask mufti</button>
             </div>
 
             <div data-aos="zoom-in" className="h-36 w-full flex justify-center p-4">
                 <img src={logoOne} className="h-32" alt="" />
             </div>
-            <div className="w-full h-14 flex justify-around items-center">
-                <button data-aos="fade-right"  className="bg-blue-950 text-white hover:bg-blue-800 rounded-md p-2 font-semibold uppercase "><a href="https://www.dawateislami.net/bookslibrary/" target="blank">books</a></button>
-                <button data-aos="fade-left" onClick={fat} className="bg-blue-950 text-white hover:bg-blue-800 rounded-md p-2 font-semibold uppercase ">ask mufti</button>
-            </div>
+           
 
           <div className="ha">
 
