@@ -22,9 +22,12 @@ const don = ()=>{
 const fat = ()=>{
   Navigate('/fatwa')
 }
-const qur = ()=>{
-  Navigate('/quran')
-}
+// const qur = ()=>{
+//   Navigate('/quran')
+//   Navigate('https://alqurankarim.net/')
+//   onClick={qur}
+
+// }
 
     useEffect(() => {
         AOS.init({
@@ -38,19 +41,21 @@ const qur = ()=>{
                 
         
       <h1>
-        <Typewriter
+      امَّا بَعْدُ فَأَعُوذُ بِاللَّهِ مِنَ الشَّيْطَنِ الرَّحِيمِ بِسْمِ اللهِ الرَّحْمَنِ 
+      الرَّحِيم
+        {/* <Typewriter
           options={{
             strings: ['الْحَمْدُ لِلَّهِ رَبِّ  الْعَلَمِينَ وَالصَّلوةُ وَالسَّلَامُ عَلَى خَاتم النبين',  ' امَّا بَعْدُ فَأَعُوذُ بِاللَّهِ مِنَ الشَّيْطَنِ الرَّحِيمِ بِسْمِ اللهِ الرَّحْمَنِ الرَّحِيم'],
             autoStart: true,
             loop: true,
             delay: 30, 
           }}
-        />
+        /> */}
       </h1>
               
             </div>
             <div className="w-full h-16 flex justify-around items-center">
-                <button data-aos="fade-right" onClick={qur} className="bg-blue-950 text-white hover:bg-blue-800 rounded-md p-2 font-semibold uppercase ">quran</button>
+                <button data-aos="fade-right"  className="bg-blue-950 text-white hover:bg-blue-800 rounded-md p-2 font-semibold uppercase "><a href="https://alqurankarim.net/" target="blank">quran</a></button>
                 <button data-aos="fade-left" className="bg-blue-950 text-white hover:bg-blue-800 rounded-md p-2 font-semibold uppercase ">hadith</button>
                 <button data-aos="fade-right"  className="bg-blue-950 text-white hover:bg-blue-800 rounded-md p-2 font-semibold uppercase "><a href="https://www.dawateislami.net/bookslibrary/" target="blank">books</a></button>
                 <button data-aos="fade-left" onClick={fat} className="bg-blue-950 text-white hover:bg-blue-800 rounded-md p-2 font-semibold uppercase ">ask mufti</button>

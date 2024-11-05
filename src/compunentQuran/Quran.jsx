@@ -7,6 +7,8 @@ export default function TarjamaQuran(){
     const Navigate = useNavigate();
     const as =()=>{
         Navigate('/qurantarjama')
+        // Navigate('https://alqurankarim.net/')
+        
     }
     return(
         <div>

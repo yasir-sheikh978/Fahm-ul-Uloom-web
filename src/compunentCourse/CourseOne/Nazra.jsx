@@ -1,22 +1,22 @@
 import React, { useState } from "react";
 import { Card } from "flowbite-react";
 import { Button } from "flowbite-react";
-import quran from '../../assets/courseOne/Quran.jpg'
-import Norani from '../../assets/courseOne/norani.jpg'
 import hafiz from '../../assets/courseOne/hafiz.png'
+import Nazra from '../../assets/courseOne/nazra1.jpg'
+import norani from '../../assets/courseOne/norani.jpg'
 
 
 export default function Course(){
     const CourseDtails = [
-        {name1: 'Online Norani Qaida', img: Norani, dscpt1:'Foundation of Quranic Reading', dscpt2:'Correct Pronunciation and Tajweed', dscpt3:'Preparation for Quranic Recitation', dscpt4:'Course For Both Children And Adults', Doration: 'Class 4 Days In A Week , Combine And Individual Classes Available'},
-        {name1: 'Online Nazra e Quran', img: quran, dscpt1:'Proper Pronunciation and Recitation', dscpt2:'Familiarity with Quranic Text', dscpt3:'Enhanced Focus and Discipline', dscpt4:'Course For Both Children And Adults', Doration: 'Class 4 Days In A Week , Combine And Individual Classes Available'},
+        {name1: 'Online Norani Qaida', img: norani, dscpt1:'Foundation of Quranic Reading', dscpt2:'Correct Pronunciation and Tajweed', dscpt3:'Preparation for Quranic Recitation', dscpt4:'Course For Both Children And Adults', Doration: 'Class 4 Days In A Week , Combine And Individual Classes Available'},
+        {name1: 'Online Nazra e Quran', img: Nazra, dscpt1:'Proper Pronunciation and Recitation', dscpt2:'Familiarity with Quranic Text', dscpt3:'Enhanced Focus and Discipline', dscpt4:'Course For Both Children And Adults', Doration: 'Class 4 Days In A Week , Combine And Individual Classes Available'},
         {name1: 'Online Hifzul Quran', img: hafiz, dscpt1:'Cognitive Development', dscpt2:'Reward in the Hereafter', dscpt3:'Understanding of Islamic Teachings', dscpt4:'Course For Both Children And Adults', Doration: 'Class 4 Days In A Week , Combine And Individual Classes Available'},
         
     ]
     const UrduTrans = [
-        {name1: '  ناظرہ قرآن کورس', img: Norani, dscpt1:'قرآنی پڑھائی کی بنیاد', dscpt2:'صحیح تلفظ اور تجوید', dscpt3:'قرآن کی تلاوت کی تیاری', dscpt4:'یہ کورس بچوں اور بڑوں دونوں کے لیے ہے', Doration: 'ہفتے میں 4 دن کلاس، اجتماعی اور انفرادی کلاسز دستیاب ہیں'},
-        {name1: '  نورانی قاعدہ کورس', img: quran, dscpt1:'صحیح تلفظ اور تجوید', dscpt2:'قرآنی متن سے واقفیت', dscpt3:'توجہ اور نظم و ضبط میں بہتری', dscpt4:'یہ کورس بچوں اور بڑوں دونوں کے لیے ہے', Doration: 'ہفتے میں 4 دن کلاس، اجتماعی اور انفرادی کلاسز دستیاب ہیں'},
-        {name1: '  ناظرہ قرآن کورس', img: quran, dscpt1:'ذہنی ترقی', dscpt2:'آخرت میں انعامات', dscpt3:'اسلامی تعلیمات کی سمجھ', dscpt4:'یہ کورس بچوں اور بڑوں دونوں کے لیے ہے', Doration: 'ہفتے میں 4 دن کلاس، اجتماعی اور انفرادی کلاسز دستیاب ہیں'},
+        {name1: '  ناظرہ قرآن کورس', img: norani, dscpt1:'قرآنی پڑھائی کی بنیاد', dscpt2:'صحیح تلفظ اور تجوید', dscpt3:'قرآن کی تلاوت کی تیاری', dscpt4:'یہ کورس بچوں اور بڑوں دونوں کے لیے ہے', Doration: 'ہفتے میں 4 دن کلاس، اجتماعی اور انفرادی کلاسز دستیاب ہیں'},
+        {name1: '  نورانی قاعدہ کورس', img: Nazra, dscpt1:'صحیح تلفظ اور تجوید', dscpt2:'قرآنی متن سے واقفیت', dscpt3:'توجہ اور نظم و ضبط میں بہتری', dscpt4:'یہ کورس بچوں اور بڑوں دونوں کے لیے ہے', Doration: 'ہفتے میں 4 دن کلاس، اجتماعی اور انفرادی کلاسز دستیاب ہیں'},
+        {name1: '  ناظرہ قرآن کورس', img: hafiz, dscpt1:'ذہنی ترقی', dscpt2:'آخرت میں انعامات', dscpt3:'اسلامی تعلیمات کی سمجھ', dscpt4:'یہ کورس بچوں اور بڑوں دونوں کے لیے ہے', Doration: 'ہفتے میں 4 دن کلاس، اجتماعی اور انفرادی کلاسز دستیاب ہیں'},
         
     ]
 const [id , setid] = useState(0);
@@ -61,6 +61,35 @@ const [eng , seteng] = useState("flex");
                     <li className="">
                      8)   Discount Packages
                     </li>
+                </ul>
+                {/* <p className=" w-full text-center text-yellow-500 text-2xl  py-8">
+               * Join us to benefit from a community of learners dedicated to personal and spiritual growth through education*
+                </p> */}
+                </div>
+                <div>
+                <h2 className="py-12 text-center font-serif w-full text-4xl text-blue-700">
+                   Fee Structure
+                </h2>
+                <ul className="p-4 leading-9 text-xl font-serif border-2 border-black mx-2 md:mx-8 shadow-lg shadow-gray-500">
+                    <li className="flex justify-around font-bold py-2">
+                   <span>Courses</span><span>Combine Class</span><span>Saperate Class</span>
+                    </li>
+                    <li className="flex justify-around border-b-2 border-gray-500">
+                   <span>1) Norani Qaida</span> <span>15$ per-Month</span><span>20$ per-month</span>
+                    </li>
+                    <li className="flex justify-around border-b-2 border-gray-500"> 
+                    <span>1) Nazra Quran</span> <span>20$ per-Month</span><span>30$ per-month</span>
+                    </li>
+                    <li className="flex justify-around border-b-2 border-gray-500">
+                    <span>1) Hifzul Quran</span> <span>35$ per-Month</span><span>40$ per-month</span>
+                    </li>
+                    <li className="flex justify-around border-b-2 border-gray-500">
+                    <span>1) Short courses</span> <span>50$ - 60$ per-course</span><span>not-available</span>
+                    </li>
+                    <li className="flex justify-around border-b-2 border-gray-500">
+                    <span>1) Long courses</span> <span>40$ - 50$ per-Month</span><span>not-available</span>
+                    </li>
+                   
                 </ul>
                 <p className=" w-full text-center text-yellow-500 text-2xl  py-8">
                * Join us to benefit from a community of learners dedicated to personal and spiritual growth through education*
