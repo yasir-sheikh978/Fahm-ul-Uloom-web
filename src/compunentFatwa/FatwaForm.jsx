@@ -6,6 +6,7 @@ const CustomForm = () => {
   const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [message, setMessage] = useState('');
+  const [img, setimg] = useState('');
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = (e) => {
@@ -17,6 +18,7 @@ const CustomForm = () => {
       email,
       phoneNumber,
       message,
+      img
     };
 
     emailjs.send(
@@ -33,6 +35,7 @@ const CustomForm = () => {
         setEmail('');
         setPhoneNumber('');
         setMessage('');
+        setimg('');
         
         // Send auto-reply
         emailjs.send(
@@ -108,6 +111,20 @@ const CustomForm = () => {
             value={message}
             placeholder='Ask Your Question'
             onChange={(e) => setMessage(e.target.value)}
+            required
+            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+          />
+        </div>
+        <h1 className='text-center'>
+          Or
+        </h1>
+        <div>
+          <label htmlFor="img" className="block text-sm font-medium text-gray-700 mb-1">Img</label>
+          <input
+            id="img"
+            type='file'
+            value={img}
+            onChange={(e) => setimg(e.target.value)}
             required
             className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
