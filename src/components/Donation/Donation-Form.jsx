@@ -6,12 +6,16 @@ const DonationForm = () => {
   const [email, setEmail] = useState('');
   const [address, setAddress] = useState('');
   const [lastname, setLastName] = useState('');
+
+  
   
   const handleSubmit = (e) => {
     e.preventDefault();
     // Handle donation submission logic here
     console.log({ amount, name, email,lastname,address });
   };
+
+ 
 
   return (
     <div className="w-[70vw] md:w-[40vw] mx-auto p-4 bg-white rounded-lg  ">
@@ -74,7 +78,8 @@ const DonationForm = () => {
         </div>
         <button
           type="submit"
-          className="w-full bg-blue-500  p-2 rounded-md hover:bg-blue-600 transition text-black"
+          
+          className="w-full bg-blue-950  p-2 rounded-md hover:bg-blue-700 transition text-white font-semibold"
         >
           Donate
         </button>

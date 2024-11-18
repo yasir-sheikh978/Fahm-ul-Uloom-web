@@ -53,13 +53,13 @@ const [eng , seteng] = useState("flex");
 
 
     return(
-        <div className="bg-gray-300"> 
-          <h1 className="flex justify-center items-center bg-gray-300 text-center h-20  text-4xl font-semibold font-serif border-b-2 border-gray-400">
+        <div className="bg-gray-200"> 
+          <h1 className="flex justify-center items-center bg-gray-200 text-center h-20  text-4xl font-semibold font-serif border-b-2 border-gray-400">
             SHORT COURSES
           </h1>
             <div className={`w-full ${hid} h-screen  z-40 fixed bottom-0 backdrop-blur-sm justify-center items-center `}>
             <div className={`fixed inset-0 bg-gray-900 bg-opacity-50 ${eng} items-center justify-center`}>
-  <div className="relative overflow-scroll bg-gray-300 w-[90vw] md:w-[95vw] h-[85vh] md:h-[95vh] flex flex-col md:flex-row justify-around items-center p-2 rounded-sm">
+  <div className="relative overflow-scroll bg-gray-200 w-[90vw] md:w-[95vw] h-[85vh] md:h-[95vh] flex flex-col md:flex-row justify-around items-center p-2 rounded-sm">
     {/* Close Button */}
     <div className="absolute top-4 right-4 text-4xl md:text-6xl cursor-pointer text-gray-900" onClick={() => sethid("hidden")}>
       &times;
@@ -108,7 +108,7 @@ const [eng , seteng] = useState("flex");
   </div>
 </div>
             <div className={`fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center ${Urdu}`}>
-  <div className="relative overflow-scroll bg-gray-300 w-[90vw] md:w-[95vw] h-[85vh] md:h-[95vh] flex flex-col md:flex-row justify-around items-center p-2 rounded-sm">
+  <div className="relative overflow-scroll bg-gray-200 w-[90vw] md:w-[95vw] h-[85vh] md:h-[95vh] flex flex-col md:flex-row justify-around items-center p-2 rounded-sm">
     {/* Close Button */}
     <div className="absolute top-4 right-4 text-4xl md:text-6xl cursor-pointer text-gray-900" onClick={() => sethid("hidden")}>
       &times; 
@@ -156,7 +156,7 @@ const [eng , seteng] = useState("flex");
 
             </div>
 
-        <div className="bg-gray-300 py-8 flex flex-wrap gap-4 justify-center " >
+        <div className="bg-gray-200 py-8 flex flex-wrap gap-4 justify-center " >
   {CourseDtails.map((items, index) => (
     <Card key={index}
     data-aos="zoom-in-down"

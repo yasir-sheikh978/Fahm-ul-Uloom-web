@@ -1,8 +1,8 @@
 import React from "react";
-
+import '../../App.css'
 export default function QuranKarim(){
     return(
-        <div className="pt-12 text-center w-full">
+        <div className="pt-12 text-center w-full amiri-quran-regular">
             <h1 className="text-yellow-400 ">
                 
             بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِیْمِ

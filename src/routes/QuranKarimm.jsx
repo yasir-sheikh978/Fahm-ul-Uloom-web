@@ -25,8 +25,11 @@ export default function Book(){
     return(
       <div>
       <Navbar />
-      <div data-aos="zoom-in">
-        <img src={QuranBg} className="w-full h-[80vh]" />
+      <div data-aos="zoom-in " className="-z-50 fixed top-0  w-full h-[100vh]">
+        <img src={QuranBg} className="w-full h-[100%] " />
+      </div>
+      <div className="h-[60vh] w-full z-20 text-blue-500 font-serif font-bold text-8xl flex justify-center items-center">
+        <h1>" Quran kareem "</h1>
       </div>
       
       
@@ -39,13 +42,13 @@ export default function Book(){
                 }}>
       &times;
     </div>
-    <div className=" bg-gray-300 text-white sm:leading-loose font-serif tracking-wider leading-loose text-2xl sm:text-4xl pt-8 w-full overflow-scroll h-[100vh]">
+    <div className=" bg-gray-200 text-white sm:leading-loose font-serif tracking-wider leading-loose text-2xl sm:text-4xl pt-8 w-full overflow-scroll h-[100vh]">
         {booklink[id].link}
     </div> 
   </div>
   </div>
 
-        <div className={`bg-gray-300 ${flx} py-8 flex flex-wrap gap-4 justify-center`}>
+        <div className={`bg-gray-200 ${flx} py-8 flex flex-wrap gap-4 justify-center`}>
             {bookName.map((items, index) => (
                <Card key={index}
                className="h-100 sa"

@@ -3,6 +3,7 @@ import React from "react";
 import Navbar from "../compunentIndex/Navbar";
 import Slider from "../compunentIndex/Slider";
 import Footer from "../compunentIndex/Footer";
+import Welcom from '../componentHome/Welcom'
 
 import 'flowbite';
 function Index(){
@@ -12,6 +13,8 @@ function Index(){
            <Navbar />
 
             <Slider />
+            <Welcom />
+
 
             <Footer />
         </div>

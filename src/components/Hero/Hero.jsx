@@ -41,14 +41,14 @@ const Hero = () => {
               <motion.p variants={FadeUp(0.4)} initial="initial" animate="animate">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad atque quas accusantium tenetur ut nostrum, autem dignissimos aut amet nemo explicabo beatae exercitationem. Inventore.
               </motion.p>
-              <div className="space-x-4">
+              {/* <div className="space-x-4">
                 <motion.button variants={FadeUp(0.6)} initial="initial" animate="animate" className="btn-outline bg-indigo-900">
                   Get started
                 </motion.button>
                 <motion.button variants={FadeUp(0.8)} initial="initial" animate="animate" className="btn-outline">
                   login
                 </motion.button>
-              </div>
+              </div> */}
             </div>
             {/* form section */}
             <div>

@@ -58,7 +58,7 @@ const CustomForm = () => {
   };
 
   return (
-    <div className="w-[85vw] sm:w-[70vw] mx-auto p-8 my-10 bg-gray-300 rounded-lg shadow-lg">
+    <div className="w-[85vw] sm:w-[70vw] mx-auto p-8 my-10 bg-gray-200 rounded-lg shadow-lg">
       <h2 className="text-2xl font-bold text-center text-blue-600 mb-6">Ask Your Quetion</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>

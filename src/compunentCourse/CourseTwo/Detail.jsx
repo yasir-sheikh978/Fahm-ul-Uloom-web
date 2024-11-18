@@ -9,7 +9,7 @@ function Stats() {
   ];
 
   return (
-    <div className='h-96 py-16 bg-gray-300' >
+    <div className='h-96 py-16 bg-gray-200' >
    <div className="bg-blue-950 text-white  py-10" data-aos="zoom-in">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         {stats.map((stat) => (

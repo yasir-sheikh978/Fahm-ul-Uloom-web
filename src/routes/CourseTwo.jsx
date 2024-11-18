@@ -1,30 +1,29 @@
-
 import React from "react";
 import Navbar from "../compunentIndex/Navbar";
 import Slider from "../compunentIndex/Slider";
 import Footer from "../compunentIndex/Footer";
-import Detail from "../compunentCourse/CourseOne/Detail";
+import Fees from "../compunentCourse/Fees";
+import LongCourse from "../compunentCourse/CourseTwo/CourseTwo";
+import Nazra from "../compunentCourse/Nazra";
+
+// import Detail from "../compunentCourse/CourseOne/Detail";
 // import Course from "../compunentCourse/Course";
 
-import 'flowbite';
-function CourseTwo(){
+import "flowbite";
+function CourseTwo() {
+  return (
+    <div>
+      <Navbar />
 
-    return(
-       <div >
-           <Navbar />
+      <Slider />
+      {/* <Detail /> */}
+      <Fees />
+      <Nazra />
 
-            <Slider />
+      <LongCourse />
 
-            <Detail />
-
-            {/* <Course /> */}
-
-            <Footer />
-
-        </div>
-          
-
-        
-    )
+      <Footer />
+    </div>
+  );
 }
 export default CourseTwo;

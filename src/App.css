@@ -12,3 +12,17 @@ justify-content: center !important;
     width: 384px;
     height: 275px;
 }
+
+/* App.css */
+.quranic-text {
+    font-family: 'Scheherazade', serif;
+    font-size: 24px; /* Adjust size as needed */
+    direction: rtl; /* Right-to-left direction for Arabic */
+  }
+  
+
+  .amiri-quran-regular {
+    font-family: "Amiri Quran", serif;
+    font-weight: 400;
+    font-style: normal;
+  }

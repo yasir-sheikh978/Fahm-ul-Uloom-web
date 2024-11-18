@@ -5,7 +5,8 @@ import Slider from "../compunentIndex/Slider";
 import Footer from "../compunentIndex/Footer";
 // import Detail from "../compunentCourse/CourseOne/Detail";
 import ShortCourse from "../compunentCourse/CourseOne/CourseOne";
-import Nazra from "../compunentCourse/CourseOne/Nazra";
+import Nazra from "../compunentCourse/Nazra";
+import Fees from "../compunentCourse/Fees";
 
 import 'flowbite';
 function CourseOne(){
@@ -15,6 +16,7 @@ function CourseOne(){
            <Navbar />
 
             <Slider />
+            <Fees />
             <Nazra />
 
             {/* <Detail /> */}

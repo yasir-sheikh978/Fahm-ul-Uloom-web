@@ -1,6 +1,12 @@
 
 
 const Bannersection2 = () => {
+    const scrollToTop = () => {
+        window.scrollTo({
+          top: 500,
+          behavior: "smooth",
+        });
+      }
     return (
         <div className='bg-slate-100 dark:bg-slate-900 dark:text-white'>
             <div className='container md:h-[500px] flex items-center justify-center py-10'>
@@ -19,8 +25,8 @@ const Bannersection2 = () => {
                                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatem modi dolore, rerum repudiandae reprehenderit incidunt?
                             </li>
                         </ul>
-                        <button className="bg-blue-500 p-4 rounded-xl ">
-                            Get Started
+                        <button onClick={scrollToTop} className="bg-blue-950 text-white font-semibold hover:bg-blue-700 p-4 rounded-xl ">
+                            Donate
                         </button>
                     </div>
                     {/* image container */}

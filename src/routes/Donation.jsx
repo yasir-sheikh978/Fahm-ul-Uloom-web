@@ -5,18 +5,19 @@ import Hero from "../components/Hero/Hero";
 import Navbar from "../compunentIndex/Navbar";
 import Footer from "../compunentIndex/Footer";
 import OurVision from "../components/OurVision/OurVision";
-import Overveiwcounter from "../components/Overveiwcounter/Overveiwcounter";
+// import Overveiwcounter from "../components/Overveiwcounter/Overveiwcounter";
 import VideoBanner from "../components/VideoBanner/VideoBanner";
 
 
 
 export const App = () => {
+  
   return (
     <>
     <main className="overflow-x"> 
       <Navbar/>
       <Hero/>
-      <Overveiwcounter/>
+      {/* <Overveiwcounter/> */}
       <OurVision/>
       <Bannersection/>
       <Bannersection2/>
