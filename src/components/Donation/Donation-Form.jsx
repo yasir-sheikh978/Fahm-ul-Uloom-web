@@ -18,7 +18,7 @@ const DonationForm = () => {
  
 
   return (
-    <div className="w-[70vw] md:w-[40vw] mx-auto p-4 bg-white rounded-lg  ">
+    <div className="w-[83vw] md:w-[40vw] mx-auto p-4 bg-white rounded-lg  ">
       <h2 className="text-2xl font-bold mb-4 text-black">Donate Now</h2>
       <form onSubmit={handleSubmit} className="space-y-1">
         <div>
