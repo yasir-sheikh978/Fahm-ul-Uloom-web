@@ -6,7 +6,7 @@ const Bannersection = () => {
     const Navigate = useNavigate();
 
     const doo = () =>{
-        Navigate('./donation')
+        Navigate('./courseone')
     }
 
     return (
@@ -28,7 +28,7 @@ const Bannersection = () => {
                             </li>
                         </ul>
                         <button onClick={doo} className="bg-blue-950 w-[100%] text-white font-semibold hover:bg-blue-700 p-4 rounded-xl ">
-                            Donate
+                            Explore
                         </button>
                     </div>
                     {/* image container */}
