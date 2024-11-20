@@ -17,10 +17,10 @@ export default function CourseHome(){
         <div className="w-full h-[40vh] md:h-[75vh] bg-transparent flex justify-center md:justify-around  items-center ">
             <div>
 
-            <h1 className="text-4xl sm:text-6xl text-white playfair">
+            <h1 className="text-4xl sm:text-6xl text-white playfair" data-aos="fade-down">
                 Learn Quran
             </h1>
-            <button onClick={as} className="w-40 bg-white text-blue-900 font-bold my-4 p-2 rounded-xl hover:bg-blue-500 hover:text-black">
+            <button data-aos="flip-up" onClick={as} className="w-40 bg-white text-blue-900 font-bold my-4 p-2 rounded-xl hover:bg-blue-500 hover:text-black">
                 Explore More
             </button>
             </div>
