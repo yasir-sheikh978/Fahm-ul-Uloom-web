@@ -13,6 +13,13 @@ justify-content: center !important;
     height: 275px;
 }
 
+
+.bg{
+    background-image: url('https://png.pngtree.com/thumb_back/fh260/background/20210326/pngtree-ramadan-background-with-white-mosque-image_595534.jpg');
+    background-repeat: no-repeat;
+    background-size: cover    ;
+}
+
 /* App.css */
 .quranic-text {
     font-family: 'Scheherazade', serif;
@@ -26,3 +33,19 @@ justify-content: center !important;
     font-weight: 400;
     font-style: normal;
   }
+
+
+  .playfair{
+    font-family: "Edu AU VIC WA NT Pre", cursive;
+    font-optical-sizing: auto;
+    font-weight: 50;
+    font-style: normal;
+  }
+
+  .caveat {
+    font-family: "Caveat", cursive;
+    font-optical-sizing: auto;
+    font-weight: 50;
+    font-style: normal;
+  }
+

@@ -1,13 +1,39 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from "react";
 import emailjs from 'emailjs-com';
+import imageCompression from "browser-image-compression";
 
 const CustomForm = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [message, setMessage] = useState('');
-  const [img, setimg] = useState('');
+  const [img, setimg] = useState(null);
   const [loading, setLoading] = useState(false);
+  const fileInputRef = useRef(null);
+
+  const handleImageChange = async (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      try {
+        // Compress the image
+        const options = {
+          maxSizeMB: 0.05, // Target size: 50KB
+          maxWidthOrHeight: 800, // Maintain good resolution while reducing size
+          useWebWorker: true,
+        };
+        const compressedFile = await imageCompression(file, options);
+
+        // Convert the compressed file to Base64
+        const reader = new FileReader();
+        reader.onloadend = () => {
+          setimg(reader.result); // Store the compressed image as Base64
+        };
+        reader.readAsDataURL(compressedFile);
+      } catch (error) {
+        // console.error("Error compressing image:", error);
+      }
+    }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -30,12 +56,13 @@ const CustomForm = () => {
 
     .then(
       (response) => {
-        console.log('Message sent successfully!', response.status, response.text);
+        // console.log('Message sent successfully!', response.status, response.text);
         setName('');
         setEmail('');
         setPhoneNumber('');
         setMessage('');
-        setimg('');
+        if (fileInputRef.current) fileInputRef.current.value = "";
+        setimg(null);
         
         // Send auto-reply
         emailjs.send(
@@ -46,15 +73,15 @@ const CustomForm = () => {
           )
   
         .then((response) => {
-          console.log('Auto-reply sent successfully!', response.status, response.text);
+          // console.log('Auto-reply sent successfully!', response.status, response.text);
           alert('Your message was sent! You will receive a confirmation email shortly.');
         })
         .catch((error) => console.error('Auto-reply failed...', error))
         .finally(() => setLoading(false));
       },
       (error) => {
-        console.error('Failed to send message...', error);
-        alert('Failed to send your message. Please try again later.');
+        // console.error('Failed to send message...', error);
+        alert("Variables size limit. The maximum allowed variables size is 50Kb",error);
         setLoading(false);
       }
     );
@@ -123,8 +150,9 @@ const CustomForm = () => {
           <input
             id="img"
             type='file'
-            value={img}
-            onChange={(e) => setimg(e.target.value)}
+            accept="image/*"
+            onChange={handleImageChange}
+            ref={fileInputRef}
             required
             className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
           />

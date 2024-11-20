@@ -1,13 +1,11 @@
-import pic from '../../assets/home/Donation.jpg'
-
-
+import React from "react"
+import { useNavigate } from "react-router-dom"
+import pic from '../assets/home/Donation.jpg'
 const Bannersection = () => {
-    const scrollToTop = () => {
-        window.scrollTo({
-          top: 450,
-          behavior: "smooth",
-        });
-      }
+    const Navigate = useNavigate();
+    const doo = () =>{
+        Navigate('./donation')
+    }
     return (
         <div className='bg-gray-200 py-10'>
             <div className='container md:h-[500px] flex items-center justify-center py-10'>
@@ -26,7 +24,7 @@ const Bannersection = () => {
                             <li className='font-medium'>
                             Together, we can spread knowledge and transform communities.                            </li>
                         </ul>
-                        <button onClick={scrollToTop} className="bg-blue-950 text-white font-semibold hover:bg-blue-700 p-4 rounded-xl w-full ">
+                        <button onClick={doo} className="bg-blue-950 text-white font-semibold hover:bg-blue-700 p-4 rounded-xl w-full ">
                             Donate
                         </button>
                     </div>
