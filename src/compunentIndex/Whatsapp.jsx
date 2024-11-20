@@ -1,22 +1,25 @@
 import React from "react";
-import pic from '../assets/WhatsApp.svg.png'
-export default function Whatsapp(){
+import pic from "../assets/WhatsApp.svg.png";
 
-    function navigateToWhatsApp() {
-        const phoneNumber = "03182320684"; // Replace with your WhatsApp number in international format, e.g., "923001234567"
-        const message = "Hello, I would like to know more about your services."; // Optional: Replace with your default message
-        const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-        
-        window.open(whatsappURL, "_blank");
-      }
-      
-    return(
-        <div className="w-full h-20 flex justify-end fixed bottom-0 z-50">
-            <a href="https://wa.me/03182320684" target="_blank" onclick="navigateToWhatsApp()">
+export default function Whatsapp() {
+  function navigateToWhatsApp() {
+    const phoneNumber = "923182320684"; // WhatsApp number in international format
+    const message = "Hello, I would like to know more about your services."; // Default message
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappURL, "_blank");
+  }
 
-<img src={pic} alt="whatsapp"  className="h-20 "/>
-</a>
+  return (
+    <div className="w-full h-20 flex justify-end fixed bottom-0 z-50">
+      {/* Chat Box */}
+      <div className="absolute bottom-24 right-4 bg-green-100 border border-green-500 rounded-lg p-3 shadow-lg">
+        <p className="text-gray-800 font-medium">How can I help you?</p>
+      </div>
 
-        </div>
-    )
+      {/* WhatsApp Icon */}
+      <div className="cursor-pointer" onClick={navigateToWhatsApp}>
+        <img src={pic} alt="whatsapp" className="h-20" />
+      </div>
+    </div>
+  );
 }
