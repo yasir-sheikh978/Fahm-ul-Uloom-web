@@ -10,6 +10,11 @@ const CustomForm = () => {
   const [img, setimg] = useState(null);
   const [loading, setLoading] = useState(false);
   const fileInputRef = useRef(null);
+  // const [idd, setdata] = useState({name:"zain"});
+
+  
+  
+
 
   const handleImageChange = async (e) => {
     const file = e.target.files[0];
@@ -34,8 +39,12 @@ const CustomForm = () => {
       }
     }
   };
+  // const myArray = ["Item 1", "Item 2", "Item 3"];
+  // const idd = myArray.join(", ");
+  // console.log(idd);
 
   const handleSubmit = (e) => {
+
     e.preventDefault();
     setLoading(true);
 
@@ -44,7 +53,7 @@ const CustomForm = () => {
       email,
       phoneNumber,
       message,
-      img
+      img,
     };
 
     emailjs.send(
@@ -153,7 +162,7 @@ const CustomForm = () => {
             accept="image/*"
             onChange={handleImageChange}
             ref={fileInputRef}
-            required
+            
             className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
         </div>
