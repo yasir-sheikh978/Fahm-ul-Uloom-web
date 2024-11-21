@@ -7,6 +7,7 @@ import Welcom from '../componentHome/Welcom'
 import Donate from '../componentHome/Donation'
 import CourseHome from '../componentHome/Quran'
 import Short from '../componentHome/short'
+import Long from '../componentHome/long'
 import 'flowbite';
 
 
@@ -15,12 +16,13 @@ function Index(){
     return(
        <div>
            <Navbar />
-           <Whatsapp />
+           {/* <Whatsapp /> */}
             <Slider />
             <Welcom />
             <Donate />
             <CourseHome />
             <Short />
+            <Long />
             <Footer />
         </div>
     )

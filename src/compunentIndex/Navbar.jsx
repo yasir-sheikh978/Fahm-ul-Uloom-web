@@ -39,7 +39,7 @@ export default function Navbarr() {
   }, []);
 
   return (
-    <div data-aos="fade-down" className="bg-gray-200">
+    <div  className="bg-gray-200">
       <div className="bg-blue-950 z-10 text-white sm:text-2xl text-md items-center flex justify-center px-6 w-full h-[60px] ">
         <h1 className="text-2xl">
            بِسْم
@@ -90,7 +90,7 @@ export default function Navbarr() {
         <img src={logoOne} className="h-32" alt="" />
       </div>
 
-      <div className="ha">
+      <div className="ha" data-aos="fade-down">
         <Navbar
           fluid
           rounded
