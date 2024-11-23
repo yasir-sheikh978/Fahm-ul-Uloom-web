@@ -10,7 +10,7 @@ const Bannersection = () => {
     };
 
     return (
-        <div className='bg-gray-200'>
+        <div className='bg-gray-200  h-fit md:h-screen flex items-center'>
             <div className='container mx-auto flex flex-col md:flex-row items-center justify-center py-10 gap-8 md:gap-12'>
                 {/* Text Container */}
                 <div className='w-[90%] md:w-[45%] space-y-6 px-6 text-center md:text-left' data-aos="fade-right">
@@ -38,7 +38,7 @@ const Bannersection = () => {
                     data-aos="flip-up" 
                     src={online} 
                     alt="Online Courses" 
-                    className='w-[90%] md:w-[45%] h-[40vh] sm:h-[50vh] object-cover rounded-3xl mx-auto' 
+                    className='w-[90%] md:w-[45%] h-[40vh] sm:h-[55vh] object-contain rounded-3xl mx-auto' 
                 />
             </div>
         </div>

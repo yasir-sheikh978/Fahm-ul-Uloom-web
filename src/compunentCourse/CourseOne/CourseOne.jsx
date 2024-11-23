@@ -4,7 +4,7 @@ import { Button } from "flowbite-react";
 import tajweed from "../../assets/courseOne/tajweed.jpg";
 import tijarat from "../../assets/courseOne/tijarat.jpg";
 import bank from "../../assets/courseOne/bank.jpg";
-import aqaid from "../../assets/courseOne/aqaid.png";
+import aqaid from "../../assets/courseOne/aqaid.jpg";
 import ilhad from "../../assets/courseOne/ilhad.jpg";
 import ramzan from "../../assets/courseOne/ramzan.jpg";
 import nabuwat from "../../assets/courseOne/nabuwat.jpg";

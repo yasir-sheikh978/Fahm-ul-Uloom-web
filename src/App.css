@@ -15,9 +15,10 @@ justify-content: center !important;
 
 
 .bg{
-    background-image: url('https://img.freepik.com/free-vector/black-background-with-focus-spot-light_1017-27230.jpg');
+    background-image: url('https://t3.ftcdn.net/jpg/07/43/14/40/360_F_743144079_BymKchowczuqp1vXNr8dweCEBUvetsMi.jpg');
     background-repeat: no-repeat;
     background-size: cover    ;
+    background-position: center;
     background-attachment: fixed;
 
 }
@@ -51,3 +52,9 @@ justify-content: center !important;
     font-style: normal;
   }
 
+  .geist {
+    font-family: "Geist Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 40;
+    font-style: normal;
+  }

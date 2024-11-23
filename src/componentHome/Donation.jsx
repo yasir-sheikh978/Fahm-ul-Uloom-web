@@ -15,12 +15,12 @@ const Bannersection = () => {
         <img
           src={pic}
           alt="Donation"
-          className="mx-auto w-full md:w-[45%] h-[30vh] sm:h-[40vh] md:h-[45vh] object-cover rounded-3xl"
+          className="mx-auto w-[100%] md:w-[45%] h-[40vh] sm:h-[60vh] md:h-[75vh] object-cover rounded-3xl"
           data-aos="fade-right"
         />
         
         {/* Text Container */}
-        <div className="text-center md:text-left md:w-[50%] px-4" data-aos="flip-up">
+        <div className="text-center md:text-left md:w-[45%] px-4" data-aos="zoom-in">
           <h1 className="text-2xl font-semibold md:text-4xl mb-4">
             Donate For Education
           </h1>

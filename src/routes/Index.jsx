@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../compunentIndex/Navbar";
+import Nab from "../compunentIndex/nabs";
 import Slider from "../compunentIndex/Slider";
 import Whatsapp from "../compunentIndex/Whatsapp";
 import Footer from "../compunentIndex/Footer";
@@ -16,7 +17,8 @@ function Index(){
     return(
        <div>
            <Navbar />
-           {/* <Whatsapp /> */}
+           <Nab />
+           <Whatsapp />
             <Slider />
             <Welcom />
             <Donate />

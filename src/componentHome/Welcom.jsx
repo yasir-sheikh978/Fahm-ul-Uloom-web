@@ -12,7 +12,7 @@ export default function Welcom() {
         Education at Your Doorstep
       </p>
 
-      <div className="p-6 caveat leading-6 md:leading-9 text-sm md:text-xl  border-2 border-black rounded-lg shadow-xl bg-gray-100  shadow-gray-700 mx-auto max-w-2xl" data-aos="flip-left"
+      <div className="p-6 geist leading-6 md:leading-9 text-sm md:text-xl  border-2 border-black rounded-lg shadow-xl bg-gray-100  shadow-gray-700 mx-auto max-w-2xl" data-aos="flip-left"
      data-aos-easing="ease-out-cubic"
      data-aos-duration="2000">
         <p>
