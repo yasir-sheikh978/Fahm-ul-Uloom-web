@@ -48,7 +48,7 @@ export default function Navbarr() {
           <Navbar.Brand onClick={logothre}>
             <img
               src={logothree}
-              className="mr-3 h-6 sm:h-16 bg-white rounded-full"
+              className="mr-3 h-10 sm:h-14 bg-white rounded-full"
               alt="Fahm Ul Alum"
             />
           </Navbar.Brand>

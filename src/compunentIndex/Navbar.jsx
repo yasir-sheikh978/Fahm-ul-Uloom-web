@@ -2,12 +2,12 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../App.css";
-import logoOne from "../assets/logo/logoOne.png";
+import logoOne from "../assets/logo/LogoOne.png";
 import { useNavigate } from "react-router-dom";
 // import Typewriter from "typewriter-effect";
 
 
-
+ 
 export default function Navbarr() {
   const Navigate = useNavigate();
   const long = () => {
@@ -89,8 +89,8 @@ export default function Navbarr() {
         </button>
       </div>
 
-      <div data-aos="zoom-in" className="h-36 w-full flex justify-center p-4">
-        <img src={logoOne} className="h-32" alt="" />
+      <div data-aos="zoom-in" className="h-36 w-full  flex justify-center py-2">
+        <img src={logoOne} className="h-28  sm:h-32" alt="" />
       </div>
     </div>
   );
