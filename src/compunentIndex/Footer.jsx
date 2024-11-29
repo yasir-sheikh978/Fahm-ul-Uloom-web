@@ -250,7 +250,7 @@ export default function Footer() {
           <div className="flex justify-between ">
 
           <p className="text-sm   pb-2 text-gray-300">
-            Copyright ©  2024, All Rights Reserved by Fahm-Ul-Uloom
+            Copyright © 2024, All Rights Reserved by Fahm-Ul-Uloom
           </p>
           <Link className="text-sm   pb-2 text-gray-300">
             Developed By IT department of Fahm-Ul-Uloom
