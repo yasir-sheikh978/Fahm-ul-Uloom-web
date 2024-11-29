@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../App.css";
-import logoOne from "../assets/logo/LogoOne.png";
+import logoOne from "../assets/logo/logoOne.png";
 import { useNavigate } from "react-router-dom";
 // import Typewriter from "typewriter-effect";
 
