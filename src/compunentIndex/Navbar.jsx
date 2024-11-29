@@ -10,24 +10,11 @@ import { useNavigate } from "react-router-dom";
  
 export default function Navbarr() {
   const Navigate = useNavigate();
-  const long = () => {
-    Navigate("/coursetwo");
-  };
-  const short = () => {
-    Navigate("/courseone");
-  };
-  const ho = () => {
-    Navigate("/");
-  };
-  const don = () => {
-    Navigate("/donation");
-  };
+
   const fat = () => {
     Navigate("/fatwa");
   };
-  const logothre = () => {
-    Navigate("/");
-  };
+
   // const qur = ()=>{
   //   Navigate('/quran')
   //   Navigate('https://alqurankarim.net/')
@@ -37,7 +24,7 @@ export default function Navbarr() {
 
   useEffect(() => {
     AOS.init({
-      duration: 1500, // Duration of animation in milliseconds
+      duration: 1500,
     });
   }, []);
 
