@@ -19,7 +19,6 @@ export default function Navbarr() {
   //   Navigate('/quran')
   //   Navigate('https://alqurankarim.net/')
   //   onClick={qur}
-
   // }
 
   useEffect(() => {
