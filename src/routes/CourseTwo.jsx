@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../compunentIndex/Navbar";
+import Nab from "../compunentIndex/nabs";
 import Slider from "../compunentIndex/Slider";
 import Footer from "../compunentIndex/Footer";
 import Fees from "../compunentCourse/Fees";
@@ -14,7 +15,7 @@ function CourseTwo() {
   return (
     <div>
       <Navbar />
-
+      <Nab />
       <Slider />
       {/* <Detail /> */}
       <Fees />

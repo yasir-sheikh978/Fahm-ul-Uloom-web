@@ -7,7 +7,7 @@ import fatiha from '../assets/quran/surahfatiha.png'
 import baqarah from '../assets/quran/surahbaqara.jpg'
 import QuranBg from '../assets/quran/Quran-bg.jpg'
 import Navbar from '../compunentIndex/Navbar'
-
+import Nab from "../compunentIndex/nabs";
 
 export default function Book(){
     const [hid , sethid] = useState("hidden")
@@ -25,6 +25,7 @@ export default function Book(){
     return(
       <div>
       <Navbar />
+      <Nab />
       <div data-aos="zoom-in " className="-z-50 fixed top-0  w-[100%] h-[100vh]">
         <img src={QuranBg} className="w-[100%] h-[100%] " />
       </div>
