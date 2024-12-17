@@ -1,6 +1,6 @@
 import React from "react";
-import quran from "../assets/courseOne/quran.png";
-import bg from '../assets/home/bg.jpg'
+// import quran from "../assets/courseOne/quran.png";
+// import bg from '../assets/home/bg.jpg'
 import "../App.css";
 import { useNavigate } from "react-router-dom";
 
@@ -14,12 +14,12 @@ export default function CourseHome() {
   return (
     <div>
       {/* Background */}
-      <div className=" w-full h-screen fixed bottom-0 -z-40">
+      {/* <div className=" w-full h-screen fixed bottom-0 -z-40">
         <img src={bg}  alt="" className="size-full" />
-      </div>
+      </div> */}
 
       {/* Content */}
-      <div className="w-[100%] h-[50vh] md:h-[75vh] bg-transparent flex flex-col md:flex-row justify-center items-center md:justify-around">
+      <div className="w-[100%] BG h-[50vh] md:h-[75vh] bg-transparent flex flex-col md:flex-row justify-center items-center md:justify-around">
         {/* Left Content */}
         <div className="text-center md:text-left ">
           <h1
