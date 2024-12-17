@@ -37,7 +37,7 @@ const Bannersection = () => {
           </ul>
           <button
             onClick={doo}
-            className="bg-blue-950 text-white font-semibold hover:bg-blue-700 p-4 rounded-xl w-full md:w-auto"
+            className="bg-blue-950 text-white font-semibold hover:bg-blue-700 p-4 rounded-xl w-[100%] md:w-auto"
           >
             Donate
           </button>

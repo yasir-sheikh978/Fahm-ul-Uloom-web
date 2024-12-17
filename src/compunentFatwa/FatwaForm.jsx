@@ -109,7 +109,7 @@ const CustomForm = () => {
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
-            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="w-[100%] p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
         </div>
 
@@ -122,7 +122,7 @@ const CustomForm = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="w-[100%] p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
         </div>
         
@@ -135,7 +135,7 @@ const CustomForm = () => {
             onChange={(e) => setPhoneNumber(e.target.value)}
             required
             placeholder="Please enter WhatsApp number"
-            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="w-[100%] p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
         </div>
 
@@ -148,7 +148,7 @@ const CustomForm = () => {
             placeholder='Ask Your Question'
             onChange={(e) => setMessage(e.target.value)}
             required
-            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="w-[100%] p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
         </div>
         <h1 className='text-center'>
@@ -163,13 +163,13 @@ const CustomForm = () => {
             onChange={handleImageChange}
             ref={fileInputRef}
             
-            className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="w-[100%] p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
           />
         </div>
         
         <button
           type="submit"
-          className="w-full bg-blue-500 text-white py-3 rounded-md hover:bg-blue-600 transition duration-200"
+          className="w-[100%] bg-blue-500 text-white py-3 rounded-md hover:bg-blue-600 transition duration-200"
           disabled={loading}
         >
           {loading ? (

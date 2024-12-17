@@ -25,15 +25,15 @@ export default function Book(){
     return(
       <div>
       <Navbar />
-      <div data-aos="zoom-in " className="-z-50 fixed top-0  w-full h-[100vh]">
-        <img src={QuranBg} className="w-full h-[100%] " />
+      <div data-aos="zoom-in " className="-z-50 fixed top-0  w-[100%] h-[100vh]">
+        <img src={QuranBg} className="w-[100%] h-[100%] " />
       </div>
-      <div className="h-[60vh] w-full z-20 text-blue-500 font-serif font-bold text-8xl flex justify-center items-center">
+      <div className="h-[60vh] w-[100%] z-20 text-blue-500 font-serif font-bold text-8xl flex justify-center items-center">
         <h1>" Quran kareem "</h1>
       </div>
       
       
-                        <div className={` w-full ${hid} h-screen z-40 fixed bottom-0 backdrop-blur-sm justify-center items-center `}>
+                        <div className={` w-[100%] ${hid} h-screen z-40 fixed bottom-0 backdrop-blur-sm justify-center items-center `}>
 
              <div className={`fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center`}>
              <div className="absolute top-12 right-12 text-xl md:text-8xl cursor-pointer text-black" onClick={() =>{
@@ -42,7 +42,7 @@ export default function Book(){
                 }}>
       &times;
     </div>
-    <div className=" bg-gray-200 text-white sm:leading-loose font-serif tracking-wider leading-loose text-2xl sm:text-4xl pt-8 w-full overflow-scroll h-[100vh]">
+    <div className=" bg-gray-200 text-white sm:leading-loose font-serif tracking-wider leading-loose text-2xl sm:text-4xl pt-8 w-[100%] overflow-scroll h-[100vh]">
         {booklink[id].link}
     </div> 
   </div>

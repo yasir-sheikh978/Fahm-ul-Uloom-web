@@ -29,7 +29,7 @@ const DonationForm = () => {
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
-            className="w-full p-2 border border-gray-300 rounded-md text-black"
+            className="w-[100%] p-2 border border-gray-300 rounded-md text-black"
           />
         </div>
         <div>
@@ -40,7 +40,7 @@ const DonationForm = () => {
             value={lastname}
             onChange={(e) => setLastName(e.target.value)}
             required
-            className="w-full p-2 border border-gray-300 rounded-md text-black"
+            className="w-[100%] p-2 border border-gray-300 rounded-md text-black"
           />
         </div>
         <div>
@@ -51,7 +51,7 @@ const DonationForm = () => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="w-full p-2 border border-gray-300 rounded-md text-black"
+            className="w-[100%] p-2 border border-gray-300 rounded-md text-black"
           />
         </div>
         <div>
@@ -62,7 +62,7 @@ const DonationForm = () => {
             value={address}
             onChange={(e) => setAddress(e.target.value)}
             required
-            className="w-full p-2 border border-gray-300 rounded-md text-black"
+            className="w-[100%] p-2 border border-gray-300 rounded-md text-black"
           />
         </div>
         <div>
@@ -73,13 +73,13 @@ const DonationForm = () => {
             value={amount}
             onChange={(e) => setAmount(e.target.value)}
             required
-            className="w-full p-2 border border-gray-300 rounded-md text-black"
+            className="w-[100%] p-2 border border-gray-300 rounded-md text-black"
           />
         </div>
         <button
           type="submit"
           
-          className="w-full bg-blue-950  p-2 rounded-md hover:bg-blue-700 transition text-white font-semibold"
+          className="w-[100%] bg-blue-950  p-2 rounded-md hover:bg-blue-700 transition text-white font-semibold"
         >
           Donate
         </button>

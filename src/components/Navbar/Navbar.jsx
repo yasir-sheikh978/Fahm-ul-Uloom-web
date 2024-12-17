@@ -6,7 +6,7 @@ import { FaCaretDown } from "react-icons/fa";
 const Navbar = () => {
     return (
         <>
-            <nav className="bg-violet-900	 text-white fixed top-left-0 w-full border-b-[1px] border-primary/50">
+            <nav className="bg-violet-900	 text-white fixed top-left-0 w-[100%] border-b-[1px] border-primary/50">
                 <div className="container">
                     <div className="flex items-center justify-between h-[70px] py-2">
                 {/* logo section */}

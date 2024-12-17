@@ -17,12 +17,12 @@ export default function TarjamaQuran(){
         <div className="flex flex-wrap gap-4 py-20 justify-center">
 
         <div className=" border-black w-[350px]">
-            <img src={Quran} className="w-full"/>
-            <button className="text-center w-full bg-blue-600 h-12 text-white hover:bg-blue-950"  onClick={as}>Red Quran ul Karim</button>
+            <img src={Quran} className="w-[100%]"/>
+            <button className="text-center w-[100%] bg-blue-600 h-12 text-white hover:bg-blue-950"  onClick={as}>Red Quran ul Karim</button>
         </div>
         <div>
             <img src={Quran} width={350} />
-            <button className="text-center w-full bg-blue-600 h-12 text-white hover:bg-blue-950"  onClick={as}>Red Quran ul Karim</button>
+            <button className="text-center w-[100%] bg-blue-600 h-12 text-white hover:bg-blue-950"  onClick={as}>Red Quran ul Karim</button>
         </div>
        
        

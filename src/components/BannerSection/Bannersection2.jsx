@@ -30,7 +30,7 @@ const Bannersection2 = () => {
                         </button>
                     </div>
                     {/* image container */}
-                    <img src="https://charitytruth.com/wp-content/uploads/2018/04/Starting-a-charity-concept.jpg" alt="" className='mx-auto w-full p-4 md:max-w-full h-[300px] md:h-[350px] object-cover rounded-3xl' />
+                    <img src="https://charitytruth.com/wp-content/uploads/2018/04/Starting-a-charity-concept.jpg" alt="" className='mx-auto w-[100%] p-4 md:max-w-[100%] h-[300px] md:h-[350px] object-cover rounded-3xl' />
                 </div>
             </div>
         </div>

@@ -76,7 +76,7 @@ export default function Course() {
     <div className="bg-gray-200">
      
       <div
-        className={`w-full ${hid} h-screen  z-40 fixed bottom-0 backdrop-blur-sm justify-center items-center `}
+        className={`w-[100%] ${hid} h-screen  z-40 fixed bottom-0 backdrop-blur-sm justify-center items-center `}
       >
         <div
           className={`fixed inset-0 bg-gray-900 bg-opacity-50 ${eng} items-center justify-center`}
@@ -105,12 +105,12 @@ export default function Course() {
               <img
                 src={CourseDtails[id].img}
                 alt=""
-                className="w-full md:w-3/4 object-contain rounded-lg"
+                className="w-[100%] md:w-3/4 object-contain rounded-lg"
               />
             </div>
 
             {/* Course Details */}
-            <div className="w-full md:w-1/2  px-4">
+            <div className="w-[100%] md:w-1/2  px-4">
               <div className="text-center md:text-left ">
                 <h1 className="text-lg md:text-xl font-semibold font-serif mb-4">
                   {CourseDtails[id].name1}
@@ -131,7 +131,7 @@ export default function Course() {
                 <p className="pt-2">~{CourseDtails[id].Doration}</p>
               </div>
               <div>
-                <Button color="blue" className="mt-4 w-full">
+                <Button color="blue" className="mt-4 w-[100%]">
                   Enroll Now
                 </Button>
               </div>
@@ -165,12 +165,12 @@ export default function Course() {
               <img
                 src={CourseDtails[id].img}
                 alt=""
-                className="w-full md:w-3/4 object-contain rounded-lg"
+                className="w-[100%] md:w-3/4 object-contain rounded-lg"
               />
             </div>
 
             {/* Course Details */}
-            <div className="w-full md:w-1/2  px-4">
+            <div className="w-[100%] md:w-1/2  px-4">
               <div className="text-center md:text-left ">
                 {/* <h1 className="text-lg md:text-xl font-semibold font-serif mb-4">{CourseDtails[id].name1}</h1> */}
                 <h1 className="text-lg md:text-xl md:text-end font-semibold font-serif mb-4">
@@ -189,7 +189,7 @@ export default function Course() {
                 <p className="pt-2">{UrduTrans[id].Doration}~</p>
               </div>
               <div>
-                <Button color="blue" className="mt-4 w-full">
+                <Button color="blue" className="mt-4 w-[100%]">
                   Enroll Now
                 </Button>
               </div>
@@ -213,10 +213,10 @@ export default function Course() {
             <h5 className="text-2xl text-end font-bold tracking-tight text-gray-900 dark:text-white">
               {items.name2}
             </h5>
-            <p className="w-full text-gray-700 dark:text-gray-400">
+            <p className="w-[100%] text-gray-700 dark:text-gray-400">
               {items.dscpt1}
             </p>
-            <p className="w-full text-gray-700 dark:text-gray-400">
+            <p className="w-[100%] text-gray-700 dark:text-gray-400">
               {items.dscpt2}
             </p>
             <Button

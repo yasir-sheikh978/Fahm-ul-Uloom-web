@@ -14,7 +14,7 @@ export default function CourseHome() {
   return (
     <div>
       {/* Background */}
-      {/* <div className=" w-full h-screen fixed bottom-0 -z-40">
+      {/* <div className=" w-[100%] h-screen fixed bottom-0 -z-40">
         <img src={bg}  alt="" className="size-full" />
       </div> */}
 

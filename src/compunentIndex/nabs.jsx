@@ -43,7 +43,7 @@ export default function Navbarr() {
         <Navbar
           fluid
           rounded
-          className="bg-blue-950 cursor-pointer   z-20 w-full"
+          className="bg-blue-950 cursor-pointer   z-20 w-[100%]"
         >
           <Navbar.Brand onClick={logothre}>
             <img

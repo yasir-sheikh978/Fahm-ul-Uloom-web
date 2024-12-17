@@ -7,7 +7,7 @@ const VideoBanner = () => {
             <div className='grid grid-cols-1 items-center md:grid-cols gap-4 md:gap-8'>
                 {/* video section */}
                 <div>
-                <iframe  src="https://www.youtube.com/embed/LyRLq2C3BEk?si=JcG6BqndC1m-erPq" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen  className='aspect-video w-full'></iframe>
+                <iframe  src="https://www.youtube.com/embed/LyRLq2C3BEk?si=JcG6BqndC1m-erPq" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen  className='aspect-video w-[100%]'></iframe>
                 </div>
                 {/* text section */}
                 <div className='space-y-4 text-center md:text-left text-white'>

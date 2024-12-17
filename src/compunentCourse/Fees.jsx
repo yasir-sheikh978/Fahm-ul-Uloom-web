@@ -5,7 +5,7 @@ export default function Fees() {
   return (
     <div className="bg-gray-200">
       <div className="px-4 md:px-8 lg:px-16">
-        <h1 className="w-full text-center text-2xl md:text-4xl font-serif text-blue-700 h-20 py-4">
+        <h1 className="w-[100%] text-center text-2xl md:text-4xl font-serif text-blue-700 h-20 py-4">
           Why Choose Our
         </h1>
 
@@ -14,7 +14,7 @@ export default function Fees() {
           diverse range of courses designed to enrich your knowledge and skills.
         </p>
 
-        <h2 className="py-8 md:py-12 text-center font-serif w-full text-2xl md:text-4xl text-blue-700">
+        <h2 className="py-8 md:py-12 text-center font-serif w-[100%] text-2xl md:text-4xl text-blue-700">
           Some Features of Our Academy
         </h2>
 
@@ -34,12 +34,12 @@ export default function Fees() {
         </ul>
       </div>
 
-      <h2 className="py-12 text-center font-serif w-full text-4xl text-blue-700">
+      <h2 className="py-12 text-center font-serif w-[100%] text-4xl text-blue-700">
         Fee Structure
       </h2>
 
       <div className="overflow-x-auto mx-2 md:mx-8 shadow-lg shadow-gray-500 border-2 border-black">
-        <table className="w-full text-xs md:text-xl font-serif border-collapse border border-gray-500">
+        <table className="w-[100%] text-xs md:text-xl font-serif border-collapse border border-gray-500">
           <thead className="bg-blue-100">
             <tr>
               <th className="p-4 border border-gray-500">Courses</th>
@@ -80,7 +80,7 @@ export default function Fees() {
           </tbody>
         </table>
       </div>
-      <p className=" w-full text-center text-yellow-500 text-2xl  py-16">
+      <p className=" w-[100%] text-center text-yellow-500 text-2xl  py-16">
         * Join us to benefit from a community of learners dedicated to personal
         and spiritual growth through education*
       </p>

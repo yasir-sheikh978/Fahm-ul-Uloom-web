@@ -10,7 +10,7 @@ const OverviewCounter = () => {
       transition={{ type: 'spring', stiffness: 100 }} 
       className="container p-3 "
     >
-      <div className="max-w-full mx-auto my-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-4 bg-white shadow-lg dark:bg-gray-800 dark:text-white/70">
+      <div className="max-w-[100%] mx-auto my-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-4 bg-white shadow-lg dark:bg-gray-800 dark:text-white/70">
         <div className="flex flex-col items-center justify-center">
           <p className="text-2xl font-bold text-black/80 dark:text-white">
             <CountUp 
