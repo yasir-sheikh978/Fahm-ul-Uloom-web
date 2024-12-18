@@ -7,6 +7,7 @@ import Donation from './routes/Donation'
 import Fatwa from './routes/Fatwa'
 import Quran from './routes/QuranPage'
 import QuranTarjama from './routes/QuranKarimm'
+import Contact from './routes/contact'
 import IT from './Meetteam-Component/IT-Depart'
 
 import {
@@ -15,6 +16,7 @@ import {
 } from "react-router-dom";
 import './index.css'; 
 export default function App() {
+  
 
 
   const router = createBrowserRouter([
@@ -26,6 +28,7 @@ export default function App() {
     { path: "/fatwa", element: (<Fatwa />) },
     { path: "/quran", element: (<Quran />) },
     { path: "/qurantarjama", element: (<QuranTarjama />) },
+    { path: "/contact", element: (<Contact />) },
     { path: "/it", element: (<IT />) },
 
 

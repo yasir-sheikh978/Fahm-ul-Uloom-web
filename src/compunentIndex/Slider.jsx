@@ -9,7 +9,7 @@ import { Zoom } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
 
 
-const images = [pic,pic2];
+const images = [pic2,pic];
 
 
   

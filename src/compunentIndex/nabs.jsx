@@ -10,6 +10,9 @@ import logothree from "../assets/logo/logothree.png";
 import { useNavigate } from "react-router-dom";
 export default function Navbarr() {
   const Navigate = useNavigate();
+  const introAleret =() =>{
+    alert("Work Is In Progress")
+  }
   const long = () => {
     Navigate("/coursetwo");
   };
@@ -27,6 +30,9 @@ export default function Navbarr() {
   };
   const logothre = () => {
     Navigate("/");
+  };
+  const cont = () => {
+    Navigate("/contact");
   };
  
 
@@ -67,9 +73,9 @@ export default function Navbarr() {
             </Navbar.Link>
             <Navbar className="bg-blue-950 hh  text-white hover:text-black  rounded-md md:p-2  font-semibold text-2xl">
               <Dropdown label="About" inline>
-                <Dropdown.Item>Introduction</Dropdown.Item>
+                <Dropdown.Item onClick={introAleret}>Introduction</Dropdown.Item>
                 {/* <Dropdown.Item>Founder</Dropdown.Item>   */}
-                <Dropdown.Item>Our Mission</Dropdown.Item>
+                <Dropdown.Item onClick={introAleret}>Our Mission</Dropdown.Item>
               </Dropdown>
             </Navbar>
             <Navbar className="bg-blue-950 hh  text-white hover:text-black  rounded-md md:p-2  font-semibold text-2xl">
@@ -80,7 +86,7 @@ export default function Navbarr() {
             </Navbar>
             <Navbar className="bg-blue-950 hh  text-center  text-white hover:text-black   rounded-md   font-semibold text-2xl ">
               <Dropdown label="Meet The Team" inline className="hh">
-                <Dropdown.Item>Our Treacher</Dropdown.Item>
+                <Dropdown.Item onClick={introAleret}>Our Treacher</Dropdown.Item>
                 <Dropdown.Item>IT Team</Dropdown.Item>
                 {/* <Dropdown.Item>Our Muftis</Dropdown.Item> */}
               </Dropdown>
@@ -91,7 +97,7 @@ export default function Navbarr() {
             >
               Donatio
             </Navbar.Link> */}
-            <Navbar.Link className="  border-black   text-white hover:bg-blue-950  rounded-md md:p-2  font-semibold text-2xl">
+            <Navbar.Link onClick={cont} className="  border-black   text-white hover:bg-blue-950  rounded-md md:p-2  font-semibold text-2xl">
               Contact
             </Navbar.Link>
           </Navbar.Collapse>
