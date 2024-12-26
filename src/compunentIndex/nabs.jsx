@@ -45,7 +45,7 @@ export default function Navbarr() {
   return (
    
 
-      <div className="ha sticky top-0 z-50" >
+      <div className="ha sticky top-0 z-40" >
         <Navbar
           fluid
           rounded
@@ -60,7 +60,7 @@ export default function Navbarr() {
           </Navbar.Brand>
           <div className="flex md:order-2">
             <Button onClick={don} className="bg-white hover:text-white text-black text-lg">
-            Donatio
+            Donation
             </Button>
             <Navbar.Toggle />
           </div>

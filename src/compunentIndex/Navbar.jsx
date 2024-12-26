@@ -43,12 +43,14 @@ export default function Navbarr() {
         /> */}
         </h1>
       </div>
-      <div className="w-[100%] h-16 flex justify-around items-center">
+      <div className="flex w-[100%] justify-between items-center">
+
+      <div className="w-[10%] h-fit flex items-start flex-col">
         <button
           data-aos="flip-left"
      data-aos-easing="ease-out-cubic"
      data-aos-duration="2000"
-          className="bg-blue-950 text-white hover:bg-blue-800 rounded-md p-2 font-semibold uppercase "
+          className="bg-blue-950 text-white hover:bg-blue-800 rounded-r-3xl	  my-2 p-2 font-semibold uppercase "
         >
           <a href="https://quran.com/1" target="blank">
             quran
@@ -58,7 +60,7 @@ export default function Navbarr() {
           data-aos="flip-left"
      data-aos-easing="ease-out-cubic"
      data-aos-duration="2000"
-          className="bg-blue-950 text-white hover:bg-blue-800 rounded-md p-2 font-semibold uppercase "
+          className="bg-blue-950 text-white hover:bg-blue-800  rounded-r-3xl	  my-2 p-2 font-semibold uppercase "
         >
           hadith
         </button>
@@ -66,7 +68,7 @@ export default function Navbarr() {
           data-aos="flip-left"
      data-aos-easing="ease-out-cubic"
      data-aos-duration="2000"
-          className="bg-blue-950 text-white hover:bg-blue-800 rounded-md p-2 font-semibold uppercase "
+          className="bg-blue-950 text-white hover:bg-blue-800  rounded-r-3xl my-2 p-2 font-semibold uppercase "
         >
           <a href="https://www.dawateislami.net/bookslibrary/" target="blank">
             books
@@ -77,15 +79,17 @@ export default function Navbarr() {
      data-aos-easing="ease-out-cubic"
      data-aos-duration="2000"
           onClick={fat}
-          className="bg-blue-950 text-white hover:bg-blue-800 rounded-md p-2 font-semibold uppercase "
+          className="bg-blue-950 text-white hover:bg-blue-800  rounded-r-3xl my-2 p-2 font-semibold uppercase "
         >
           ask mufti
         </button>
       </div>
 
-      <div data-aos="zoom-in" className="h-36 w-[100%]  flex justify-center py-2">
-        <img src={logoOne} className="h-28  sm:h-32" alt="" />
+      <div data-aos="zoom-in" className="h-28 sm:h-36 w-[90%]  flex justify-start items-center py-2">
+        <img src={logoOne} className="h-20  sm:h-32" alt="" />
       </div>
+      </div>
+
     </div>
   );
 }

@@ -35,7 +35,7 @@ justify-content: center !important;
 .quranic-text {
     font-family: 'Scheherazade', serif;
     font-size: 24px; /* Adjust size as needed */
-    direction: rtl; /* Right-to-left direction for Arabic */
+    /* direction: rtl; Right-to-left direction for Arabic */
   }
   
 

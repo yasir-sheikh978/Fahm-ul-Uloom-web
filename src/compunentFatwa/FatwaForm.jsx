@@ -57,10 +57,10 @@ const CustomForm = () => {
     };
 
     emailjs.send(
-        'service_a9ux9eg',      // Replace with your EmailJS Service ID
-        'template_jyqxxdm',      // Replace with your EmailJS Template ID
+        'service_moxew3c',      // Replace with your EmailJS Service ID
+        'template_71wdf83',      // Replace with your EmailJS Template ID
         templateParams,
-        'Qisr1QFqKu6kGqHui'           // Replace with your EmailJS User ID
+        'cXCGc231ud9jHkTt9'           // Replace with your EmailJS User ID
       )
 
     .then(
@@ -75,10 +75,10 @@ const CustomForm = () => {
         
         // Send auto-reply
         emailjs.send(
-            'service_a9ux9eg',      // Same EmailJS Service ID
-            'template_60elaj9', // Replace with Template ID for auto-reply
+          'service_moxew3c',      // Replace with your EmailJS Service ID
+          'template_7bx3fwl',   // Replace with Template ID for auto-reply
             { email,name },               // Only the user's email is required here
-            'Qisr1QFqKu6kGqHui'           // Same User ID/Public Key
+            'cXCGc231ud9jHkTt9'           // Same User ID/Public Key
           )
   
         .then((response) => {
