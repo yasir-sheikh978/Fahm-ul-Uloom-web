@@ -3,12 +3,13 @@ import DonationForm from "../Donation/Donation-Form";
 import Heroimage from "../Images/world-.jpg"
 import { motion } from "framer-motion";
 
-
+// ${Heroimage}
+// lg:items-start lg:text-left 
 
 const bgstyle = {
-  backgroundImage: `url(${Heroimage})`,
+  backgroundImage: `url(https://cdn.arabsstock.com/uploads/images/141912/image-141912-luminous-decorative-metal-lantern-bowl-full-dates-next-it-thumbnail.webp)`,
   backgroundSize: "cover",
-  backgroundPosition: "top",
+  backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
   width: "100%"
 };
@@ -36,11 +37,11 @@ const Hero = () => {
         <div className="container">
           <div className="grid gird-cols-1 lg:grid-cols-2 items-center gap-12 text-amber-50">
             {/* hero text section */}
-            <div className=" flex flex-col items-center text-center gap-5 lg:items-start lg:text-left lg-max-w-[450px]">
-              <motion.h1 variants={FadeUp(0.2)} initial="initial" animate="animate" className="text-5xl  lg:text-7xl font-bold">join us in chnaging lives</motion.h1>
-              <motion.p variants={FadeUp(0.4)} initial="initial" animate="animate">
+            <div className=" flex flex-col items-center text-center gap-5 lg-max-w-[450px]">
+              <motion.h1 variants={FadeUp(0.2)} initial="initial" animate="animate" className="text-5xl  lg:text-7xl font-bold">"We need your donation for spreading Islam"</motion.h1>
+              {/* <motion.p variants={FadeUp(0.4)} initial="initial" animate="animate">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad atque quas accusantium tenetur ut nostrum, autem dignissimos aut amet nemo explicabo beatae exercitationem. Inventore.
-              </motion.p>
+              </motion.p> */}
               {/* <div className="space-x-4">
                 <motion.button variants={FadeUp(0.6)} initial="initial" animate="animate" className="btn-outline bg-indigo-900">
                   Get started

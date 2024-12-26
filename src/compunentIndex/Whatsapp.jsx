@@ -3,7 +3,7 @@ import pic from "../assets/WhatsApp.svg.png";
 
 export default function Whatsapp() {
   function navigateToWhatsApp() {
-    const phoneNumber = "923182320684"; // WhatsApp number in international format
+    const phoneNumber = "923009214180"; // WhatsApp number in international format
     const message = "Hello, I would like to know more about your services."; // Default message
     const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappURL, "_blank");

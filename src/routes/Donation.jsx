@@ -1,8 +1,8 @@
 import React,{useEffect} from "react";
 import {useLocation } from 'react-router-dom';
 import Bannersection from "../components/BannerSection/Bannersection";
-import Bannersection2 from "../components/BannerSection/Bannersection2";
-import Blogsection from "../components/Blogs/Blogsection";
+// import Bannersection2 from "../components/BannerSection/Bannersection2";
+// import Blogsection from "../components/Blogs/Blogsection";
 import Hero from "../components/Hero/Hero";
 import Navbar from "../compunentIndex/Navbar";
 import Nab from "../compunentIndex/nabs";
@@ -41,9 +41,9 @@ export const App = () => {
       {/* <Overveiwcounter/> */}
       <OurVision/>
       <Bannersection/>
-      <Bannersection2/>
+      {/* <Bannersection2/> */}
       <VideoBanner/>
-      <Blogsection/>
+      {/* <Blogsection/> */}
       <Footer/>
     </main>
     </>
