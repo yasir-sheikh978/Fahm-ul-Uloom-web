@@ -19,7 +19,7 @@ export default function CourseHome() {
       </div> */}
 
       {/* Content */}
-      <div className="w-[100%] BG h-[50vh] md:h-[75vh] bg-transparent flex flex-col md:flex-row justify-center items-center md:justify-around">
+      <div className="w-[100%] BG h-[60vw] sm:h-[40vw] bg-transparent flex flex-col md:flex-row justify-center items-center md:justify-around">
         {/* Left Content */}
         <div className="text-center md:text-left ">
           <h1
