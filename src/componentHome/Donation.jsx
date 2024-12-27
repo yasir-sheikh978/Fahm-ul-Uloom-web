@@ -15,7 +15,7 @@ const Bannersection = () => {
         <img
           src={pic}
           alt="Donation"
-          className="mx-auto w-[100%] md:w-[45%] h-[40vh] sm:h-[60vh] md:h-[75vh] object-cover rounded-3xl"
+          className="mx-auto w-[100%] md:w-[45%] h-[40vh] sm:h-[60vw] md:h-[30vw] object-cover rounded-3xl"
           data-aos="fade-right"
         />
         

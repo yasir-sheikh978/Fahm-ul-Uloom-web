@@ -4,6 +4,17 @@ import React from "react";
 const ContactForm = () => {
   return (
     <div className="h-fit bg-gray-100 flex items-center justify-center flex-col p-6">
+        <div className=" flex justify-around w-[100%] h-40 items-center">
+        <p className="bg-blue-700 p-4  rounded-md my-2 w-40 text-center  text-white font-bold text-xl hover:scale-110">
+          facebook
+        </p>
+        <p className="bg-green-700 p-4  rounded-md my-2 w-40 text-center  text-white font-bold text-xl hover:scale-110">
+          whatsapp
+        </p>
+        <p className="bg-red-600 p-4  rounded-md my-2 w-40 text-center  text-white font-bold text-xl hover:scale-110">
+          Youtube 
+        </p>
+      </div>
       <div className="w-full max-w-md bg-white shadow-md rounded-lg p-8">
         <h2 className="text-2xl font-bold text-blue-600 mb-6 text-center">Contact Us</h2>
         <form>
@@ -53,8 +64,10 @@ const ContactForm = () => {
             Send Message
           </button>
         </form>
+  
 
       </div>
+    
         <div className="mt-8 w-full h-screen">
           <h3 className="text-lg font-semibold text-blue-600 mb-4">Find Us Here</h3>
           <iframe
