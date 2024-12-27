@@ -43,14 +43,14 @@ export default function Navbarr() {
         /> */}
         </h1>
       </div>
-      <div className="flex w-[100%] justify-between items-center">
+      <div className=" sm:flex w-[100%] sm:justify-between sm:items-center">
 
-      <div className="w-[10%] h-fit flex items-start flex-col">
+      <div className="w-[100%] h-fit flex justify-around items-center sm:flex-col sm:items-start sm:w-[10%]">
         <button
           data-aos="flip-left"
      data-aos-easing="ease-out-cubic"
      data-aos-duration="2000"
-          className="bg-blue-950 text-white hover:bg-blue-800 rounded-r-3xl	  my-2 p-2 font-semibold uppercase "
+          className="bg-blue-950 text-white hover:bg-blue-800 rounded-lg sm:rounded-r-3xl	  my-2 p-2 font-semibold uppercase "
         >
           <a href="https://quran.com/1" target="blank">
             quran
@@ -60,7 +60,7 @@ export default function Navbarr() {
           data-aos="flip-left"
      data-aos-easing="ease-out-cubic"
      data-aos-duration="2000"
-          className="bg-blue-950 text-white hover:bg-blue-800  rounded-r-3xl	  my-2 p-2 font-semibold uppercase "
+          className="bg-blue-950 text-white hover:bg-blue-800 rounded-lg sm:rounded-r-3xl	  my-2 p-2 font-semibold uppercase "
         >
           hadith
         </button>
@@ -68,7 +68,7 @@ export default function Navbarr() {
           data-aos="flip-left"
      data-aos-easing="ease-out-cubic"
      data-aos-duration="2000"
-          className="bg-blue-950 text-white hover:bg-blue-800  rounded-r-3xl my-2 p-2 font-semibold uppercase "
+          className="bg-blue-950 text-white hover:bg-blue-800  rounded-lg sm:rounded-r-3xl my-2 p-2 font-semibold uppercase "
         >
           <a href="https://www.dawateislami.net/bookslibrary/" target="blank">
             books
@@ -79,7 +79,7 @@ export default function Navbarr() {
      data-aos-easing="ease-out-cubic"
      data-aos-duration="2000"
           onClick={fat}
-          className="bg-blue-950 text-white hover:bg-blue-800  rounded-r-3xl my-2 p-2 font-semibold uppercase "
+          className="bg-blue-950 text-white hover:bg-blue-800 w-28 rounded-lg sm:rounded-r-3xl my-2 p-2 font-semibold uppercase "
         >
           ask mufti
         </button>

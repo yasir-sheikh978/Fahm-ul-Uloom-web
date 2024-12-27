@@ -22,7 +22,7 @@ const images = [pic2,pic];
         <div className="slide-container">
           <Zoom scale={1.5} cssClass="-z-20">
             {
-                images.map((each, index) => <img key={index} className="h-[54vw] md:h-[65vh] xl:h-[90vh] sm:h-[50vw]" style={{width: "100vw"}} src={each} />)
+                images.map((each, index) => <img key={index} className="h-[54vw] md:h-[65vw] xl:h-[90vh] sm:h-[50vw]" style={{width: "100vw"}} src={each} />)
             }
           </Zoom>
         </div>
