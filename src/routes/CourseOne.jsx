@@ -9,6 +9,7 @@ import ShortCourse from "../compunentCourse/CourseOne/CourseOne";
 import Nazra from "../compunentCourse/Nazra";
 import Fees from "../compunentCourse/Fees";
 import Whatsapp from "../compunentIndex/Whatsapp";
+import CurrentCourse from '../compunentCourse/CurrentCourse'
 
 import "flowbite";
 function CourseOne() {
@@ -35,9 +36,12 @@ function CourseOne() {
       <Nab />
       <Slider />
       <Fees />
+      <CurrentCourse />
+
+      
       <Nazra />
 
-      {/* <Detail /> */}
+
 
       <ShortCourse />
 

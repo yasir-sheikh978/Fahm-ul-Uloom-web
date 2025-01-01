@@ -8,70 +8,31 @@ import norani from "../assets/courseOne/norani.jpg";
 export default function Course() {
   const CourseDtails = [
     {
-      name1: "Online Norani Qaida",
-      btn: " Admission Off",
+      name1: "Q%A Session On E-Commerce",
       img: norani,
-      dscpt1: "Foundation of Quranic Reading",
-      dscpt2: "Correct Pronunciation and Tajweed",
-      dscpt3: "Preparation for Quranic Recitation",
-      dscpt4: "Course For Both Children And Adults",
+      dscpt1: "Online Trading And Marketing ",
+      dscpt2: "Stock Market",
+      dscpt3: "Bitcoin And Virtual Currencise",
+      dscpt4: "Drop Shipping",
+      dscpt5: "Freelancing And Commission",
       Doration:
-        "Class 4 Days In A Week , Combine And Individual Classes Available",
+        "One Day Program After Isha (8:15 to 9:45) 11 Jan Saturday",
     },
-    {
-      name1: "Online Nazra e Quran",
-      btn: " Admission Off",
-      img: Nazra,
-      dscpt1: "Proper Pronunciation and Recitation",
-      dscpt2: "Familiarity with Quranic Text",
-      dscpt3: "Enhanced Focus and Discipline",
-      dscpt4: "Course For Both Children And Adults",
-      Doration:
-        "Class 4 Days In A Week , Combine And Individual Classes Available",
-    },
-    {
-      name1: "Online Hifzul Quran",
-      btn: " Admission Off",
-      img: hafiz,
-      dscpt1: "Cognitive Development",
-      dscpt2: "Reward in the Hereafter",
-      dscpt3: "Understanding of Islamic Teachings",
-      dscpt4: "Course For Both Children And Adults",
-      Doration:
-        "Class 4 Days In A Week , Combine And Individual Classes Available",
-    },
+ 
+  
   ];
   const UrduTrans = [
     {
       name1: "  ناظرہ قرآن کورس",
-      btn: " Admission Off",
       img: norani,
       dscpt1: "قرآنی پڑھائی کی بنیاد",
       dscpt2: "صحیح تلفظ اور تجوید",
       dscpt3: "قرآن کی تلاوت کی تیاری",
       dscpt4: "یہ کورس بچوں اور بڑوں دونوں کے لیے ہے",
-      Doration: "ہفتے میں 4 دن کلاس، اجتماعی اور انفرادی کلاسز دستیاب ہیں",
-    },
-    {
-      name1: "  نورانی قاعدہ کورس",
-      btn: " Admission Off",
-      img: Nazra,
-      dscpt1: "صحیح تلفظ اور تجوید",
-      dscpt2: "قرآنی متن سے واقفیت",
-      dscpt3: "توجہ اور نظم و ضبط میں بہتری",
       dscpt4: "یہ کورس بچوں اور بڑوں دونوں کے لیے ہے",
       Doration: "ہفتے میں 4 دن کلاس، اجتماعی اور انفرادی کلاسز دستیاب ہیں",
     },
-    {
-      name1: "  ناظرہ قرآن کورس",
-      btn: " Admission Off",
-      img: hafiz,
-      dscpt1: "ذہنی ترقی",
-      dscpt2: "آخرت میں انعامات",
-      dscpt3: "اسلامی تعلیمات کی سمجھ",
-      dscpt4: "یہ کورس بچوں اور بڑوں دونوں کے لیے ہے",
-      Doration: "ہفتے میں 4 دن کلاس، اجتماعی اور انفرادی کلاسز دستیاب ہیں",
-    },
+  
   ];
   const [id, setid] = useState(0);
   const [hid, sethid] = useState("hidden");
@@ -80,8 +41,8 @@ export default function Course() {
 
   return (
     <div className="bg-gray-200">
-       <h1 className="flex justify-center items-center bg-gray-200 text-center h-20  text-4xl font-semibold font-serif border-b-2 border-gray-400">
-        COMMON COURSES
+          <h1 className="flex justify-center items-center bg-gray-200 text-center h-20  text-4xl font-semibold font-serif border-b-2 border-gray-400">
+        CURRENT COURSES
       </h1>
      
       <div
@@ -134,6 +95,7 @@ export default function Course() {
                 <p className="pt-2">~{CourseDtails[id].dscpt2}</p>
                 <p className="pt-2">~{CourseDtails[id].dscpt3}</p>
                 <p className="pt-2">~{CourseDtails[id].dscpt4}</p>
+                <p className="pt-2">~{CourseDtails[id].dscpt5}</p>
               </div>
               <div className="py-2">
                 <h2 className="text-md md:text-lg font-medium">Duration :</h2>
@@ -141,7 +103,7 @@ export default function Course() {
               </div>
               <div>
                 <Button color="blue" className="mt-4 w-[100%]">
-                {CourseDtails[id].btn}
+                  Enroll Now
                 </Button>
               </div>
             </div>
@@ -199,7 +161,7 @@ export default function Course() {
               </div>
               <div>
                 <Button color="blue" className="mt-4 w-[100%]">
-                {UrduTrans[id].btn}
+                  Enroll Now
                 </Button>
               </div>
             </div>

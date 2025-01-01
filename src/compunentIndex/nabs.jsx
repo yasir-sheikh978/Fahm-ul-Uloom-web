@@ -80,8 +80,8 @@ export default function Navbarr() {
             </Navbar>
             <Navbar className="bg-blue-950 hh  text-white hover:text-black  rounded-md md:p-2  font-semibold text-2xl">
               <Dropdown label="Course" inline>
-                <Dropdown.Item onClick={long}>Long Course</Dropdown.Item>
                 <Dropdown.Item onClick={short}>Short Course</Dropdown.Item>
+                <Dropdown.Item onClick={long}>Long Course</Dropdown.Item>
               </Dropdown>
             </Navbar>
             <Navbar className="bg-blue-950 hh  text-center  text-white hover:text-black   rounded-md   font-semibold text-2xl ">
