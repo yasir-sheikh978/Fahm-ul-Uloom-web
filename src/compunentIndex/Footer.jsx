@@ -114,34 +114,34 @@ export default function Footer() {
                     className="flex text-base text-white transition-all duration-200 hover:text-blue-400 focus:text-blue-400"
                   >
                     {" "}
-                    ABOUT{" "}
+                    HOME{" "}
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href="#"
+                    href="/courseone"
                     title=""
                     className="flex text-base text-white transition-all duration-200 hover:text-blue-400 focus:text-blue-400"
                   >
                     {" "}
-                    COURSE{" "}
+                   SHORT COURSES{" "}
                   </Link>
                 </li>
 
                 <li>
                   <Link
-                    href="#"
+                    href="/coursetwo"
                     title=""
                     className="flex text-base text-white transition-all duration-200 hover:text-blue-400 focus:text-blue-400"
                   >
                     {" "}
-                    TUTOR{" "}
+                    LONG COURSES{" "}
                   </Link>
                 </li>
 
                 <li>
                   <Link
-                    href="#"
+                    href="/donation"
                     title=""
                     className="flex text-base text-white transition-all duration-200 hover:text-blue-400 focus:text-blue-400"
                   >
@@ -171,7 +171,7 @@ export default function Footer() {
               <ul className="mt-6 space-y-4">
                 <li>
                   <Link
-                    href="#"
+                    href="./fatwa"
                     title=""
                     className="flex text-base text-white transition-all duration-200 hover:text-blue-400 focus:text-blue-400"
                   >
@@ -217,7 +217,7 @@ export default function Footer() {
                     className="flex text-base text-white transition-all duration-200 hover:text-blue-400 focus:text-blue-400"
                   >
                     {" "}
-                    famululoom@gmail.com{" "}
+                    fahmululoom@gmail.com{" "}
                   </Link>
                 </li>
 
@@ -228,7 +228,7 @@ export default function Footer() {
                     className="flex text-base text-white transition-all duration-200 hover:text-blue-400 focus:text-blue-400"
                   >
                     {" "}
-                    +92-3182320684{" "}
+                    +92-3009214180{" "}
                   </Link>
                 </li>
 

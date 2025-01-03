@@ -36,11 +36,11 @@ export default function Navbarr() {
   };
  
 
-  useEffect(() => {
-    AOS.init({
-      duration: 1000, 
-    });
-  }, []);
+  // useEffect(() => {
+  //   AOS.init({
+  //     duration: 1000, 
+  //   });
+  // }, []);
 
   return (
    
@@ -87,7 +87,7 @@ export default function Navbarr() {
             <Navbar className="bg-blue-950 hh  text-center  text-white hover:text-black   rounded-md   font-semibold text-2xl ">
               <Dropdown label="Meet The Team" inline className="hh">
                 <Dropdown.Item onClick={introAleret}>Our Treacher</Dropdown.Item>
-                <Dropdown.Item>IT Team</Dropdown.Item>
+                <Dropdown.Item onClick={introAleret}>IT Team</Dropdown.Item>
                 {/* <Dropdown.Item>Our Muftis</Dropdown.Item> */}
               </Dropdown>
             </Navbar>

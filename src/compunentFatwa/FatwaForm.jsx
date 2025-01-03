@@ -1,6 +1,7 @@
 import React, { useState, useRef } from "react";
 import emailjs from 'emailjs-com';
 import imageCompression from "browser-image-compression";
+// import { CgNametag } from "react-icons/cg";
 
 const CustomForm = () => {
   const [name, setName] = useState('');
@@ -56,6 +57,9 @@ const CustomForm = () => {
       img,
     };
 
+    const dummy = "Thank you for contacting us! We’ve received your Question, and you can expect a reply within 10 days ."
+    const dummy2 = "If you need a quick fatwa, please contact us at this number: 03009214180"
+
     emailjs.send(
         'service_moxew3c',      // Replace with your EmailJS Service ID
         'template_71wdf83',      // Replace with your EmailJS Template ID
@@ -77,7 +81,7 @@ const CustomForm = () => {
         emailjs.send(
           'service_moxew3c',      // Replace with your EmailJS Service ID
           'template_7bx3fwl',   // Replace with Template ID for auto-reply
-            { email,name },               // Only the user's email is required here
+            { email,dummy,dummy2,name },               // Only the user's email is required here
             'cXCGc231ud9jHkTt9'           // Same User ID/Public Key
           )
   

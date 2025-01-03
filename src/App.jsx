@@ -52,6 +52,7 @@ const Quran = React.lazy(() => import('./routes/QuranPage'));
 const QuranTarjama = React.lazy(() => import('./routes/QuranKarimm'));
 const Contact = React.lazy(() => import('./routes/contact'));
 const IT = React.lazy(() => import('./Meetteam-Component/IT-Depart'));
+const Registration = React.lazy(() => import('./routes/registration'));
 
 export default function App() {
   const router = createBrowserRouter([
@@ -64,6 +65,7 @@ export default function App() {
     { path: "/qurantarjama", element: (<Suspense fallback={<Loader />}><QuranTarjama /></Suspense>) },
     { path: "/contact", element: (<Suspense fallback={<Loader />}><Contact /></Suspense>) },
     { path: "/it", element: (<Suspense fallback={<Loader />}><IT /></Suspense>) },
+    { path: "/registration", element: (<Suspense fallback={<Loader />}><Registration /></Suspense>) },
   ]);
 
   return <RouterProvider router={router} />;

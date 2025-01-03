@@ -10,7 +10,7 @@ const longCourse = () => {
 
     return (
        
-        <div className="bg w-[100%] h-fit flex flex-col md:flex-row justify-around items-center text-white px-6 py-10 md:px-12">
+        <div className="bg bg-opacity-100 w-[100%] h-fit flex flex-col md:flex-row justify-around items-center text-white px-6 py-10 md:px-12">
         <div className="flex flex-col justify-center items-center text-center md:text-left space-y-2">
           <h1 data-aos="fade-down" className="text-2xl font-semibold">"Hadith"</h1>
           <p data-aos="fade-down" className="text-lg w-[92%] md:w-[80%]">

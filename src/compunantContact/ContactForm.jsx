@@ -2,13 +2,24 @@
 import React from "react";
 
 const ContactForm = () => {
+
+  function navigateToWhatsApp() {
+    const phoneNumber = "923009214180"; // WhatsApp number in international format
+    const message = "Hello, I would like to know more about your services."; // Default message
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappURL, "_blank");
+  }
+
+  const send = ()=>{
+    alert("Msg Send")
+  }
   return (
     <div className="h-fit bg-gray-100 flex items-center justify-center flex-col p-6">
         <div className=" flex justify-around w-[100%] h-40 items-center">
         <p className="bg-blue-700 p-4  rounded-md my-2 w-40 text-center  text-white font-bold text-xl hover:scale-110">
           facebook
         </p>
-        <p className="bg-green-700 p-4  rounded-md my-2 w-40 text-center  text-white font-bold text-xl hover:scale-110">
+        <p onClick={navigateToWhatsApp} className="bg-green-700 p-4  rounded-md my-2 w-40 text-center  text-white font-bold text-xl hover:scale-110">
           whatsapp
         </p>
         <p className="bg-red-600 p-4  rounded-md my-2 w-40 text-center  text-white font-bold text-xl hover:scale-110">
@@ -58,6 +69,7 @@ const ContactForm = () => {
           </div>
 
           <button
+          onClick={send}
             type="submit"
             className="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300"
           >

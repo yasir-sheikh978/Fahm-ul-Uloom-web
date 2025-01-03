@@ -11,6 +11,7 @@ import Donate from '../componentHome/Donation'
 import CourseHome from '../componentHome/Quran'
 import Short from '../componentHome/short'
 import Long from '../componentHome/long'
+import post from "../assets/popup/post.jpg"
 import 'flowbite';
 import { useNavigate } from "react-router-dom";
 
@@ -20,12 +21,14 @@ function Index(){
 
   const [isVisible, setIsVisible] = useState(true);
   const oneDay = () => {
-    Navigate("/courseone");
+    setIsVisible(false);
+    localStorage.setItem("divHidd", "true");
+    Navigate("/registration");
   };
 
   // Check localStorage on component mount
   useEffect(() => {
-    const hidden = localStorage.getItem("divHiddn");
+    const hidden = localStorage.getItem("divHidd");
     if (hidden === "true") {
       setIsVisible(false);
     }
@@ -34,7 +37,7 @@ function Index(){
   // Hide the div and store the state in localStorage
   const hideDiv = () => {
     setIsVisible(false);
-    localStorage.setItem("divHiddn", "true");
+    localStorage.setItem("divHidd", "true");
   };
 
     const ScrollToTop = () => {
@@ -57,20 +60,29 @@ function Index(){
         <ScrollToTop />
         <div>
       {isVisible && (
-        <div className="h-screen w-[100%] fixed z-50 bg-gray-100 ">
-          <button onClick={hideDiv} style={{ color: "white", border: "none", padding: "5px 10px" }} className="text-end w-full text-4xl">
+        <div className="h-[100%] w-[100%] fixed z-50 bg-gray-50 ">
+          <button onClick={hideDiv} style={{ color: "black", border: "none",}} className="text-end px-4  w-full text-4xl text-black">
             ✖
           </button>
-          <div className="flex justify-center items-center ">
+          <div className="block sm:flex justify-around items-center h-full  ">
+            <div className="w-[100%] sm:w-[40%]">
+          <img src={post} className="w-[100%] sm:w-[70%] " alt="" />
 
-          <p className="text-xl text-red-500">GOOD NEWS FOR YOU </p>
+            </div>
+
+
+          <div>
+          <p className="text-2xl py-2 text-red-500">For Registration</p>
+          <button onClick={oneDay} className="bg-blue-400 rounded p-2 text-white font-semibold hover:bg-blue-600">Click Here</button>
+
+          </div>
           </div>
         </div>
       )}
     </div>
 
-    <div className="flex justify-between items-center px-2 bg-yellow-200 text-xl py-2">
-      One Day Program<button onClick={oneDay} className="bg-blue-400 rounded p-2 text-white font-semibold hover:bg-blue-600">Learn More</button>
+    <div className="flex justify-around font-semibold items-center px-2 bg-yellow-200 text-xl py-2">
+      Registration For Q&A Session On E-Commerce <button onClick={oneDay} className="bg-blue-400 rounded p-2 text-white font-semibold hover:bg-blue-600">Click Here</button>
     </div>
            <Navbar />
            <Nab />
