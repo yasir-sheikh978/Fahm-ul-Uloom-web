@@ -10,7 +10,7 @@ export default function Whatsapp() {
   }
 
   return (
-    <div className="w-[100%] h-20 px-4 flex justify-end fixed bottom-0 z-50" >
+    <div className="w-[100%] h-20 px-4 flex justify-end fixed bottom-0 z-40" >
       {/* Chat Box */}
       <div className="absolute bottom-20 right-4 bg-green-100 border border-green-500 rounded-lg p-2 shadow-lg">
         <p className="text-gray-800 font-medium">How can I help you?</p>

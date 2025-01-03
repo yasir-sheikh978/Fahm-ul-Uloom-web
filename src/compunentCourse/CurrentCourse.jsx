@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import { Card } from "flowbite-react";
 import { Button } from "flowbite-react";
-import hafiz from "../assets/courseOne/hafiz.png";
-import Nazra from "../assets/courseOne/nazra1.jpg";
-import norani from "../assets/courseOne/norani.jpg";
-
+// import hafiz from "../assets/courseOne/hafiz.png";
+// import Nazra from "../assets/courseOne/nazra1.jpg";
+// import norani from "../assets/courseOne/norani.jpg";
+import post from "../assets/popup/post.jpg"
 export default function Course() {
   const CourseDtails = [
     {
       name1: "Q%A Session On E-Commerce",
-      img: norani,
+      img: post,
       dscpt1: "Online Trading And Marketing ",
       dscpt2: "Stock Market",
       dscpt3: "Bitcoin And Virtual Currencise",
@@ -24,7 +24,7 @@ export default function Course() {
   const UrduTrans = [
     {
       name1: "  ناظرہ قرآن کورس",
-      img: norani,
+      img: post,
       dscpt1: "قرآنی پڑھائی کی بنیاد",
       dscpt2: "صحیح تلفظ اور تجوید",
       dscpt3: "قرآن کی تلاوت کی تیاری",
