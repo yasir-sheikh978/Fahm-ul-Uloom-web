@@ -38,6 +38,7 @@
 //   return <RouterProvider router={router} />
 
 // }
+
 import React, { Suspense } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import './index.css';
