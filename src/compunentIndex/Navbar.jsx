@@ -46,7 +46,7 @@ export default function Navbarr() {
           data-aos="flip-left"
      data-aos-easing="ease-out-cubic"
      data-aos-duration="2000"
-          className="bg-blue-950 text-white hover:bg-blue-800 rounded-lg sm:rounded-r-3xl	  my-2 p-2 font-semibold uppercase "
+          className="bg-blue-950 text-white hover:bg-blue-800 rounded-lg sm:rounded-r-3xl	sm:rounded-l-none  my-2 p-2 font-semibold uppercase "
         >
           <a href="https://quran.com/1" target="blank">
             quran
@@ -56,7 +56,7 @@ export default function Navbarr() {
           data-aos="flip-left"
      data-aos-easing="ease-out-cubic"
      data-aos-duration="2000"
-          className="bg-blue-950 text-white hover:bg-blue-800 rounded-lg sm:rounded-r-3xl	  my-2 p-2 font-semibold uppercase "
+          className="bg-blue-950 text-white hover:bg-blue-800 rounded-lg sm:rounded-r-3xl	sm:rounded-l-none  my-2 p-2 font-semibold uppercase "
         >
           hadith
         </button>
@@ -64,7 +64,7 @@ export default function Navbarr() {
           data-aos="flip-left"
      data-aos-easing="ease-out-cubic"
      data-aos-duration="2000"
-          className="bg-blue-950 text-white hover:bg-blue-800  rounded-lg sm:rounded-r-3xl my-2 p-2 font-semibold uppercase "
+          className="bg-blue-950 text-white hover:bg-blue-800  rounded-lg sm:rounded-r-3xl sm:rounded-l-none	 my-2 p-2 font-semibold uppercase "
         >
           <a href="https://www.dawateislami.net/bookslibrary/" target="blank">
             books
@@ -75,7 +75,7 @@ export default function Navbarr() {
      data-aos-easing="ease-out-cubic"
      data-aos-duration="2000"
           onClick={fat}
-          className="bg-blue-950 text-white hover:bg-blue-800 w-28 rounded-lg sm:rounded-r-3xl my-2 p-2 font-semibold uppercase "
+          className="bg-blue-950 text-white hover:bg-blue-800 w-28 rounded-lg sm:rounded-r-3xl sm:rounded-l-none my-2 p-2 font-semibold uppercase "
         >
           ask mufti
         </button>
