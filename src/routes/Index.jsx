@@ -36,7 +36,7 @@ function Index(){
     
     // Hide the div and store the state in localStorage
     const hideDiv = () => {
-    localStorage.setItem("divHidd", "false");
+    localStorage.setItem("divHidd", "true");
     setIsVisible(false);
   };
 
