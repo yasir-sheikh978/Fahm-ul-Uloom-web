@@ -28,15 +28,15 @@ function Index(){
 
   // Check localStorage on component mount
   useEffect(() => {
-    const hidden = localStorage.getItem("divHidd");
-    if (hidden === "true") {
-        setIsVisible(false);
-      }
+    // const hidden = localStorage.getItem("divHidd");
+    // if (hidden === "true") {
+    //     setIsVisible(false);
+    //   }
+      localStorage.setItem("divHidd", "false");
     }, []);
     
     // Hide the div and store the state in localStorage
     const hideDiv = () => {
-    localStorage.setItem("divHidd", "true");
     setIsVisible(false);
   };
 
@@ -60,7 +60,7 @@ function Index(){
         <ScrollToTop />
         <div>
       {isVisible && (
-        <div className="h-[100%] w-[100%] fixed z-50 bg-gray-50 ">
+        <div className="h-[100%] w-[100%] fixed z-50 bg-transparent backdrop-blur-2xl	 	">
           <button onClick={hideDiv} style={{ color: "black", border: "none",}} className="text-end px-4  w-full text-4xl text-black">
             ✖
           </button>
@@ -72,7 +72,7 @@ function Index(){
 
 
           <div className="flex items-center justify-center flex-col">
-          <p className="text-2xl font-semibold py-2 text-red-700">For Registration</p>
+          <p className="text-2xl font-semibold py-2 text-white">For Registration</p>
           <button onClick={oneDay} className="bg-blue-600 rounded p-2 text-white font-semibold hover:bg-blue-800">Click Here</button>
 
           </div>
