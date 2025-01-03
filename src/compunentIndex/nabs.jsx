@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Navbar, Button } from "flowbite-react";
-import AOS from "aos";
+// import AOS from "aos";
 import "aos/dist/aos.css";
 // import Typewriter from "typewriter-effect";
 import { Dropdown } from "flowbite-react";

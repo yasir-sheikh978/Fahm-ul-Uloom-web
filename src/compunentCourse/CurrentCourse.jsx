@@ -5,7 +5,15 @@ import { Button } from "flowbite-react";
 // import Nazra from "../assets/courseOne/nazra1.jpg";
 // import norani from "../assets/courseOne/norani.jpg";
 import post from "../assets/popup/post.jpg"
+import { useNavigate } from "react-router-dom";
 export default function Course() {
+     const Navigate = useNavigate();
+    const register = ()=>{
+        Navigate("/registration");
+    }
+
+
+
   const CourseDtails = [
     {
       name1: "Q%A Session On E-Commerce",
@@ -102,7 +110,7 @@ export default function Course() {
                 <p className="pt-2">~{CourseDtails[id].Doration}</p>
               </div>
               <div>
-                <Button color="blue" className="mt-4 w-[100%]">
+                <Button color="blue" className="mt-4 w-[100%]" onClick={register}>
                   Enroll Now
                 </Button>
               </div>

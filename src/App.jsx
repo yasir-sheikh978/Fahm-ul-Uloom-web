@@ -66,7 +66,7 @@ export default function App() {
     { path: "/qurantarjama", element: (<Suspense fallback={<Loader />}><QuranTarjama /></Suspense>) },
     { path: "/contact", element: (<Suspense fallback={<Loader />}><Contact /></Suspense>) },
     { path: "/it", element: (<Suspense fallback={<Loader />}><IT /></Suspense>) },
-    { path: "registration", element: (<Suspense fallback={<Loader />}><Registration /></Suspense>) },
+    { path: "/registration", element: (<Suspense fallback={<Loader />}><Registration /></Suspense>) },
   ]);
 
   return <RouterProvider router={router} />;
