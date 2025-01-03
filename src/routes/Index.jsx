@@ -81,8 +81,8 @@ function Index(){
       )}
     </div>
 
-    <div className="flex justify-around font-semibold items-center px-2 bg-yellow-200 text-xl py-2">
-      Registration For Q&A Session On E-Commerce <button onClick={oneDay} className="bg-blue-400 rounded p-2 text-white font-semibold hover:bg-blue-600">Click Here</button>
+    <div className="flex justify-between sm:justify-around font-semibold items-center px-2 bg-yellow-200 text-lg sm:text-xl py-2">
+      Registration For Q&A Session On E-Commerce <button onClick={oneDay} className="bg-blue-400 rounded p-2 text-white sm:font-semibold hover:bg-blue-600">Click Here</button>
     </div>
            <Navbar />
            <Nab />
