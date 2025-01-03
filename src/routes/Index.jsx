@@ -14,9 +14,15 @@ import Long from '../componentHome/long'
 import post from "../assets/popup/post.jpg"
 import 'flowbite';
 import { useNavigate } from "react-router-dom";
-
+import AOS from "aos";
 
 function Index(){
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
+
   const Navigate = useNavigate();
 
   const [isVisible, setIsVisible] = useState(true);
