@@ -108,7 +108,7 @@ export default function Course() {
     },
     {
       name1: "Tayari Ramzan Course",
-      btn: " Admission Off",
+      btn: " Admissions Off",
       img: ramzan,
       dscpt1: "Significance of Ramadan",
       dscpt2: "Rules and etiquette of fasting.",
