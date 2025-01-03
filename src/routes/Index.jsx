@@ -28,15 +28,15 @@ function Index(){
 
   // Check localStorage on component mount
   useEffect(() => {
-    // const hidden = localStorage.getItem("divHidd");
-    // if (hidden === "true") {
-    //     setIsVisible(false);
-    //   }
-      localStorage.setItem("divHidd", "false");
+    const hidden = localStorage.getItem("divHidd");
+    if (hidden === "true") {
+        setIsVisible(false);
+      }
     }, []);
     
     // Hide the div and store the state in localStorage
     const hideDiv = () => {
+      localStorage.setItem("divHidd", "true");
     setIsVisible(false);
   };
 
