@@ -30,14 +30,14 @@ function Index(){
   useEffect(() => {
     const hidden = localStorage.getItem("divHidd");
     if (hidden === "true") {
-      setIsVisible(false);
-    }
-  }, []);
-  
-  // Hide the div and store the state in localStorage
-  const hideDiv = () => {
+        setIsVisible(false);
+      }
+    }, []);
+    
+    // Hide the div and store the state in localStorage
+    const hideDiv = () => {
+    localStorage.setItem("divHidd", "false");
     setIsVisible(false);
-    localStorage.setItem("divHidd", "true");
   };
 
     const ScrollToTop = () => {
@@ -65,15 +65,15 @@ function Index(){
             ✖
           </button>
           <div className="block sm:flex justify-around items-center h-full  ">
-            <div className="w-[100%] sm:w-[40%]">
-          <img src={post} className="w-[100%] sm:w-[70%] " alt="" />
+            <div className="w-[100%] sm:w-[40%] flex justify-center items-center">
+          <img src={post} className="w-[85%] sm:w-[70%] " alt="" />
 
             </div>
 
 
-          <div>
-          <p className="text-2xl py-2 text-red-500">For Registration</p>
-          <button onClick={oneDay} className="bg-blue-400 rounded p-2 text-white font-semibold hover:bg-blue-600">Click Here</button>
+          <div className="flex items-center justify-center flex-col">
+          <p className="text-2xl font-semibold py-2 text-red-700">For Registration</p>
+          <button onClick={oneDay} className="bg-blue-600 rounded p-2 text-white font-semibold hover:bg-blue-800">Click Here</button>
 
           </div>
           </div>
