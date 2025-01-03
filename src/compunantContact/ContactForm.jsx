@@ -11,7 +11,7 @@ const ContactForm = () => {
   }
 
   const send = ()=>{
-    alert("Msg Send")
+    alert("Your Msg Send")
   }
   return (
     <div className="h-fit bg-gray-100 flex items-center justify-center flex-col p-6">
