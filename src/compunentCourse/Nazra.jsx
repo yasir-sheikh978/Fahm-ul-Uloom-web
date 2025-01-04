@@ -4,12 +4,20 @@ import { Button } from "flowbite-react";
 import hafiz from "../assets/courseOne/hafiz.png";
 import Nazra from "../assets/courseOne/nazra1.jpg";
 import norani from "../assets/courseOne/norani.jpg";
+import { useNavigate } from "react-router-dom";
 
 export default function Course() {
+  const Navigate = useNavigate();
+  const register = ()=>{
+      Navigate("/feeregistration");
+  }
+
+
+     
   const CourseDtails = [
     {
       name1: "Online Norani Qaida",
-      btn: " Admission Off",
+      btn: " Enroll Now",
       img: norani,
       dscpt1: "Foundation of Quranic Reading",
       dscpt2: "Correct Pronunciation and Tajweed",
@@ -20,7 +28,7 @@ export default function Course() {
     },
     {
       name1: "Online Nazra e Quran",
-      btn: " Admission Off",
+      btn: " Enroll Now",
       img: Nazra,
       dscpt1: "Proper Pronunciation and Recitation",
       dscpt2: "Familiarity with Quranic Text",
@@ -31,7 +39,7 @@ export default function Course() {
     },
     {
       name1: "Online Hifzul Quran",
-      btn: " Admission Off",
+      btn: " Enroll Now",
       img: hafiz,
       dscpt1: "Cognitive Development",
       dscpt2: "Reward in the Hereafter",
@@ -44,7 +52,7 @@ export default function Course() {
   const UrduTrans = [
     {
       name1: "  ناظرہ قرآن کورس",
-      btn: " Admission Off",
+      btn: " Enroll Now",
       img: norani,
       dscpt1: "قرآنی پڑھائی کی بنیاد",
       dscpt2: "صحیح تلفظ اور تجوید",
@@ -54,7 +62,7 @@ export default function Course() {
     },
     {
       name1: "  نورانی قاعدہ کورس",
-      btn: " Admission Off",
+      btn: " Enroll Now",
       img: Nazra,
       dscpt1: "صحیح تلفظ اور تجوید",
       dscpt2: "قرآنی متن سے واقفیت",
@@ -64,7 +72,7 @@ export default function Course() {
     },
     {
       name1: "  ناظرہ قرآن کورس",
-      btn: " Admission Off",
+      btn: " Enroll Now",
       img: hafiz,
       dscpt1: "ذہنی ترقی",
       dscpt2: "آخرت میں انعامات",
@@ -140,7 +148,7 @@ export default function Course() {
                 <p className="pt-2">~{CourseDtails[id].Doration}</p>
               </div>
               <div>
-                <Button color="blue" className="mt-4 w-[100%]">
+                <Button color="blue" className="mt-4 w-[100%]" onClick={register}>
                 {CourseDtails[id].btn}
                 </Button>
               </div>
@@ -198,7 +206,7 @@ export default function Course() {
                 <p className="pt-2">{UrduTrans[id].Doration}~</p>
               </div>
               <div>
-                <Button color="blue" className="mt-4 w-[100%]">
+                <Button color="blue" className="mt-4 w-[100%]" onClick={register}>
                 {UrduTrans[id].btn}
                 </Button>
               </div>

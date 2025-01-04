@@ -13,12 +13,18 @@ import qurbani from "../../assets/courseOne/qurbani.jpg";
 import quran from "../../assets/courseOne/quran.png";
 import namaz from "../../assets/courseOne/namaz.jpg";
 import hadees from "../../assets/courseOne/hadees.jpg";
+import { useNavigate } from "react-router-dom";
 
 export default function Course() {
+   const Navigate = useNavigate();
+     const register = ()=>{
+         Navigate("/feeregistration");
+     }
+
   const CourseDtails = [
     {
       name1: "Tajweed e quran Course",
-      btn: " Admission Off",
+      btn: " Enroll Now",
       img: tajweed,
       dscpt1: "Method of reading Holy quran with proper Makharij",
       dscpt2: "Rules of Waqf and Ibtida",
@@ -29,7 +35,7 @@ export default function Course() {
     },
     {
       name1: "Tafseer e quran Course",
-      btn: " Admission Off",
+      btn: " Enroll Now",
       img: quran,
       dscpt1: "Comprehensive Understanding",
       dscpt2: "Gain insights on how quranic teachings apply to modern life",
@@ -41,7 +47,7 @@ export default function Course() {
     },
     {
       name1: "Hadees e Rasool Course",
-      btn: " Admission Off",
+      btn: " Enroll Now",
       img: hadees,
       dscpt1: "Learn the meanings, context, and wisdom behind various ahadith",
       dscpt2: "Understand how to apply the Prophet's teachings to modern life",
@@ -52,7 +58,7 @@ export default function Course() {
     },
     {
       name1: "Namaaz Course",
-      btn: " Admission Off",
+      btn: " Enroll Now",
       img: namaz,
       dscpt1:
         "Learn the accurate postures, words, and actions for each part of Namaaz",
@@ -64,7 +70,7 @@ export default function Course() {
     },
     {
       name1: "Ahkam-e-Tijarat",
-      btn: " Admission Off",
+      btn: " Enroll Now",
       img: tijarat,
       dscpt1: "Introduction to Islamic Business Ethics",
       dscpt2: "Halal and Haram in Trade",
@@ -75,7 +81,7 @@ export default function Course() {
     },
     {
       name1: "Islamic Banking course",
-      btn: " Admission Off",
+      btn: " Enroll Now",
       img: bank,
       dscpt1: "Skill Development for Islamic Financial Institutions",
       dscpt2: "Islamic Banking Products and Services",
@@ -86,7 +92,7 @@ export default function Course() {
     },
     {
       name1: "Aqaid Course",
-      btn: " Admission Off",
+      btn: " Enroll Now",
       img: aqaid,
       dscpt1: "Khuda Zaat-Sifaat",
       dscpt2: "Understanding the attributes of Allah and His Oneness",
@@ -97,7 +103,7 @@ export default function Course() {
     },
     {
       name1: "Radd e Ilhad",
-      btn: " Admission Off",
+      btn: " Enroll Now",
       img: ilhad,
       dscpt1: "History of atheism and its fundamental ideologies",
       dscpt2: "Importance of Tawheed (monotheism) and the existence of God",
@@ -120,7 +126,7 @@ export default function Course() {
     },
     {
       name1: "Aqidah Khatm e Nabuwat",
-      btn: " Admission Off",
+      btn: " Enroll Now",
       img: nabuwat,
       dscpt1: "Understanding the concept of Khatm e Nabuwat",
       dscpt2: "Evidence from the quran and Hadith supporting this belief",
@@ -133,7 +139,7 @@ export default function Course() {
     },
     {
       name1: "Seerat e Mustafa Course",
-      btn: " Admission Off",
+      btn: " Enroll Now",
       img: seerat,
       dscpt1: "Overview of the Prophet's early life and upbringing",
       dscpt2: "Teachings and values emphasized by the Prophet (PBUH)",
@@ -147,7 +153,7 @@ export default function Course() {
     },
     {
       name1: "Ahkam e Qurbani Course",
-      btn: " Admission Off",
+      btn: " Enroll Now",
       img: qurbani,
       dscpt1: "Significance of Qurbani in Islam",
       dscpt2: "Conditions and criteria for performing Qurbani",
@@ -161,7 +167,7 @@ export default function Course() {
   const UrduTrans = [
     {
       name1: "تجوید القرآن کورس",
-      btn: " Admission Off",
+      btn: " Enroll Now",
       img: tajweed,
       dscpt1: "قرآن پاک کو صحیح مخرج کے ساتھ پڑھنے کا طریقہ",
       dscpt2: "وقف اور ابتدا کے احکام",
@@ -172,7 +178,7 @@ export default function Course() {
     },
     {
       name1: "تفسیر قرآن کورس ",
-      btn: " Admission Off",
+      btn: " Enroll Now",
       img: tajweed,
       dscpt1: "جامع تفہیم",
       dscpt2: "جدید زندگی میں قرآن کی تعلیمات کو کیسے لاگو کیا جا سکتا ہے",
@@ -183,7 +189,7 @@ export default function Course() {
     },
     {
       name1: "حدیث رسول کورس",
-      btn: " Admission Off",
+      btn: " Enroll Now",
       img: hadees,
       dscpt1: "مختلف احادیث کے معانی، سیاق و سباق اور حکمت کو سمجھنا",
       dscpt2: "جدید زندگی میں نبی ﷺ کی تعلیمات کا اطلاق",
@@ -194,7 +200,7 @@ export default function Course() {
     },
     {
       name1: "نماز کورس",
-      btn: " Admission Off",
+      btn: " Enroll Now",
       img: namaz,
       dscpt1: "نماز کے ہر رکن کے درست انداز، الفاظ اور حرکات کو سیکھنا",
       dscpt2: "نماز کے گہرے معانی اور اہمیت کو سمجھنا",
@@ -205,7 +211,7 @@ export default function Course() {
     },
     {
       name1: "احکام تجارت کورس",
-      btn: " Admission Off",
+      btn: " Enroll Now",
       img: tijarat,
       dscpt1: "اسلامی کاروباری اخلاقیات کا تعارف",
       dscpt2: "تجارت میں حلال اور حرام",
@@ -216,7 +222,7 @@ export default function Course() {
     },
     {
       name1: "اسلامی بینکنگ کورس",
-      btn: " Admission Off",
+      btn: " Enroll Now",
       img: bank,
       dscpt1: "اسلامی مالیاتی اداروں کے لیے مہارت کی ترقی",
       dscpt2: "اسلامی بینکاری مصنوعات اور خدمات",
@@ -227,7 +233,7 @@ export default function Course() {
     },
     {
       name1: "بنیادی  عقائد کورس",
-      btn: " Admission Off",
+      btn: " Enroll Now",
       img: aqaid,
       dscpt1: "خدا ذات و صفات",
       dscpt2: "اللہ کی وحدانیت اور صفات کو سمجھنا",
@@ -238,7 +244,7 @@ export default function Course() {
     },
     {
       name1: "رد الحاد",
-      btn: " Admission Off",
+      btn: " Enroll Now",
       img: ilhad,
       dscpt1: "الحاد کی تاریخ اور اس کے بنیادی نظریات",
       dscpt2: "توحید کی اہمیت اور خدا کا وجود",
@@ -249,7 +255,7 @@ export default function Course() {
     },
     {
       name1: "تیاری رمضان کورس ",
-      btn: " Admission Off",
+      btn: " Enroll Now",
       img: ramzan,
       dscpt1: "رمضان کی اہمیت",
       dscpt2: "روزے کے قواعد اور آداب",
@@ -261,7 +267,7 @@ export default function Course() {
     },
     {
       name1: "عقیدہ ختم نبوت کورس ",
-      btn: " Admission Off",
+      btn: " Enroll Now",
       img: nabuwat,
       dscpt1: "عقیدہ ختم نببوت کا تصور",
       dscpt2: " قرآن اور حدیث سے اس عقیدے کے حق میں دلائل",
@@ -273,7 +279,7 @@ export default function Course() {
     },
     {
       name1: "سیرت مصطفیٰ کورس ",
-      btn: " Admission Off",
+      btn: " Enroll Now",
       img: seerat,
       dscpt1: "نبی کی ابتدائی زندگی اور پرورش کا خلاصہ",
       dscpt2: " نبی کریم صلی اللہ علیہ وآلہ وسلم کی تعلیمات اور اہم اصول",
@@ -285,7 +291,7 @@ export default function Course() {
     },
     {
       name1: "احکام قربانی کورس ",
-      btn: " Admission Off",
+      btn: " Enroll Now",
       img: qurbani,
       dscpt1: "اسلام میں قربانی کی اہمیت",
       dscpt2: " قربانی کے کرنے کے لیے ضروری شرائط اور معیارات",
@@ -361,8 +367,8 @@ export default function Course() {
                 <h2 className="text-md md:text-lg font-medium">Duration :</h2>
                 <p className="pt-2">~{CourseDtails[id].Doration}</p>
               </div>
-              <div>
-                <Button color="blue" className="mt-4 w-[100%]">
+              <div >
+                <Button  onClick={register}  color="blue" className="mt-4 w-[100%]">
                   {CourseDtails[id].btn}
                 </Button>
               </div>
@@ -419,8 +425,8 @@ export default function Course() {
                 <h2 className="text-md  md:text-lg font-medium">:مدت</h2>
                 <p className="pt-2">{UrduTrans[id].Doration}~</p>
               </div>
-              <div>
-                <Button color="blue" className="mt-4 w-[100%]">
+              <div >
+                <Button color="blue" className="mt-4 w-[100%]"  onClick={register}>
                   {UrduTrans[id].btn}
                 </Button>
               </div>

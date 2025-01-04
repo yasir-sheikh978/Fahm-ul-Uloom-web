@@ -1,8 +1,16 @@
 import React, { useState } from "react";
 import emailjs from 'emailjs-com';
+// import { AiFillEnvironment } from "react-icons/ai";
+import { useNavigate } from "react-router-dom";
 
 function RegistrationForm() {
       const [loading, setLoading] = useState(false);
+      const Navigate = useNavigate();
+
+  const Fees = () => {
+    Navigate("/courseone");
+  };
+     
     
   const [formData, setFormData] = useState({
     firstName: "",
@@ -16,7 +24,10 @@ function RegistrationForm() {
     sessionType: "",
     education: "High School", 
     mode: "online", 
+    Environment: "Seprate", 
   });
+
+  const [isPolicyChecked, setIsPolicyChecked] = useState(false);
 
   // Handle input changes
   const handleChange = (e) => {
@@ -24,8 +35,18 @@ function RegistrationForm() {
     setFormData({ ...formData, [name]: value });
   };
 
+    // Handle checkbox state
+    const handleCheckboxChange = (e) => {
+        setIsPolicyChecked(e.target.checked);
+      };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!isPolicyChecked) {
+        alert("Please confirm that you have read all the policy and fees structure.");
+        return;
+      }
+      
     setLoading(true); // Set loading state to true
 
     const emails = formData.email;
@@ -200,7 +221,7 @@ function RegistrationForm() {
     onChange={handleChange}
     className="w-full border border-gray-300 rounded-md p-2 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
   >
-    <option value="">Q%A Session On E-Commerce</option>
+    <option value="">Select Course</option>
     <option value="Norani Qaida">Norani Qaida</option>
     <option value="Nazra e Quran">Nazra e Quran</option>
     <option value="Hifzul Quran">Hifzul Quran</option>
@@ -268,6 +289,53 @@ function RegistrationForm() {
             </label>
           </div>
         </div>
+
+        {/* Enviroment */}
+
+        <div className="mt-4">
+          <label className="block text-gray-700 mb-2">Environment </label>
+          <div className="flex items-center space-x-4">
+            <label className="flex items-center">
+              <input
+                type="radio"
+                name="Environment"
+                value="Seprate"
+                checked={formData.Environment === "Seprate"}
+                onChange={handleChange}
+                className="form-radio text-blue-500"
+              />
+              <span className="ml-2 text-gray-700">Seprate classes</span>
+            </label>
+            <label className="flex items-center">
+              <input
+                type="radio"
+                name="Environment"
+                value="Combine"
+                checked={formData.Environment === "Combine"}
+                onChange={handleChange}
+                className="form-radio text-blue-500"
+              />
+              <span className="ml-2 text-gray-700">Combine classes</span>
+            </label>
+          </div>
+        </div>
+
+          {/* Checkbox for Policy Confirmation */}
+          <div className="mt-4">
+          <label className="flex items-center space-x-2">
+            <input
+              type="checkbox"
+              checked={isPolicyChecked}
+              onChange={handleCheckboxChange}
+              className="form-checkbox text-blue-500"
+            />
+            <span className="text-gray-700">
+              I read all the <a className="text-blue-600 underline">policy</a> and <a className="text-blue-600 underline" onClick={Fees}>fees structure.</a>
+            </span>
+          </label>
+        </div>
+
+      
 
         {/* Submit Button */}
         <button

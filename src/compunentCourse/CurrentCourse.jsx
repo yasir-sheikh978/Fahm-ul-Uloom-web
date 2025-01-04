@@ -168,7 +168,7 @@ export default function Course() {
                 <p className="pt-2">{UrduTrans[id].Doration}~</p>
               </div>
               <div>
-                <Button color="blue" className="mt-4 w-[100%]">
+                <Button color="blue" className="mt-4 w-[100%]" onClick={register}>
                   Enroll Now
                 </Button>
               </div>

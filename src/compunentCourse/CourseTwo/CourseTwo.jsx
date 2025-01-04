@@ -1,13 +1,21 @@
 import React, { useState } from "react";
 import { Card } from "flowbite-react";
 import { Button } from "flowbite-react";
-import tajweed from "../../assets/courseOne/tajweed.jpg";
+import tajweed from "../../assets/coursetwo/alim.jpg";
+import alim from "../../assets/coursetwo/alimtwo.jpg";
+import { useNavigate } from "react-router-dom";
 
 export default function Course() {
+
+       const Navigate = useNavigate();
+      const register = ()=>{
+          Navigate("/feeregistration");
+      }
+
   const CourseDtails = [
     {
       name1: "Dar e Nizami (Alim Course) ",
-      btn: " Admission Off",
+      btn: " Enroll Now",
       img: tajweed,
       dscpt1: "Study Quran, Hadith, Fiqh, and other key subjects in depth.",
       dscpt2: "Learn the Arabic language to access Islamic texts directly",
@@ -18,8 +26,8 @@ export default function Course() {
     },
     {
       name1: "One Year Alim Diploma ",
-      btn: " Admission Off",
-      img: tajweed,
+      btn: " Enroll Now",
+      img: alim,
       dscpt1: "Comprehensive Understanding",
       dscpt2: "Gain insights on how quranic teachings apply to modern life",
       dscpt3:
@@ -32,7 +40,7 @@ export default function Course() {
   const UrduTrans = [
     {
       name1: "درس نظامی (عالم کورس)",
-      btn: " Admission Off",
+      btn: " Enroll Now",
       img: tajweed,
       dscpt1: "قرآن، حدیث، فقہ اور دیگر اہم مضامین کا گہرائی سے مطالعہ",
       dscpt2: "اسلامی متون کو براہ راست سمجھنے کے لیے عربی زبان سیکھیں۔",
@@ -43,8 +51,8 @@ export default function Course() {
     },
     {
       name1: "تفسیر قرآن کورس ",
-      btn: " Admission Off",
-      img: tajweed,
+      btn: " Enroll Now",
+      img: alim,
       dscpt1: "جامع تفہیم",
       dscpt2: "جدید زندگی میں قرآن کی تعلیمات کو کیسے لاگو کیا جا سکتا ہے",
       dscpt3: "مزید مطالعے کے لیے نوٹس، تراجم اور ریفرنس مواد تک رسائی",
@@ -119,7 +127,7 @@ export default function Course() {
                 <p className="pt-2">~{CourseDtails[id].Doration}</p>
               </div>
               <div>
-                <Button color="blue" className="mt-4 w-[100%]">
+                <Button color="blue" className="mt-4 w-[100%]" onClick={register}>
                   {CourseDtails[id].btn}
                 </Button>
               </div>
@@ -177,7 +185,7 @@ export default function Course() {
                 <p className="pt-2">{UrduTrans[id].Doration} ~</p>
               </div>
               <div>
-                <Button color="blue" className="mt-4 w-[100%]">
+                <Button color="blue" className="mt-4 w-[100%]" onClick={register}>
                   {UrduTrans[id].btn}
                 </Button>
               </div>
