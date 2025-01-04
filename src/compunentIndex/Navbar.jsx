@@ -81,7 +81,7 @@ export default function Navbarr() {
         </button>
       </div>
 
-      <div data-aos="zoom-in" className="h-[15vw] w-[90%]  flex justify-center items-center">
+      <div data-aos="zoom-in" className="h-[18vw] w-[90%]  flex justify-center items-center">
         <img src={logoOne} className="w-[80%]  h-[65%] sm:h-[55%]" alt="" />
       </div>
       </div>
