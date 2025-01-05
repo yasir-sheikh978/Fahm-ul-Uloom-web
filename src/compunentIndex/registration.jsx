@@ -13,7 +13,7 @@ function RegistrationForm() {
     country: "",
     city: "",
     address: "",
-    sessionType: "",
+    sessionType: "Q%A Session On E-Commerce",
     education: "High School", 
     mode: "online", 
   });
@@ -200,24 +200,8 @@ function RegistrationForm() {
     onChange={handleChange}
     className="w-full border border-gray-300 rounded-md p-2 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
   >
-    <option value="">Q%A Session On E-Commerce</option>
-    <option value="Norani Qaida">Norani Qaida</option>
-    <option value="Nazra e Quran">Nazra e Quran</option>
-    <option value="Hifzul Quran">Hifzul Quran</option>
-    <option value="Tajweed e Quran Course">Tajweed e Quran Course</option>
-    <option value="Tafseer e Quran Course">Tafseer e Quran Course</option>
-    <option value="Hadees e Rasool Course">Hadees e Rasool Course</option>
-    <option value="Namaaz Course">Namaaz Course</option>
-    <option value="Ahkam-e-Tijarat">Ahkam-e-Tijarat</option>
-    <option value="Islamic Banking Course">Islamic Banking Course</option>
-    <option value="Aqaid Course">Aqaid Course</option>
-    <option value="Radd e Ilhad">Radd e Ilhad</option>
-    <option value="Tayari Ramzan Course">Tayari Ramzan Course</option>
-    <option value="Aqidah Khatm e Nabuwat">Aqidah Khatm e Nabuwat</option>
-    <option value="Seerat e Mustafa Course">Seerat e Mustafa Course</option>
-    <option value="Ahkam e Qurbani Course">Ahkam e Qurbani Course</option>
-    <option value="Dar e Nizami (Alim Course)">Dar e Nizami (Alim Course)</option>
-    <option value="One Year Alim Diploma">One Year Alim Diploma</option>
+    <option value="Q%A Session On E-Commerce">Q%A Session On E-Commerce</option>
+
   </select>
 </div>
 
