@@ -24,51 +24,75 @@ function RegistrationForm() {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true); // Set loading state to true
+    setStatus('Sending....');
+    try {
+        const response = await fetch('https://email-tem-one.vercel.app/email', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formData),
+        });
 
-    const emails = formData.email;
-    const names = formData.firstName;
-
-    const courseDummy = "Thank you for contacting us! We’ve received your Details.";
-    const courseDummy2 = "Now You Registered For Our New Course 'Q&A Session On E-Commerce'.";
-    const courseDummy3 = "Timing: After Isha on 11 Jan Saturday 2025 (8:15pm to 9:45pm).";
-    const courseDummy4 = "For online participation, you will receive a link via WhatsApp.";
-
-    emailjs
-      .send(
-        "service_moxew3c", // Replace with your EmailJS Service ID
-        "template_71wdf83", // Replace with your EmailJS Template ID
-        formData,
-        "cXCGc231ud9jHkTt9" // Replace with your EmailJS User ID
-      )
-      .then(
-        (response) => {
-          emailjs
-            .send(
-              "service_moxew3c", // Replace with your EmailJS Service ID
-              "template_7bx3fwl", // Replace with Template ID for auto-reply
-              { emails, names, courseDummy, courseDummy2, courseDummy3, courseDummy4 },
-              "cXCGc231ud9jHkTt9" // Replace with the same User ID
-            )
-            .then(() => {
-              alert("Your message was sent! You will receive a confirmation email shortly.");
-              setLoading(false); // Stop loading after success
-            })
-            .catch((error) => {
-              console.error("Auto-reply failed...", error);
-              alert("Failed to send auto-reply. Please try again.");
-              setLoading(false);
-            });
-        },
-        (error) => {
-          console.error("Failed to send message...", error);
-          alert("Failed to send message. Please try again.");
-          setLoading(false); // Stop loading after failure
+        if (response.ok) {
+            setStatus('Auto-reply email sennt successfully!');
+        } else {
+            throw new Error('Failed to send the email.');
         }
-      );
-  };
+    } catch (error) {
+        console.error(error);
+        setStatus('Failed to send the email.');
+    }
+};
+
+
+  // const handleSubmitt = (e) => {
+  //   e.preventDefault();
+  //   setLoading(true); // Set loading state to true
+
+  //   const emails = formData.email;
+  //   const names = formData.firstName;
+
+  //   const courseDummy = "Thank you for contacting us! We’ve received your Details.";
+  //   const courseDummy2 = "Now You Registered For Our New Course 'Q&A Session On E-Commerce'.";
+  //   const courseDummy3 = "Timing: After Isha on 11 Jan Saturday 2025 (8:15pm to 9:45pm).";
+  //   const courseDummy4 = "For online participation, you will receive a link via WhatsApp.";
+
+  //   emailjs
+  //     .send(
+  //       "service_moxew3c", // Replace with your EmailJS Service ID
+  //       "template_71wdf83", // Replace with your EmailJS Template ID
+  //       formData,
+  //       "cXCGc231ud9jHkTt9" // Replace with your EmailJS User ID
+  //     )
+  //     .then(
+  //       (response) => {
+  //         emailjs
+  //           .send(
+  //             "service_moxew3c", // Replace with your EmailJS Service ID
+  //             "template_7bx3fwl", // Replace with Template ID for auto-reply
+  //             { emails, names, courseDummy, courseDummy2, courseDummy3, courseDummy4 },
+  //             "cXCGc231ud9jHkTt9" // Replace with the same User ID
+  //           )
+  //           .then(() => {
+  //             alert("Your message was sent! You will receive a confirmation email shortly.");
+  //             setLoading(false); // Stop loading after success
+  //           })
+  //           .catch((error) => {
+  //             console.error("Auto-reply failed...", error);
+  //             alert("Failed to send auto-reply. Please try again.");
+  //             setLoading(false);
+  //           });
+  //       },
+  //       (error) => {
+  //         console.error("Failed to send message...", error);
+  //         alert("Failed to send message. Please try again.");
+  //         setLoading(false); // Stop loading after failure
+  //       }
+  //     );
+  // };
 
   return (
     <div className="h-fit py-20 flex items-center justify-center bg-gray-100">
