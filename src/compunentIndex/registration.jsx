@@ -15,7 +15,7 @@ function RegistrationForm() {
     country: "",
     city: "",
     address: "",
-    sessionType: "Q%A Session On E-Commerce",
+    sessionType: "Select Course",
     education: "High School", 
     mode: "online", 
   });
@@ -27,6 +27,14 @@ function RegistrationForm() {
   };
 
   const handleSubmit = async (e) => {
+    console.log("done");
+    if (formData.sessionType == "Select Course") {
+      alert("Please Select Your Course")
+    }else{
+
+
+    setLoading(true);
+    
     e.preventDefault();
     setStatus('Sending....');
     try {
@@ -36,17 +44,23 @@ function RegistrationForm() {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(formData),
+            
         });
 
         if (response.ok) {
+          setLoading(false);
             setStatus('Auto-reply email sennt successfully!');
         } else {
+          setLoading(false);
             throw new Error('Failed to send the email.');
         }
     } catch (error) {
         console.error(error);
+        setLoading(false);
         setStatus('Failed to send the email.');
     }
+  }
+
 };
 
 
@@ -226,6 +240,7 @@ function RegistrationForm() {
     onChange={handleChange}
     className="w-full border border-gray-300 rounded-md p-2 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
   >
+    <option value="Select Course">Select Course</option>
     <option value="Q%A Session On E-Commerce">Q%A Session On E-Commerce</option>
 
   </select>
