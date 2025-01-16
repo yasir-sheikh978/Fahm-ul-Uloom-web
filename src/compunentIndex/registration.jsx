@@ -26,6 +26,7 @@ function RegistrationForm() {
     setFormData({ ...formData, [name]: value });
   };
 
+
   const handleSubmit = async (e) => {
 
     if (formData.sessionType == "Select Course") {
@@ -48,17 +49,17 @@ function RegistrationForm() {
         });
 
         if (response.ok) {
-          formData.firstName= "",
-          formData.lastName= "",
-          formData.email= "",
-          formData.whatsapp= "",
-          formData.phone= "",
-          formData.country= "",
-          formData.city= "",
-          formData.address= "",
-          formData.sessionType= "",
+          setFormData.firstName= "",
+          setFormData.lastName= "",
+          setFormData.email= "",
+          setFormData.whatsapp= "",
+          setFormData.phone= "",
+          setFormData.country= "",
+          setFormData.city= "",
+          setFormData.address= "",
+          setFormData.sessionType= "",
           setLoading(false);
-            setStatus('Auto-reply email sennt successfully!');
+            alert('Auto-reply email sennt successfully!');
         } else {
           setLoading(false);
             throw new Error('Failed to send the email.');
@@ -250,7 +251,7 @@ function RegistrationForm() {
     className="w-full border border-gray-300 rounded-md p-2 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
   >
     <option value="Select Course">Select Course</option>
-    <option value="Q%A Session On E-Commerce">Q%A Session On E-Commerce</option>
+    {/* <option value="Q%A Session On E-Commerce">Q%A Session On E-Commerce</option> */}
 
   </select>
 </div>

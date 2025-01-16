@@ -23,7 +23,7 @@ function RegistrationForm() {
     city: "",
     address: "",
     sessionType: "",
-    education: "Matric", 
+    education: "", 
     mode: "online", 
     Environment: "Seprate", 
   });
@@ -45,21 +45,20 @@ function RegistrationForm() {
 
       const handleSubmit = async (e) => {
         e.preventDefault();
-
-        if (!isPolicyChecked) {
-          alert("Please confirm that you have read all the policy and fees structure.");
-          return;
-        }
-       
-        if (formData.sessionType == "Select Course") {
-          alert("Please Select Your Course")
-        }else{
     
+        if (!isPolicyChecked) {
+            alert("Please confirm that you have read all the policy and fees structure.");
+            return;
+        }
+    
+        if (formData.sessionType === "Select Course") {
+            alert("Please Select Your Course");
+            return;
+        }
     
         setLoading(true);
-        
-        e.preventDefault();
         setStatus('Sending....');
+    
         try {
             const response = await fetch('https://email-tem-one.vercel.app/email', {
                 method: 'POST',
@@ -67,35 +66,40 @@ function RegistrationForm() {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify(formData),
-                
             });
     
             if (response.ok) {
-              formData.firstName= "",
-              formData.lastName= "",
-              formData.email= "",
-              formData.whatsapp= "",
-              formData.phone= "",
-              formData.country= "",
-              formData.city= "",
-              formData.address= "",
-              formData.sessionType= "",
-              setLoading(false);
+                setLoading(false);
+                alert('Email sent successfully!');
+    
+                // Reset the form to its initial state
+                setFormData({
+                    firstName: "",
+                    lastName: "",
+                    email: "",
+                    whatsapp: "",
+                    phone: "",
+                    country: "",
+                    city: "",
+                    address: "",
+                    sessionType: "",
+                    education: "",
+                    mode: "online", 
+                    Environment: "Seprate",
+                });
                 setStatus('Auto-reply email sennt successfully!');
+                // setStatus('Email sent successfully!');
             } else {
-              setLoading(false);
+                setLoading(false);
                 throw new Error('Failed to send the email.');
             }
-
-
         } catch (error) {
             console.error(error);
             setLoading(false);
             setStatus('Failed to send the email.');
         }
-      }
-    
     };
+    
     
 
   return (
@@ -260,7 +264,8 @@ function RegistrationForm() {
             onChange={handleChange}
             className="w-full border border-gray-300 rounded-md p-2 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
-            <option value="High School"> Matric</option>
+            <option value=""> Select</option>
+            <option value=" Matric"> Matric</option>
             <option value="Undergraduate">Intermediate</option>
             <option value="Graduate">Undergraduation</option>
             <option value="Postgraduate">Graduate</option>
