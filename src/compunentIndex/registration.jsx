@@ -27,7 +27,7 @@ function RegistrationForm() {
   };
 
   const handleSubmit = async (e) => {
-    console.log("done");
+
     if (formData.sessionType == "Select Course") {
       alert("Please Select Your Course")
     }else{
@@ -48,6 +48,15 @@ function RegistrationForm() {
         });
 
         if (response.ok) {
+          formData.firstName= "",
+          formData.lastName= "",
+          formData.email= "",
+          formData.whatsapp= "",
+          formData.phone= "",
+          formData.country= "",
+          formData.city= "",
+          formData.address= "",
+          formData.sessionType= "",
           setLoading(false);
             setStatus('Auto-reply email sennt successfully!');
         } else {

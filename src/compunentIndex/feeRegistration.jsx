@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 function RegistrationForm() {
       const [loading, setLoading] = useState(false);
+      const [status, setStatus] = useState('');
       const Navigate = useNavigate();
 
   const Fees = () => {
@@ -22,7 +23,7 @@ function RegistrationForm() {
     city: "",
     address: "",
     sessionType: "",
-    education: "High School", 
+    education: "Matric", 
     mode: "online", 
     Environment: "Seprate", 
   });
@@ -40,56 +41,62 @@ function RegistrationForm() {
         setIsPolicyChecked(e.target.checked);
       };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!isPolicyChecked) {
-        alert("Please confirm that you have read all the policy and fees structure.");
-        return;
-      }
       
-    setLoading(true); // Set loading state to true
 
-    const emails = formData.email;
-    const names = formData.firstName;
+      const handleSubmit = async (e) => {
+        e.preventDefault();
 
-    const courseDummy = "Thank you for contacting us! We’ve received your Details.";
-    const courseDummy2 = "Now You Registered For Our New Course 'Q&A Session On E-Commerce'.";
-    const courseDummy3 = "Timing: After Isha on 11 Jan Saturday 2025 (8:15pm to 9:45pm).";
-    const courseDummy4 = "For online participation, you will receive a link via WhatsApp.";
-
-    emailjs
-      .send(
-        "service_moxew3c", // Replace with your EmailJS Service ID
-        "template_71wdf83", // Replace with your EmailJS Template ID
-        formData,
-        "cXCGc231ud9jHkTt9" // Replace with your EmailJS User ID
-      )
-      .then(
-        (response) => {
-          emailjs
-            .send(
-              "service_moxew3c", // Replace with your EmailJS Service ID
-              "template_7bx3fwl", // Replace with Template ID for auto-reply
-              { emails, names, courseDummy, courseDummy2, courseDummy3, courseDummy4 },
-              "cXCGc231ud9jHkTt9" // Replace with the same User ID
-            )
-            .then(() => {
-              alert("Your message was sent! You will receive a confirmation email shortly.");
-              setLoading(false); // Stop loading after success
-            })
-            .catch((error) => {
-              console.error("Auto-reply failed...", error);
-              alert("Failed to send auto-reply. Please try again.");
-              setLoading(false);
-            });
-        },
-        (error) => {
-          console.error("Failed to send message...", error);
-          alert("Failed to send message. Please try again.");
-          setLoading(false); // Stop loading after failure
+        if (!isPolicyChecked) {
+          alert("Please confirm that you have read all the policy and fees structure.");
+          return;
         }
-      );
-  };
+       
+        if (formData.sessionType == "Select Course") {
+          alert("Please Select Your Course")
+        }else{
+    
+    
+        setLoading(true);
+        
+        e.preventDefault();
+        setStatus('Sending....');
+        try {
+            const response = await fetch('https://email-tem-one.vercel.app/email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+                
+            });
+    
+            if (response.ok) {
+              formData.firstName= "",
+              formData.lastName= "",
+              formData.email= "",
+              formData.whatsapp= "",
+              formData.phone= "",
+              formData.country= "",
+              formData.city= "",
+              formData.address= "",
+              formData.sessionType= "",
+              setLoading(false);
+                setStatus('Auto-reply email sennt successfully!');
+            } else {
+              setLoading(false);
+                throw new Error('Failed to send the email.');
+            }
+
+
+        } catch (error) {
+            console.error(error);
+            setLoading(false);
+            setStatus('Failed to send the email.');
+        }
+      }
+    
+    };
+    
 
   return (
     <div className="h-fit py-20 flex items-center justify-center bg-gray-100">

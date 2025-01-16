@@ -9,7 +9,8 @@ import { useNavigate } from "react-router-dom";
 export default function Course() {
      const Navigate = useNavigate();
     const register = ()=>{
-        Navigate("/registration");
+        // Navigate("/registration");
+        alert("Admission Off")
     }
 
 
@@ -23,6 +24,7 @@ export default function Course() {
       dscpt3: "Bitcoin And Virtual Currencise",
       dscpt4: "Drop Shipping",
       dscpt5: "Freelancing And Commission",
+      btn:"Admission Off",
       Doration:
         "One Day Program After Isha (8:15 to 9:45) 11 Jan Saturday",
     },
@@ -39,6 +41,7 @@ export default function Course() {
       dscpt4: "یہ کورس بچوں اور بڑوں دونوں کے لیے ہے",
       dscpt5: "یہ کورس بچوں اور بڑوں دونوں کے لیے ہے",
       Doration: "ہفتے میں 4 دن کلاس، اجتماعی اور انفرادی کلاسز دستیاب ہیں",
+      btn: "Admission Off"
     },
   
   ];
@@ -111,7 +114,7 @@ export default function Course() {
               </div>
               <div>
                 <Button color="blue" className="mt-4 w-[100%]" onClick={register}>
-                  Enroll Now
+                  {CourseDtails[id].btn}
                 </Button>
               </div>
             </div>
@@ -169,7 +172,7 @@ export default function Course() {
               </div>
               <div>
                 <Button color="blue" className="mt-4 w-[100%]" onClick={register}>
-                  Enroll Now
+                  {UrduTrans[id].btn}
                 </Button>
               </div>
             </div>
