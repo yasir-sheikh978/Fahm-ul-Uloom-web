@@ -3,9 +3,37 @@ import "../routes/Index"; // Import Tailwind CSS first
 import "../App.css";
 import logoTwo from "../assets/logo/logoTwo.png";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 export default function Footer() {
+  function navigateToWhatsApp() {
+    const phoneNumber = "923009214180"; // WhatsApp number in international format
+    const message = "Hello, I would like to know more about your services."; // Default message
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappURL, "_blank");
+  }
+
+  const Navigate = useNavigate();
+
+  const Short =() =>{
+   Navigate("/courseone")
+  }
+  
+  const Long =() =>{
+   Navigate("/coursetwo")
+  }
+  const Donation =() =>{
+   Navigate("/donation")
+  }
+  
+  const Contact =() =>{
+   Navigate("/contact")
+  }
+  const Mufti =() =>{
+   Navigate("/fatwa")
+  }
+  
   return (
     <div className=" -z-20 bg-gray-200">
       <section
@@ -119,7 +147,8 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link
-                    href="/courseone"
+                  onClick={Short}
+                    
                     title=""
                     className="flex text-base text-white transition-all duration-200 hover:text-blue-400 focus:text-blue-400"
                   >
@@ -130,7 +159,8 @@ export default function Footer() {
 
                 <li>
                   <Link
-                    href="/coursetwo"
+                  onClick={Long}
+                 
                     title=""
                     className="flex text-base text-white transition-all duration-200 hover:text-blue-400 focus:text-blue-400"
                   >
@@ -141,7 +171,8 @@ export default function Footer() {
 
                 <li>
                   <Link
-                    href="/donation"
+                  onClick={Donation}
+                   
                     title=""
                     className="flex text-base text-white transition-all duration-200 hover:text-blue-400 focus:text-blue-400"
                   >
@@ -152,7 +183,8 @@ export default function Footer() {
 
                 <li>
                   <Link
-                    href="#"
+                  onClick={Contact}
+                    
                     title=""
                     className="flex text-base text-white transition-all duration-200 hover:text-blue-400 focus:text-blue-400"
                   >
@@ -171,7 +203,8 @@ export default function Footer() {
               <ul className="mt-6 space-y-4">
                 <li>
                   <Link
-                    href="./fatwa"
+                  onClick={Mufti}
+                    
                     title=""
                     className="flex text-base text-white transition-all duration-200 hover:text-blue-400 focus:text-blue-400"
                   >
@@ -223,7 +256,7 @@ export default function Footer() {
 
                 <li>
                   <Link
-                    href="#"
+                    onClick={navigateToWhatsApp}
                     title=""
                     className="flex text-base text-white transition-all duration-200 hover:text-blue-400 focus:text-blue-400"
                   >

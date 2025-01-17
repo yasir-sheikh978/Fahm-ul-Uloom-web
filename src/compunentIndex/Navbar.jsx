@@ -41,12 +41,12 @@ export default function Navbarr() {
       </div>
       <div className=" sm:flex w-[100%] sm:justify-between sm:items-center">
 
-      <div className="w-[100%] h-fit flex justify-around items-center sm:flex-col sm:items-start sm:w-[10%]">
+      <div className="w-[100%] h-fit flex justify-around items-center  sm:w-[25%]">
         <button
           data-aos="flip-left"
      data-aos-easing="ease-out-cubic"
      data-aos-duration="2000"
-          className="bg-blue-950 text-white hover:bg-blue-800 rounded-lg sm:rounded-r-3xl	sm:rounded-l-none  my-2 p-2 font-semibold uppercase "
+          className="bg-blue-950 text-white hover:bg-blue-800 rounded-lg   my-2 p-2 font-semibold uppercase "
         >
           <a href="https://quran.com/1" target="blank">
             quran
@@ -56,7 +56,7 @@ export default function Navbarr() {
           data-aos="flip-left"
      data-aos-easing="ease-out-cubic"
      data-aos-duration="2000"
-          className="bg-blue-950 text-white hover:bg-blue-800 rounded-lg sm:rounded-r-3xl	sm:rounded-l-none  my-2 p-2 font-semibold uppercase "
+          className="bg-blue-950 text-white hover:bg-blue-800 rounded-lg   my-2 p-2 font-semibold uppercase "
         >
           hadith
         </button>
@@ -64,7 +64,7 @@ export default function Navbarr() {
           data-aos="flip-left"
      data-aos-easing="ease-out-cubic"
      data-aos-duration="2000"
-          className="bg-blue-950 text-white hover:bg-blue-800  rounded-lg sm:rounded-r-3xl sm:rounded-l-none	 my-2 p-2 font-semibold uppercase "
+          className="bg-blue-950 text-white hover:bg-blue-800  rounded-lg sm:rounded-r-3xl sm:rounded-l-none	 my-2 p-2 font-semibold uppercase sm:hidden"
         >
           <a href="https://www.dawateislami.net/bookslibrary/" target="blank">
             books
@@ -75,14 +75,37 @@ export default function Navbarr() {
      data-aos-easing="ease-out-cubic"
      data-aos-duration="2000"
           onClick={fat}
-          className="bg-blue-950 text-white hover:bg-blue-800 w-28 rounded-lg sm:rounded-r-3xl sm:rounded-l-none my-2 p-2 font-semibold uppercase "
+          className="bg-blue-950 text-white hover:bg-blue-800 w-28 rounded-lg sm:rounded-r-3xl sm:rounded-l-none my-2 p-2 font-semibold uppercase sm:hidden"
         >
           ask mufti
         </button>
       </div>
 
-      <div data-aos="zoom-in" className="h-[18vw] w-[90%]  flex justify-center items-center">
-        <img src={logoOne} className="w-[80%]  h-[65%] sm:h-[55%]" alt="" />
+      <div data-aos="zoom-in" className="h-[18vw] w-[100%] sm:w-[50%] sm:h-[14vw] md:h-[10vw]  flex justify-center items-center">
+        <img src={logoOne} className="w-[80%]  h-[65%] sm:h-[60%]" alt="" />
+      </div>
+
+
+      <div className="sm:flex w-[25%] items-center justify-around hidden">
+      <button
+          data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000"
+          className="bg-blue-950 text-white hover:bg-blue-800  rounded-lg 	 my-2 p-2 font-semibold uppercase "
+        >
+          <a href="https://www.dawateislami.net/bookslibrary/" target="blank">
+            books
+          </a>
+        </button>
+        <button
+          data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000"
+          onClick={fat}
+          className="bg-blue-950 text-white hover:bg-blue-800 w-28 rounded-lg  my-2 p-2 font-semibold uppercase "
+        >
+          ask mufti
+        </button>
       </div>
       </div>
 
