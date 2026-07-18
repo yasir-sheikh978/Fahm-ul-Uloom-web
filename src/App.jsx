@@ -43,6 +43,8 @@ import React, { Suspense } from "react";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import './index.css';
 import Loader from './loader'; // Path to the Loader component
+import { AuthProvider } from './context/AuthContext';
+import ProtectedRoute from './components/Admin/ProtectedRoute';
 
 const Index = React.lazy(() => import("./routes/Index"));
 const CourseOne = React.lazy(() => import('./routes/CourseOne'));
@@ -55,6 +57,8 @@ const Contact = React.lazy(() => import('./routes/contact'));
 const IT = React.lazy(() => import('./Meetteam-Component/IT-Depart'));
 const Registration = React.lazy(() => import('./routes/registration'));
 const FeeRegistration = React.lazy(() => import('./routes/FeeRegistration'));
+const AdminLogin = React.lazy(() => import('./routes/AdminLogin'));
+const MeetingManagement = React.lazy(() => import('./routes/MeetingManagement'));
 
 export default function App() {
   const router = createBrowserRouter([
@@ -69,9 +73,15 @@ export default function App() {
     { path: "/it", element: (<Suspense fallback={<Loader />}><IT /></Suspense>) },
     { path: "/registration", element: (<Suspense fallback={<Loader />}><Registration /></Suspense>) },
     { path: "/feeregistration", element: (<Suspense fallback={<Loader />}><FeeRegistration /></Suspense>) },
+    { path: "/admin-login", element: (<Suspense fallback={<Loader />}><AdminLogin /></Suspense>) },
+    { path: "/meeting-management", element: (<Suspense fallback={<Loader />}><ProtectedRoute><MeetingManagement /></ProtectedRoute></Suspense>) },
   ]);
 
-  return <RouterProvider router={router} />;
+  return (
+    <AuthProvider>
+      <RouterProvider router={router} />
+    </AuthProvider>
+  );
 }
 
 

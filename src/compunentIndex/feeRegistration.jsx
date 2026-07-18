@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import emailjs from 'emailjs-com';
 // import { AiFillEnvironment } from "react-icons/ai";
 import { useNavigate } from "react-router-dom";
+import { API_BASE } from "../config/api";
 
 function RegistrationForm() {
       const [loading, setLoading] = useState(false);
@@ -58,7 +59,28 @@ function RegistrationForm() {
     
         setLoading(true);
         setStatus('Sending....');
-    
+
+        // Save the student in MongoDB so the admin can send Meet links later.
+        // Failure here should not block the email confirmation flow.
+        try {
+            await fetch(`${API_BASE}/api/students`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    fullName: `${formData.firstName} ${formData.lastName}`.trim(),
+                    email: formData.email,
+                    whatsapp: formData.whatsapp,
+                    phone: formData.phone,
+                    country: formData.country,
+                    city: formData.city,
+                    course: formData.sessionType,
+                    mode: formData.mode,
+                }),
+            });
+        } catch (err) {
+            console.error('Failed to save student record:', err);
+        }
+
         try {
             const response = await fetch('https://email-tem-one.vercel.app/email', {
                 method: 'POST',
