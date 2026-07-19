@@ -34,6 +34,9 @@ export default function Navbarr() {
   const cont = () => {
     Navigate("/contact");
   };
+  const admin = () => {
+    Navigate("/meeting-management");
+  };
  
 
   // useEffect(() => {
@@ -58,7 +61,10 @@ export default function Navbarr() {
               alt="Fahm Ul Alum"
             />
           </Navbar.Brand>
-          <div className="flex md:order-2">
+          <div className="flex md:order-2 gap-2">
+            <Button onClick={admin} className="bg-white hover:text-white text-black text-lg">
+            Admin
+            </Button>
             <Button onClick={don} className="bg-white hover:text-white text-black text-lg">
             Donation
             </Button>

@@ -48,7 +48,7 @@ function ClassInvitePopup() {
         {/* Body */}
         <div className="p-6 text-center">
           <p className="text-lg font-semibold text-gray-800">
-            Aap ki class / session start hone wala hai!
+            Your class / session is about to start!
           </p>
 
           <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 mt-4 text-left text-sm">
@@ -65,7 +65,7 @@ function ClassInvitePopup() {
           </div>
 
           <p className="text-gray-500 text-sm mt-4">
-            Neeche diye gaye button par click kar ke apni online class join karein.
+            Click the button below to join your online class.
           </p>
 
           <a
@@ -84,7 +84,7 @@ function ClassInvitePopup() {
             onClick={handleClose}
             className="mt-3 w-full text-gray-500 hover:text-gray-700 text-sm py-2"
           >
-            Baad mein join karunga
+            I will join later
           </button>
         </div>
       </div>

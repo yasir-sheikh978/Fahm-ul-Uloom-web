@@ -4,6 +4,7 @@ import { Button } from "flowbite-react";
 import hafiz from "../assets/courseOne/hafiz.png";
 import Nazra from "../assets/courseOne/nazra1.jpg";
 import norani from "../assets/courseOne/norani.jpg";
+import namaz from "../assets/courseOne/namaz.jpg";
 import { useNavigate } from "react-router-dom";
 
 export default function Course() {
@@ -25,6 +26,18 @@ export default function Course() {
       dscpt4: "Course For Both Children And Adults",
       Doration:
         "Class 4 Days In A Week , Combine And Individual Classes Available",
+    },
+    {
+      name1: "Namaaz Course",
+      btn: " Enroll Now",
+      img: namaz,
+      dscpt1:
+        "Learn the accurate postures, words, and actions for each part of Namaaz",
+      dscpt2: "Understand the deeper meanings and significance of the prayer",
+      dscpt3: "Tips for consistency, concentration, and devotion in Salah",
+      dscpt4: "Opportunities to ask questions and clarify doubts",
+      Doration:
+        "Typically completed in 3 to 6 months, with daily classes of 1-2 hours",
     },
     {
       name1: "Online Nazra e Quran",
@@ -59,6 +72,17 @@ export default function Course() {
       dscpt3: "قرآن کی تلاوت کی تیاری",
       dscpt4: "یہ کورس بچوں اور بڑوں دونوں کے لیے ہے",
       Doration: "ہفتے میں 4 دن کلاس، اجتماعی اور انفرادی کلاسز دستیاب ہیں",
+    },
+    {
+      name1: "نماز کورس",
+      btn: " Enroll Now",
+      img: namaz,
+      dscpt1: "نماز کے ہر رکن کے درست انداز، الفاظ اور حرکات کو سیکھنا",
+      dscpt2: "نماز کے گہرے معانی اور اہمیت کو سمجھنا",
+      dscpt3: "نماز میں توجہ، استقامت اور خشوع حاصل کرنے کے طریقے",
+      dscpt4: "سوالات پوچھنے اور وضاحت حاصل کرنے کے مواقع",
+      Doration:
+        "عام طور پر 3 سے 6 ماہ میں مکمل ہوتا ہے، روزانہ 1-2 گھنٹے کی کلاسز کے ساتھ",
     },
     {
       name1: "  نورانی قاعدہ کورس",

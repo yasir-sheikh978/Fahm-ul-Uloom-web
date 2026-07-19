@@ -4,7 +4,9 @@ import { API_BASE } from "../config/api";
 const AuthContext = createContext(null);
 
 export function AuthProvider({ children }) {
-  const [token, setToken] = useState(() => localStorage.getItem("admin_token"));
+  // sessionStorage: login lasts only for the current browser session —
+  // closing the browser/tab requires the admin to log in again.
+  const [token, setToken] = useState(() => sessionStorage.getItem("admin_token"));
 
   const login = async (email, password) => {
     const res = await fetch(`${API_BASE}/api/auth/login`, {
@@ -14,12 +16,12 @@ export function AuthProvider({ children }) {
     });
     const data = await res.json();
     if (!res.ok) throw new Error(data.error || "Login failed");
-    localStorage.setItem("admin_token", data.token);
+    sessionStorage.setItem("admin_token", data.token);
     setToken(data.token);
   };
 
   const logout = () => {
-    localStorage.removeItem("admin_token");
+    sessionStorage.removeItem("admin_token");
     setToken(null);
   };
 
