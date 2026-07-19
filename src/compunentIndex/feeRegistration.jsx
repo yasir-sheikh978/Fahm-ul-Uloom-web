@@ -82,7 +82,7 @@ function RegistrationForm() {
         }
 
         try {
-            const response = await fetch('https://email-tem-one.vercel.app/email', {
+            const response = await fetch(`${API_BASE}/email`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

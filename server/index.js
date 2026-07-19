@@ -5,6 +5,7 @@ import { connectDB } from "./db.js";
 import authRoutes from "./routes/auth.js";
 import studentRoutes from "./routes/students.js";
 import meetingRoutes from "./routes/meetings.js";
+import { sendRegistrationEmails } from "./mailer.js";
 
 const app = express();
 
@@ -23,6 +24,25 @@ app.use(async (req, res, next) => {
 });
 
 app.get("/", (req, res) => res.json({ status: "Fahm-ul-Uloom API running" }));
+
+// Registration emails (auto-reply + admin notification).
+// Same contract as the old standalone email server, now merged here.
+app.post("/email", async (req, res) => {
+  try {
+    const { email, firstName, sessionType } = req.body || {};
+    if (!email || !firstName || !sessionType) {
+      return res
+        .status(400)
+        .json({ success: false, message: "email, firstName and sessionType are required" });
+    }
+    await sendRegistrationEmails(req.body);
+    res.status(200).json({ success: true, message: "Emails sent successfully!" });
+  } catch (error) {
+    console.error("Error sending emails:", error);
+    res.status(500).json({ success: false, message: "Failed to send emails." });
+  }
+});
+
 app.use("/api/auth", authRoutes);
 app.use("/api/students", studentRoutes);
 app.use("/api/meetings", meetingRoutes);

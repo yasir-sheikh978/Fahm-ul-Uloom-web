@@ -28,3 +28,6 @@ server/.env
 *.sw?
 .vercel
 .env*
+
+# old standalone email server clone (merged into server/, kept only as reference)
+email-template/

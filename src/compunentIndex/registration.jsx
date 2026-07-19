@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { API_BASE } from "../config/api";
 // import emailjs from 'emailjs-com';
 
 
@@ -39,7 +40,7 @@ function RegistrationForm() {
     e.preventDefault();
     setStatus('Sending....');
     try {
-        const response = await fetch('https://email-tem-one.vercel.app/email', {
+        const response = await fetch(`${API_BASE}/email`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

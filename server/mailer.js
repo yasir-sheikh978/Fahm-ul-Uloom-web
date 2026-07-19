@@ -15,6 +15,93 @@ function getTransporter() {
   return transporter;
 }
 
+// Registration auto-reply to the student + admission details to the admin.
+// Merged from the old standalone email server (email-tem-one).
+export async function sendRegistrationEmails({
+  email,
+  firstName,
+  lastName,
+  whatsapp,
+  phone,
+  country,
+  city,
+  address,
+  sessionType,
+  education,
+  mode,
+  Environment,
+}) {
+  const transporter = getTransporter();
+
+  // Auto-reply to the student
+  await transporter.sendMail({
+    from: `"Fahm-ul-Uloom" <${process.env.EMAIL_USER}>`,
+    to: email,
+    subject: "You Received A Message From Fahmululoom!",
+    html: `
+      <div style="font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px; line-height: 1.6;">
+        <div style="max-width: 600px; margin: auto; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px;">
+          <div style="background-color: #007bff; color: #ffffff; padding: 15px 20px; border-top-left-radius: 8px; border-top-right-radius: 8px; text-align: center;">
+            <h2 style="margin: 0; font-size: 20px;">السَّلاَمُ عَلَيْكُمْ وَرَحْمَةُ اللهِ وَبَرَكَاتُهُ</h2>
+            <p style="margin: 5px 0;">Jamia Fahm-ul-uloom</p>
+            <p style="font-size: 14px;">Education At Your Doorstep</p>
+          </div>
+          <div style="padding: 20px; color: #333;">
+            <p>Dear ${firstName},</p>
+            <p>Thank you for contacting us! We’ve received your details.</p>
+            <p>You are now registered for the course: <strong>'${sessionType}'</strong>.</p>
+            <p>Our team will contact you soon to provide information about the fees and timings.</p>
+            <p>If you have further questions, please don’t hesitate to reach out to us:</p>
+            <p style="font-size: 16px; font-weight: bold; color: #007bff;">+92 300 9214180</p>
+            <p>Best regards,</p>
+            <p>Jamia Fahm-ul-uloom</p>
+          </div>
+          <div style="background-color: #f0f0f0; padding: 10px 20px; text-align: center; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;">
+            <p style="margin: 0; font-size: 12px; color: #555;">© 2025 Jamia Fahm-ul-uloom. All rights reserved.</p>
+          </div>
+        </div>
+      </div>`,
+  });
+
+  // Admission details to the admin inbox
+  const row = (label, value) => `
+              <tr>
+                <td style="padding: 8px; border-bottom: 1px solid #f0f0f0; color: #555;"><strong>${label}:</strong></td>
+                <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">${value || "-"}</td>
+              </tr>`;
+
+  await transporter.sendMail({
+    from: `"Fahm-ul-Uloom" <${process.env.EMAIL_USER}>`,
+    to: process.env.EMAIL_USER,
+    subject: "New Admission Form Submission",
+    html: `
+      <div style="font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px; line-height: 1.6;">
+        <div style="max-width: 600px; margin: auto; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px;">
+          <div style="background-color: #007bff; color: #ffffff; padding: 15px 20px; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+            <h2 style="margin: 0; font-size: 20px;">New Admission Form Submission</h2>
+          </div>
+          <div style="padding: 20px; color: #333;">
+            <table style="width: 100%; border-collapse: collapse;">
+              ${row("Name", `${firstName} ${lastName}`)}
+              ${row("Email", email)}
+              ${row("WhatsApp Number", whatsapp)}
+              ${row("Phone Number", phone)}
+              ${row("Course", sessionType)}
+              ${row("Country, City", `${country}, ${city}`)}
+              ${row("Address", address)}
+              ${row("Education", education)}
+              ${row("Mode", mode)}
+              ${row("Environment", Environment)}
+            </table>
+          </div>
+          <div style="background-color: #f0f0f0; padding: 10px 20px; text-align: center; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;">
+            <p style="margin: 0; font-size: 12px; color: #555;">© 2025 Jamia Fahm-ul-uloom. All rights reserved.</p>
+          </div>
+        </div>
+      </div>`,
+  });
+}
+
 export async function sendMeetingEmail({ to, name, sessionName, course, meetLink, message }) {
   // The email button opens the website home page, which shows a popup
   // with the session details and the real "Join Google Meet" button.
