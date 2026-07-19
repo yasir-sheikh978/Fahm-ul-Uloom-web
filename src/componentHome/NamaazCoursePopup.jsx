@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import namaz from "../assets/courseOne/namaz.jpg";
-import logo from "../assets/logo/logoOne.png";
 
 // Promotional popup shown on the home page announcing the Namaaz Course.
 // The Register button opens the registration form with the course locked in.
@@ -13,11 +12,19 @@ function NamaazCoursePopup() {
   useEffect(() => {
     // Don't fight with the class-invite popup (?join=1 from invitation emails)
     if (searchParams.get("join") === "1") return;
+    // Show only once per browser session so it doesn't annoy on every visit
+    if (sessionStorage.getItem("namaaz_popup_seen")) return;
     const timer = setTimeout(() => setOpen(true), 800);
     return () => clearTimeout(timer);
   }, [searchParams]);
 
+  const dismiss = () => {
+    sessionStorage.setItem("namaaz_popup_seen", "1");
+    setOpen(false);
+  };
+
   const handleRegister = () => {
+    sessionStorage.setItem("namaaz_popup_seen", "1");
     setOpen(false);
     navigate("/feeregistration?course=Namaaz%20Course");
   };
@@ -32,17 +39,12 @@ function NamaazCoursePopup() {
           <img src={namaz} alt="Namaaz Course" className="w-full h-36 sm:h-44 object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-blue-950/90 via-blue-950/30 to-transparent"></div>
           <button
-            onClick={() => setOpen(false)}
+            onClick={dismiss}
             className="absolute top-3 right-4 bg-white/90 hover:bg-white text-gray-800 rounded-full w-9 h-9 text-2xl leading-none shadow"
             aria-label="Close"
           >
             &times;
           </button>
-          <img
-            src={logo}
-            alt="Fahm-ul-Uloom"
-            className="absolute bottom-3 left-4 h-10 sm:h-12 bg-white rounded-full p-1 shadow"
-          />
           <span className="absolute bottom-4 right-4 bg-green-600 text-white text-[10px] sm:text-xs font-bold uppercase tracking-wider px-2 sm:px-3 py-1 rounded-full shadow">
             Admissions Open
           </span>
@@ -73,7 +75,7 @@ function NamaazCoursePopup() {
           </button>
 
           <button
-            onClick={() => setOpen(false)}
+            onClick={dismiss}
             className="mt-3 w-full text-gray-500 hover:text-gray-700 text-sm py-2"
           >
             Maybe later
