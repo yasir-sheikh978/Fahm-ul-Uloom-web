@@ -25,11 +25,11 @@ function NamaazCoursePopup() {
   if (!open) return null;
 
   return (
-    <div className="fixed inset-0 z-[9998] flex items-center justify-center bg-black bg-opacity-60 px-4">
-      <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full overflow-hidden">
+    <div className="fixed inset-0 z-[9998] flex items-center justify-center bg-black bg-opacity-60 px-4 py-6">
+      <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full overflow-hidden max-h-[90vh] overflow-y-auto">
         {/* Header */}
         <div className="relative">
-          <img src={namaz} alt="Namaaz Course" className="w-full h-44 object-cover" />
+          <img src={namaz} alt="Namaaz Course" className="w-full h-36 sm:h-44 object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-blue-950/90 via-blue-950/30 to-transparent"></div>
           <button
             onClick={() => setOpen(false)}
@@ -41,22 +41,22 @@ function NamaazCoursePopup() {
           <img
             src={logo}
             alt="Fahm-ul-Uloom"
-            className="absolute bottom-3 left-4 h-12 bg-white rounded-full p-1 shadow"
+            className="absolute bottom-3 left-4 h-10 sm:h-12 bg-white rounded-full p-1 shadow"
           />
-          <span className="absolute bottom-4 right-4 bg-green-600 text-white text-xs font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow">
+          <span className="absolute bottom-4 right-4 bg-green-600 text-white text-[10px] sm:text-xs font-bold uppercase tracking-wider px-2 sm:px-3 py-1 rounded-full shadow">
             Admissions Open
           </span>
         </div>
 
         {/* Body */}
-        <div className="p-6 text-center">
-          <h2 className="text-2xl font-bold text-blue-950">Namaaz Course</h2>
-          <p className="text-gray-600 mt-2">
+        <div className="p-4 sm:p-6 text-center">
+          <h2 className="text-xl sm:text-2xl font-bold text-blue-950">Namaaz Course</h2>
+          <p className="text-gray-600 mt-2 text-sm sm:text-base">
             Learn the accurate postures, words, and actions of Salah — with its
             deeper meanings — from qualified teachers, online at your doorstep.
           </p>
 
-          <div className="flex justify-center gap-2 mt-4 text-sm">
+          <div className="flex flex-wrap justify-center gap-2 mt-4 text-xs sm:text-sm">
             <span className="bg-blue-50 text-blue-900 px-3 py-1 rounded-full border border-blue-100">
               For Children &amp; Adults
             </span>
@@ -67,7 +67,7 @@ function NamaazCoursePopup() {
 
           <button
             onClick={handleRegister}
-            className="mt-6 w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 text-lg"
+            className="mt-5 sm:mt-6 w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 text-base sm:text-lg"
           >
             Register Now
           </button>

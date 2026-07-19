@@ -19,6 +19,25 @@ export default function MeetingManagement() {
   const [sending, setSending] = useState(false);
   const [result, setResult] = useState(null);
   const [error, setError] = useState("");
+  const [whatsappMsg, setWhatsappMsg] = useState("");
+  const [showMsgPopup, setShowMsgPopup] = useState(false);
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(whatsappMsg);
+    } catch {
+      // Fallback for browsers without clipboard API permission
+      const ta = document.createElement("textarea");
+      ta.value = whatsappMsg;
+      document.body.appendChild(ta);
+      ta.select();
+      document.execCommand("copy");
+      document.body.removeChild(ta);
+    }
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   const authHeaders = {
     "Content-Type": "application/json",
@@ -87,6 +106,19 @@ export default function MeetingManagement() {
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Failed to send");
       setResult(data);
+
+      // Ready-made WhatsApp message with the same invite link sent in the email
+      const msg =
+        `*${form.course} — Class Started!*\n\n` +
+        `Assalamu Alaikum!\n\n` +
+        `Your online class *"${form.sessionName}"* is starting now. ` +
+        `Please join your class using the link below:\n\n` +
+        `${data.inviteUrl}\n\n` +
+        (form.message ? `Note: ${form.message}\n\n` : "") +
+        `Jamia Fahm-ul-Uloom\nEducation At Your Doorstep`;
+      setWhatsappMsg(msg);
+      setShowMsgPopup(true);
+
       setForm({ course: form.course, sessionName: "", meetLink: "", message: "" });
     } catch (err) {
       setError(err.message);
@@ -207,6 +239,54 @@ export default function MeetingManagement() {
             {sending ? "Sending..." : "Send to Students"}
           </button>
         </form>
+
+        {/* WhatsApp message popup after successful send */}
+        {showMsgPopup && (
+          <div className="fixed inset-0 z-[9999] flex items-center justify-center bg-black bg-opacity-60 px-4 py-6">
+            <div className="bg-white rounded-2xl shadow-2xl max-w-lg w-full overflow-hidden max-h-[90vh] overflow-y-auto">
+              <div className="bg-green-600 text-white px-6 py-4 flex items-center justify-between">
+                <div>
+                  <h2 className="text-lg font-bold">Emails Sent Successfully ✅</h2>
+                  <p className="text-green-100 text-sm">
+                    Copy this message and share it on WhatsApp broadcast
+                  </p>
+                </div>
+                <button
+                  onClick={() => setShowMsgPopup(false)}
+                  className="text-white text-3xl leading-none hover:text-green-200"
+                  aria-label="Close"
+                >
+                  &times;
+                </button>
+              </div>
+
+              <div className="p-5">
+                <textarea
+                  readOnly
+                  value={whatsappMsg}
+                  rows={10}
+                  className="w-full border border-gray-300 rounded-lg p-3 text-sm text-gray-800 bg-gray-50 focus:outline-none resize-none whitespace-pre-wrap"
+                />
+
+                <button
+                  onClick={handleCopy}
+                  className={`mt-4 w-full font-bold py-3 px-6 rounded-lg transition duration-300 text-white ${
+                    copied ? "bg-blue-600" : "bg-green-600 hover:bg-green-700"
+                  }`}
+                >
+                  {copied ? "✓ Copied! Paste it in WhatsApp" : "📋 Copy Message"}
+                </button>
+
+                <button
+                  onClick={() => setShowMsgPopup(false)}
+                  className="mt-2 w-full text-gray-500 hover:text-gray-700 text-sm py-2"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
 
         {/* Delivery log */}
         {result?.deliveryLog?.length > 0 && (

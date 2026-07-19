@@ -2,7 +2,7 @@ import { Router } from "express";
 import Student from "../models/Student.js";
 import Meeting from "../models/Meeting.js";
 import { requireAdmin } from "../middleware/auth.js";
-import { sendMeetingEmail } from "../mailer.js";
+import { sendMeetingEmail, buildInviteUrl } from "../mailer.js";
 
 const router = Router();
 
@@ -62,6 +62,7 @@ router.post("/send", requireAdmin, async (req, res) => {
       total: students.length,
       sent,
       failed: students.length - sent,
+      inviteUrl: buildInviteUrl({ sessionName, course, meetLink }),
       deliveryLog,
     });
   } catch (err) {

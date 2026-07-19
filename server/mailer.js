@@ -102,15 +102,21 @@ export async function sendRegistrationEmails({
   });
 }
 
-export async function sendMeetingEmail({ to, name, sessionName, course, meetLink, message }) {
-  // The email button opens the website home page, which shows a popup
-  // with the session details and the real "Join Google Meet" button.
+// The invite link opens the website home page, which shows a popup
+// with the session details and the real "Join Google Meet" button.
+// Used in the email button and also returned to the admin for WhatsApp sharing.
+export function buildInviteUrl({ sessionName, course, meetLink }) {
   const siteUrl = process.env.SITE_URL || "http://localhost:5173";
-  const inviteUrl =
+  return (
     `${siteUrl}/?join=1` +
     `&session=${encodeURIComponent(sessionName)}` +
     `&course=${encodeURIComponent(course)}` +
-    `&meet=${encodeURIComponent(meetLink)}`;
+    `&meet=${encodeURIComponent(meetLink)}`
+  );
+}
+
+export async function sendMeetingEmail({ to, name, sessionName, course, meetLink, message }) {
+  const inviteUrl = buildInviteUrl({ sessionName, course, meetLink });
 
   const html = `
     <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden;">
