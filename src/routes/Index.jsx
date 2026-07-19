@@ -13,6 +13,7 @@ import Short from '../componentHome/short'
 import Long from '../componentHome/long'
 import Promotion from '../componentHome/Promotion'
 import ClassInvitePopup from '../componentHome/ClassInvitePopup'
+import NamaazCoursePopup from '../componentHome/NamaazCoursePopup'
 import 'flowbite';
 import AOS from "aos";
 
@@ -45,6 +46,7 @@ function Index(){
        <div>
         <ScrollToTop />
         <ClassInvitePopup />
+        <NamaazCoursePopup />
         {/* <Promotion /> */}
 
    

@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 import emailjs from 'emailjs-com';
 // import { AiFillEnvironment } from "react-icons/ai";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { API_BASE } from "../config/api";
 
 function RegistrationForm() {
       const [loading, setLoading] = useState(false);
       const [status, setStatus] = useState('');
       const Navigate = useNavigate();
+      // When opened from a course popup (e.g. /feeregistration?course=Namaaz Course)
+      // the course is pre-selected and locked so it can't be changed by mistake.
+      const [searchParams] = useSearchParams();
+      const lockedCourse = searchParams.get("course") || "";
 
   const Fees = () => {
     Navigate("/courseone");
@@ -23,10 +27,10 @@ function RegistrationForm() {
     country: "",
     city: "",
     address: "",
-    sessionType: "",
-    education: "", 
-    mode: "online", 
-    Environment: "Seprate", 
+    sessionType: lockedCourse || "",
+    education: "",
+    mode: "online",
+    Environment: "Seprate",
   });
 
   const [isPolicyChecked, setIsPolicyChecked] = useState(false);
@@ -104,7 +108,7 @@ function RegistrationForm() {
                     country: "",
                     city: "",
                     address: "",
-                    sessionType: "",
+                    sessionType: lockedCourse || "",
                     education: "",
                     mode: "online", 
                     Environment: "Seprate",
@@ -247,6 +251,21 @@ function RegistrationForm() {
         {/* Session Type Dropdown */}
         <div className="mt-4">
   <label className="block text-gray-700">Session</label>
+  {lockedCourse ? (
+    <>
+      <select
+        name="sessionType"
+        value={lockedCourse}
+        disabled
+        className="w-full border border-gray-300 rounded-md p-2 mt-1 bg-gray-100 text-gray-800 font-semibold cursor-not-allowed"
+      >
+        <option value={lockedCourse}>{lockedCourse}</option>
+      </select>
+      <p className="text-sm text-green-600 mt-1">
+        You are registering for the {lockedCourse}.
+      </p>
+    </>
+  ) : (
   <select
   required
     name="sessionType"
@@ -273,6 +292,7 @@ function RegistrationForm() {
     <option value="Dar e Nizami (Alim Course)">Dar e Nizami (Alim Course)</option>
     <option value="One Year Alim Diploma">One Year Alim Diploma</option>
   </select>
+  )}
 </div>
 
 
