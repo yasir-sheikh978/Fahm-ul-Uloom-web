@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
-import namaz from "../assets/courseOne/namaz.jpg";
+import courseImg from "../assets/courseOne/Tajhiz-O-Takfeen.png";
 
-// Promotional popup shown on the home page announcing the Namaaz Course.
+const COURSE_NAME = "Tajheez o Takfeen Course";
+
+// Promotional popup shown on the home page announcing a course.
 // The Register button opens the registration form with the course locked in.
 function NamaazCoursePopup() {
   const navigate = useNavigate();
@@ -26,7 +28,7 @@ function NamaazCoursePopup() {
   const handleRegister = () => {
     sessionStorage.setItem("namaaz_popup_seen", "1");
     setOpen(false);
-    navigate("/feeregistration?course=Namaaz%20Course");
+    navigate(`/feeregistration?course=${encodeURIComponent(COURSE_NAME)}`);
   };
 
   if (!open) return null;
@@ -36,7 +38,11 @@ function NamaazCoursePopup() {
       <div className="bg-white rounded-2xl shadow-2xl max-w-md w-full overflow-hidden max-h-[90vh] overflow-y-auto">
         {/* Header */}
         <div className="relative">
-          <img src={namaz} alt="Namaaz Course" className="w-full h-36 sm:h-44 object-cover" />
+          <img
+            src={courseImg}
+            alt={COURSE_NAME}
+            className="w-full h-36 sm:h-44 object-cover object-[20%_25%]"
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-blue-950/90 via-blue-950/30 to-transparent"></div>
           <button
             onClick={dismiss}
@@ -52,15 +58,16 @@ function NamaazCoursePopup() {
 
         {/* Body */}
         <div className="p-4 sm:p-6 text-center">
-          <h2 className="text-xl sm:text-2xl font-bold text-blue-950">Namaaz Course</h2>
+          <h2 className="text-xl sm:text-2xl font-bold text-blue-950">{COURSE_NAME}</h2>
           <p className="text-gray-600 mt-2 text-sm sm:text-base">
-            Learn the accurate postures, words, and actions of Salah — with its
-            deeper meanings — from qualified teachers, online at your doorstep.
+            Learn the correct Islamic method of Ghusl, Kafan, Janazah prayer and
+            burial rites — an essential Fard-e-Kifayah skill — from qualified
+            teachers, online at your doorstep.
           </p>
 
           <div className="flex flex-wrap justify-center gap-2 mt-4 text-xs sm:text-sm">
             <span className="bg-blue-50 text-blue-900 px-3 py-1 rounded-full border border-blue-100">
-              For Children &amp; Adults
+              For Men &amp; Women
             </span>
             <span className="bg-blue-50 text-blue-900 px-3 py-1 rounded-full border border-blue-100">
               Online Classes

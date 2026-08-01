@@ -5,6 +5,7 @@ import hafiz from "../assets/courseOne/hafiz.png";
 import Nazra from "../assets/courseOne/nazra1.jpg";
 import norani from "../assets/courseOne/norani.jpg";
 import namaz from "../assets/courseOne/namaz.jpg";
+import tajheez from "../assets/courseOne/Tajhiz-O-Takfeen.png";
 import { useNavigate } from "react-router-dom";
 
 export default function Course() {
@@ -36,6 +37,17 @@ export default function Course() {
       dscpt2: "Understand the deeper meanings and significance of the prayer",
       dscpt3: "Tips for consistency, concentration, and devotion in Salah",
       dscpt4: "Opportunities to ask questions and clarify doubts",
+      Doration:
+        "Typically completed in 3 to 6 months, with daily classes of 1-2 hours",
+    },
+    {
+      name1: "Tajheez o Takfeen Course",
+      btn: " Enroll Now",
+      img: tajheez,
+      dscpt1: "Correct Islamic method of Ghusl (bathing the deceased)",
+      dscpt2: "Proper way of Kafan (shrouding)",
+      dscpt3: "Rules of Janazah prayer and burial (Dafan)",
+      dscpt4: "An essential Fard-e-Kifayah skill for every Muslim",
       Doration:
         "Typically completed in 3 to 6 months, with daily classes of 1-2 hours",
     },
@@ -81,6 +93,17 @@ export default function Course() {
       dscpt2: "نماز کے گہرے معانی اور اہمیت کو سمجھنا",
       dscpt3: "نماز میں توجہ، استقامت اور خشوع حاصل کرنے کے طریقے",
       dscpt4: "سوالات پوچھنے اور وضاحت حاصل کرنے کے مواقع",
+      Doration:
+        "عام طور پر 3 سے 6 ماہ میں مکمل ہوتا ہے، روزانہ 1-2 گھنٹے کی کلاسز کے ساتھ",
+    },
+    {
+      name1: "تجہیز و تکفین کورس",
+      btn: " Enroll Now",
+      img: tajheez,
+      dscpt1: "میت کو غسل دینے کا صحیح اسلامی طریقہ",
+      dscpt2: "کفن پہنانے کا درست طریقہ",
+      dscpt3: "نماز جنازہ اور تدفین کے احکام",
+      dscpt4: "ہر مسلمان کے لیے ایک اہم فرض کفایہ",
       Doration:
         "عام طور پر 3 سے 6 ماہ میں مکمل ہوتا ہے، روزانہ 1-2 گھنٹے کی کلاسز کے ساتھ",
     },

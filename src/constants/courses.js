@@ -18,4 +18,5 @@ export const COURSES = [
   "Ahkam e Qurbani Course",
   "Dar e Nizami (Alim Course)",
   "One Year Alim Diploma",
+  "Tajheez o Takfeen Course",
 ];

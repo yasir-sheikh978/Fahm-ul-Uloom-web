@@ -274,6 +274,7 @@ function RegistrationForm() {
     className="w-full border border-gray-300 rounded-md p-2 mt-1 focus:outline-none focus:ring-2 focus:ring-blue-500"
   >
     <option value="">Select Course</option>
+        <option value="Tajheez o Takfeen Course">Tajheez o Takfeen Course</option>
     <option value="Norani Qaida">Norani Qaida</option>
     <option value="Nazra e Quran">Nazra e Quran</option>
     <option value="Hifzul Quran">Hifzul Quran</option>
