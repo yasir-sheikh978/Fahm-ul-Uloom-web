@@ -47,9 +47,9 @@ export default function Course() {
       dscpt1: "Correct Islamic method of Ghusl (bathing the deceased)",
       dscpt2: "Proper way of Kafan (shrouding)",
       dscpt3: "Rules of Janazah prayer and burial (Dafan)",
-      dscpt4: "An essential Fard-e-Kifayah skill for every Muslim",
+      dscpt4: "A 2-day short course on Google Meet, 3:00 PM to 4:00 PM",
       Doration:
-        "Typically completed in 3 to 6 months, with daily classes of 1-2 hours",
+        "2-Day Course on 8th & 9th August (Sat & Sun), 3:00 PM to 4:00 PM, via Google Meet",
     },
     {
       name1: "Online Nazra e Quran",
@@ -103,9 +103,9 @@ export default function Course() {
       dscpt1: "میت کو غسل دینے کا صحیح اسلامی طریقہ",
       dscpt2: "کفن پہنانے کا درست طریقہ",
       dscpt3: "نماز جنازہ اور تدفین کے احکام",
-      dscpt4: "ہر مسلمان کے لیے ایک اہم فرض کفایہ",
+      dscpt4: "گوگل میٹ پر دو روزہ کورس، دوپہر 3 بجے سے 4 بجے تک",
       Doration:
-        "عام طور پر 3 سے 6 ماہ میں مکمل ہوتا ہے، روزانہ 1-2 گھنٹے کی کلاسز کے ساتھ",
+        "8 اور 9 اگست (ہفتہ و اتوار) دو روزہ کورس، دوپہر 3:00 تا 4:00، گوگل میٹ پر",
     },
     {
       name1: "  نورانی قاعدہ کورس",

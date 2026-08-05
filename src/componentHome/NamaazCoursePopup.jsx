@@ -60,17 +60,20 @@ function NamaazCoursePopup() {
         <div className="p-4 sm:p-6 text-center">
           <h2 className="text-xl sm:text-2xl font-bold text-blue-950">{COURSE_NAME}</h2>
           <p className="text-gray-600 mt-2 text-sm sm:text-base">
-            Learn the correct Islamic method of Ghusl, Kafan, Janazah prayer and
-            burial rites — an essential Fard-e-Kifayah skill — from qualified
-            teachers, online at your doorstep.
+            A 2-day course covering the correct Islamic method of Ghusl, Kafan,
+            Janazah prayer and burial rites — an essential Fard-e-Kifayah skill
+            — taught live on Google Meet.
           </p>
 
           <div className="flex flex-wrap justify-center gap-2 mt-4 text-xs sm:text-sm">
             <span className="bg-blue-50 text-blue-900 px-3 py-1 rounded-full border border-blue-100">
-              For Men &amp; Women
+              8th &amp; 9th August
             </span>
             <span className="bg-blue-50 text-blue-900 px-3 py-1 rounded-full border border-blue-100">
-              Online Classes
+              3:00 PM – 4:00 PM
+            </span>
+            <span className="bg-blue-50 text-blue-900 px-3 py-1 rounded-full border border-blue-100">
+              On Google Meet
             </span>
           </div>
 
