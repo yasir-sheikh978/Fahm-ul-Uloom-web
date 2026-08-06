@@ -55,19 +55,19 @@ export default function Footer() {
 
   return (
     <footer className="bg-blue-950">
-      <div className="px-6 md:px-10 lg:px-16 py-14 sm:py-16 lg:py-20 w-full">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-y-12 gap-x-8">
+      <div className="px-6 md:px-10 lg:px-16 py-5 sm:py-6 lg:py-8 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-y-4 gap-x-8">
           {/* Brand */}
           <div className="min-w-0 sm:col-span-2 md:col-span-4 lg:col-span-2 lg:pr-8">
             <div className="flex flex-col items-center md:items-start text-center md:text-left">
-              <img className="w-40 sm:w-48" src={logoTwo} alt="Fahm-ul-Uloom" />
-              <p className="text-sm text-blue-200 mt-3 max-w-xs">
+              <img className="w-24 sm:w-28" src={logoTwo} alt="Fahm-ul-Uloom" />
+              <p className="text-sm text-blue-200 mt-1 max-w-xs">
                 Education at Your Doorstep — bringing authentic Quranic and
                 Islamic education to homes around the world.
               </p>
             </div>
 
-            <ul className="flex items-center justify-center md:justify-start gap-3 mt-6">
+            <ul className="flex items-center justify-center md:justify-start gap-3 mt-2">
               {socialLinks.map(({ icon: Icon, label, href, onClick }) => (
                 <li key={label}>
                   {onClick ? (
@@ -97,7 +97,7 @@ export default function Footer() {
             <p className="text-xs font-bold tracking-widest text-blue-300 uppercase">
               Quick Links
             </p>
-            <ul className="mt-6 space-y-3">
+            <ul className="mt-2 space-y-1">
               {quickLinks.map(({ label, onClick }) => (
                 <li key={label}>
                   <button
@@ -116,7 +116,7 @@ export default function Footer() {
             <p className="text-xs font-bold tracking-widest text-blue-300 uppercase">
               Help
             </p>
-            <ul className="mt-6 space-y-3">
+            <ul className="mt-2 space-y-1">
               {helpLinks.map(({ label, onClick }) => (
                 <li key={label}>
                   <button
@@ -132,10 +132,10 @@ export default function Footer() {
 
           {/* Contact */}
           <div className="min-w-0 sm:col-span-2 md:col-span-4 lg:col-span-2 lg:pl-8">
-            <p className="text-xs font-bold tracking-widest text-blue-300 uppercase mb-6">
+            <p className="text-xs font-bold tracking-widest text-blue-300 uppercase mb-2">
               Contact
             </p>
-            <ul className="space-y-3">
+            <ul className="space-y-1">
               <li className="min-w-0">
                 <a
                   href="mailto:fahmululoom@gmail.com"
@@ -162,7 +162,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <hr className="mt-12 mb-6 border-white/10" />
+        <hr className="mt-4 mb-2 border-white/10" />
 
         <div className="flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
           <p className="text-xs sm:text-sm text-blue-300">
