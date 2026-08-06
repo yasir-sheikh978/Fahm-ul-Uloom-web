@@ -12,6 +12,10 @@ module.exports = {
     // Add Flowbite's components path
   ],
   theme: {
+    container: {
+      center: true,
+      padding: "1rem",
+    },
     extend: {},
   },
   plugins: [

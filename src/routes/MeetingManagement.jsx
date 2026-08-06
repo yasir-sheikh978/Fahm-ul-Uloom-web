@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { FaTrash } from "react-icons/fa6";
 import { useAuth } from "../context/AuthContext";
 import { API_BASE } from "../config/api";
 import { COURSES } from "../constants/courses";
@@ -72,6 +73,21 @@ export default function MeetingManagement() {
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [form.course]);
+
+  const handleDeleteStudent = async (id) => {
+    if (!window.confirm("Delete this student's registration?")) return;
+    try {
+      const res = await fetch(`${API_BASE}/api/students/${id}`, {
+        method: "DELETE",
+        headers: authHeaders,
+      });
+      if (res.status === 401) return handleUnauthorized();
+      if (!res.ok) throw new Error("Failed to delete");
+      setStudents((prev) => prev.filter((s) => s._id !== id));
+    } catch {
+      alert("Failed to delete student. Please try again.");
+    }
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -322,6 +338,8 @@ export default function MeetingManagement() {
                     <th className="py-2">Name</th>
                     <th className="py-2">Email</th>
                     <th className="py-2">WhatsApp</th>
+                    <th className="py-2">Registered On</th>
+                    <th className="py-2"></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -330,6 +348,24 @@ export default function MeetingManagement() {
                       <td className="py-2">{s.fullName}</td>
                       <td className="py-2">{s.email}</td>
                       <td className="py-2">{s.whatsapp}</td>
+                      <td className="py-2 text-gray-500 whitespace-nowrap">
+                        {s.createdAt
+                          ? new Date(s.createdAt).toLocaleString(undefined, {
+                              dateStyle: "medium",
+                              timeStyle: "short",
+                            })
+                          : "-"}
+                      </td>
+                      <td className="py-2 text-right">
+                        <button
+                          onClick={() => handleDeleteStudent(s._id)}
+                          className="text-red-500 hover:text-red-700 p-1"
+                          title="Delete registration"
+                          aria-label={`Delete ${s.fullName}`}
+                        >
+                          <FaTrash />
+                        </button>
+                      </td>
                     </tr>
                   ))}
                 </tbody>

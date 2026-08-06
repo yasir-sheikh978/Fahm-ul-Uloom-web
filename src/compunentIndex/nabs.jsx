@@ -37,6 +37,15 @@ export default function Navbarr() {
   const admin = () => {
     Navigate("/meeting-management");
   };
+  const itTeam = () => {
+    Navigate("/it");
+  };
+  const about = () => {
+    Navigate("/about");
+  };
+  const ourTeacher = () => {
+    Navigate("/teachers");
+  };
  
 
   // useEffect(() => {
@@ -77,23 +86,22 @@ export default function Navbarr() {
             >
               Home
             </Navbar.Link>
-            <Navbar className="bg-blue-950 hh  text-white hover:text-black  rounded-md md:p-2  font-semibold text-2xl">
-              <Dropdown label="About" inline>
-                <Dropdown.Item onClick={introAleret}>Introduction</Dropdown.Item>
-                {/* <Dropdown.Item>Founder</Dropdown.Item>   */}
-                <Dropdown.Item onClick={introAleret}>Our Mission</Dropdown.Item>
-              </Dropdown>
-            </Navbar>
-            <Navbar className="bg-blue-950 hh  text-white hover:text-black  rounded-md md:p-2  font-semibold text-2xl">
-              <Dropdown label="Course" inline>
-                <Dropdown.Item onClick={short}>Short Course</Dropdown.Item>
-                <Dropdown.Item onClick={long}>Long Course</Dropdown.Item>
-              </Dropdown>
-            </Navbar>
+            <Navbar.Link
+              onClick={about}
+              className=" text-white hover:bg-blue-950  hover:text-blue-500 border-black  rounded-md md:p-2    font-semibold text-2xl"
+            >
+              About
+            </Navbar.Link>
+            <Navbar.Link
+              onClick={short}
+              className=" text-white hover:bg-blue-950  hover:text-blue-500 border-black  rounded-md md:p-2    font-semibold text-2xl"
+            >
+              Course
+            </Navbar.Link>
             <Navbar className="bg-blue-950 hh  text-center  text-white hover:text-black   rounded-md   font-semibold text-2xl ">
               <Dropdown label="Meet The Team" inline className="hh">
-                <Dropdown.Item onClick={introAleret}>Our Treacher</Dropdown.Item>
-                <Dropdown.Item onClick={introAleret}>IT Team</Dropdown.Item>
+                <Dropdown.Item onClick={ourTeacher}>Our Teacher</Dropdown.Item>
+                <Dropdown.Item onClick={itTeam}>IT Team</Dropdown.Item>
                 {/* <Dropdown.Item>Our Muftis</Dropdown.Item> */}
               </Dropdown>
             </Navbar>

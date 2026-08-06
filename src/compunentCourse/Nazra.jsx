@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { Card } from "flowbite-react";
-import { Button } from "flowbite-react";
+import { FaArrowRight, FaCircleCheck, FaClock } from "react-icons/fa6";
 import hafiz from "../assets/courseOne/hafiz.png";
 import Nazra from "../assets/courseOne/nazra1.jpg";
 import norani from "../assets/courseOne/norani.jpg";
@@ -133,167 +132,145 @@ export default function Course() {
   const [Urdu, seturdu] = useState("hidden");
   const [eng, seteng] = useState("flex");
 
+  const openDetails = (index) => {
+    setid(index);
+    sethid("flex");
+  };
+  const closeDetails = () => sethid("hidden");
+  const toggleLanguage = () => {
+    if (eng === "flex") {
+      seteng("hidden");
+      seturdu("flex");
+    } else {
+      seteng("flex");
+      seturdu("hidden");
+    }
+  };
+
+  const activeCourse = eng === "flex" ? CourseDtails[id] : UrduTrans[id];
+  const isUrdu = eng === "hidden";
+
   return (
-    <div className="bg-gray-200">
-       <h1 className="flex justify-center items-center bg-gray-200 text-center h-20  text-4xl font-semibold font-serif border-b-2 border-gray-400">
-        COMMON COURSES
-      </h1>
-     
-      <div
-        className={`w-[100%] ${hid} h-screen  z-40 fixed bottom-0 backdrop-blur-sm justify-center items-center `}
-      >
-        <div
-          className={`fixed inset-0 bg-gray-900 bg-opacity-50 ${eng} items-center justify-center`}
-        >
-          <div className="relative overflow-scroll bg-gray-200 w-[90vw] md:w-[95vw] h-[85vh] md:h-[95vh] flex flex-col md:flex-row justify-around items-center p-2 rounded-sm">
-            {/* Close Button */}
-            <div
-              className="absolute top-4 right-4 text-4xl md:text-6xl cursor-pointer text-gray-900"
-              onClick={() => sethid("hidden")}
-            >
-              &times;
-            </div>
-            <div className="absolute h-20 md:h-10 top-4  text-4xl md:text-6xl cursor-pointer text-black">
-              <button
-                className="text-xl border font-semibold border-black p-2 hover:bg-blue-300 rounded-md"
-                onClick={() => {
-                  seteng("hidden");
-                  seturdu("flex");
-                }}
-              >
-                Urdu
-              </button>
-            </div>
-
-            <div className="w-[70vw] sm:w-3/4 md:w-2/3 flex justify-start p-4">
-              <img
-                src={CourseDtails[id].img}
-                alt=""
-                className="w-[100%] md:w-3/4 object-contain rounded-lg"
-              />
-            </div>
-
-            {/* Course Details */}
-            <div className="w-[100%] md:w-1/2  px-4">
-              <div className="text-center md:text-left ">
-                <h1 className="text-lg md:text-xl font-semibold font-serif mb-4">
-                  {CourseDtails[id].name1}
-                </h1>
-                {/* <h1 className="text-lg md:text-xl md:text-end font-semibold font-serif mb-4">{CourseDtails[id].name2}</h1> */}
-              </div>
-              <div>
-                <h2 className="text-md md:text-lg font-medium">
-                  Some Feature :
-                </h2>
-                <p className="pt-2">~{CourseDtails[id].dscpt1}</p>
-                <p className="pt-2">~{CourseDtails[id].dscpt2}</p>
-                <p className="pt-2">~{CourseDtails[id].dscpt3}</p>
-                <p className="pt-2">~{CourseDtails[id].dscpt4}</p>
-              </div>
-              <div className="py-2">
-                <h2 className="text-md md:text-lg font-medium">Duration :</h2>
-                <p className="pt-2">~{CourseDtails[id].Doration}</p>
-              </div>
-              <div>
-                <Button color="blue" className="mt-4 w-[100%]" onClick={register}>
-                {CourseDtails[id].btn}
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          className={`fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center ${Urdu}`}
-        >
-          <div className="relative overflow-scroll bg-gray-200 w-[90vw] md:w-[95vw] h-[85vh] md:h-[95vh] flex flex-col md:flex-row justify-around items-center p-2 rounded-sm">
-            {/* Close Button */}
-            <div
-              className="absolute top-4 right-4 text-4xl md:text-6xl cursor-pointer text-gray-900"
-              onClick={() => sethid("hidden")}
-            >
-              &times;
-            </div>
-            <div className="absolute h-20 md:h-10 top-4  text-4xl md:text-6xl cursor-pointer text-black">
-              <button
-                className="text-xl border font-semibold border-black p-2 hover:bg-blue-300 rounded-md"
-                onClick={() => {
-                  seteng("flex");
-                  seturdu("hidden");
-                }}
-              >
-                English
-              </button>
-            </div>
-
-            <div className="w-[70vw] sm:w-3/4 md:w-2/3 flex justify-star p-4">
-              <img
-                src={CourseDtails[id].img}
-                alt=""
-                className="w-[100%] md:w-3/4 object-contain rounded-lg"
-              />
-            </div>
-
-            {/* Course Details */}
-            <div className="w-[100%] md:w-1/2  px-4">
-              <div className="text-center md:text-left ">
-                {/* <h1 className="text-lg md:text-xl font-semibold font-serif mb-4">{CourseDtails[id].name1}</h1> */}
-                <h1 className="text-lg md:text-xl md:text-end font-semibold font-serif mb-4">
-                  {UrduTrans[id].name1}
-                </h1>
-              </div>
-              <div className="text-end">
-                <h2 className="text-md md:text-lg font-medium">:فوائد</h2>
-                <p className="pt-2">{UrduTrans[id].dscpt1}~</p>
-                <p className="pt-2">{UrduTrans[id].dscpt2}~</p>
-                <p className="pt-2">{UrduTrans[id].dscpt3}~</p>
-                <p className="pt-2">{UrduTrans[id].dscpt4}~</p>
-              </div>
-              <div className="py-2 text-end">
-                <h2 className="text-md  md:text-lg font-medium">:مدت</h2>
-                <p className="pt-2">{UrduTrans[id].Doration}~</p>
-              </div>
-              <div>
-                <Button color="blue" className="mt-4 w-[100%]" onClick={register}>
-                {UrduTrans[id].btn}
-                </Button>
-              </div>
-            </div>
-          </div>
-        </div>
+    <div className="bg-gray-200 py-4">
+      <div className="text-center py-10 px-4">
+        <h1 className="text-2xl md:text-4xl font-serif text-blue-700">
+          Common Courses
+        </h1>
+        <p className="text-gray-600 max-w-xl mx-auto mt-2">
+          Our most popular courses for building a strong foundation in
+          Quran and everyday Islamic practice.
+        </p>
       </div>
 
-      <div className="bg-gray-200 py-8 flex flex-wrap gap-4 justify-center ">
+      {hid !== "hidden" && (
+        <div
+          className="fixed inset-0 z-[9999] flex items-center justify-center bg-black bg-opacity-70 px-4 py-6"
+          onClick={closeDetails}
+        >
+          <div
+            className="bg-white rounded-2xl shadow-2xl max-w-3xl w-full max-h-[90vh] overflow-y-auto"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Header */}
+            <div className="flex items-start justify-between p-4 border-b border-gray-100">
+              <button
+                onClick={toggleLanguage}
+                className="text-sm font-semibold border border-gray-300 text-gray-700 px-3 py-1.5 rounded-lg hover:bg-gray-50"
+              >
+                {isUrdu ? "English" : "اردو"}
+              </button>
+              <button
+                onClick={closeDetails}
+                className="text-3xl leading-none text-gray-400 hover:text-gray-700"
+                aria-label="Close"
+              >
+                &times;
+              </button>
+            </div>
+
+            <div className={`flex flex-col md:flex-row gap-6 p-6 ${isUrdu ? "md:flex-row-reverse" : ""}`}>
+              <img
+                src={CourseDtails[id].img}
+                alt={CourseDtails[id].name1}
+                className="w-full md:w-2/5 h-56 md:h-64 object-cover rounded-2xl flex-shrink-0"
+              />
+
+              <div className={`flex-1 ${isUrdu ? "text-right" : "text-left"}`} dir={isUrdu ? "rtl" : "ltr"}>
+                <h2 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
+                  {activeCourse.name1}
+                </h2>
+
+                <h3 className="text-sm font-bold text-blue-950 uppercase tracking-wide mb-2">
+                  {isUrdu ? "فوائد" : "Course Benefits"}
+                </h3>
+                <ul className="space-y-2 mb-5">
+                  {[activeCourse.dscpt1, activeCourse.dscpt2, activeCourse.dscpt3, activeCourse.dscpt4]
+                    .filter(Boolean)
+                    .map((point, i) => (
+                      <li key={i} className={`flex items-start gap-2 text-gray-700 ${isUrdu ? "flex-row-reverse" : ""}`}>
+                        <FaCircleCheck className="text-blue-950 mt-1 flex-shrink-0" />
+                        <span>{point}</span>
+                      </li>
+                    ))}
+                </ul>
+
+                <div className={`flex items-start gap-2 bg-blue-50 text-blue-950 rounded-xl p-4 mb-5 ${isUrdu ? "flex-row-reverse" : ""}`}>
+                  <FaClock className="mt-1 flex-shrink-0" />
+                  <div>
+                    <p className="text-xs font-bold uppercase tracking-wide">
+                      {isUrdu ? "مدت" : "Duration"}
+                    </p>
+                    <p className="text-sm">{activeCourse.Doration}</p>
+                  </div>
+                </div>
+
+                <button
+                  onClick={register}
+                  className="group inline-flex items-center justify-center gap-2 w-full bg-blue-950 hover:bg-blue-800 text-white font-semibold py-3 rounded-xl transition"
+                >
+                  {activeCourse.btn}
+                  <FaArrowRight className="transition-transform duration-300 group-hover:translate-x-1" />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      <div className="max-w-6xl mx-auto px-4 pb-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {CourseDtails.map((items, index) => (
-          <Card
+          <div
             key={index}
             data-aos="zoom-in-down"
-            className="max-w-sm sa"
-            imgAlt="Meaningful alt text for an image that is not purely decorative"
-            imgSrc={items.img}
+            className="bg-white rounded-2xl shadow-lg border border-gray-200 overflow-hidden hover:shadow-xl transition duration-300 flex flex-col"
           >
-            <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
-              {items.name1}
-            </h5>
-            <h5 className="text-2xl text-end font-bold tracking-tight text-gray-900 dark:text-white">
-              {items.name2}
-            </h5>
-            <p className="w-[100%] text-gray-700 dark:text-gray-400">
-              {items.dscpt1}
-            </p>
-            <p className="w-[100%] text-gray-700 dark:text-gray-400">
-              {items.dscpt2}
-            </p>
-            <Button
-              color="blue"
-              onClick={(e) => {
-                setid(index);
-                sethid("flex");
-              }}
-              key={index}
-            >
-              Details
-            </Button>
-          </Card>
+            <img
+              src={items.img}
+              alt={items.name1}
+              className="w-full h-44 object-cover"
+            />
+            <div className="p-5 flex flex-col flex-1">
+              <h5 className="font-bold text-lg text-gray-900 mb-2">
+                {items.name1}
+              </h5>
+              <ul className="space-y-1.5 mb-4">
+                <li className="flex items-start gap-2 text-sm text-gray-600">
+                  <FaCircleCheck className="text-blue-950 mt-0.5 flex-shrink-0 text-xs" />
+                  {items.dscpt1}
+                </li>
+                <li className="flex items-start gap-2 text-sm text-gray-600">
+                  <FaCircleCheck className="text-blue-950 mt-0.5 flex-shrink-0 text-xs" />
+                  {items.dscpt2}
+                </li>
+              </ul>
+              <button
+                onClick={() => openDetails(index)}
+                className="mt-auto w-full bg-blue-950 hover:bg-blue-800 text-white font-semibold py-2.5 rounded-lg transition"
+              >
+                Details
+              </button>
+            </div>
+          </div>
         ))}
       </div>
     </div>

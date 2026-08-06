@@ -102,6 +102,43 @@ export async function sendRegistrationEmails({
   });
 }
 
+// Notifies the admin when someone fills the "Donate Now" form, so they can
+// follow up — no payment gateway is wired up, donors transfer manually via
+// Easypaisa/Bank (shown on the donation page).
+export async function sendDonationIntentEmail({ name, lastname, email, address, amount }) {
+  const row = (label, value) => `
+              <tr>
+                <td style="padding: 8px; border-bottom: 1px solid #f0f0f0; color: #555;"><strong>${label}:</strong></td>
+                <td style="padding: 8px; border-bottom: 1px solid #f0f0f0;">${value || "-"}</td>
+              </tr>`;
+
+  await getTransporter().sendMail({
+    from: `"Fahm-ul-Uloom" <${process.env.EMAIL_USER}>`,
+    to: process.env.EMAIL_USER,
+    subject: `New Donation Intent — $${amount} from ${name} ${lastname}`,
+    html: `
+      <div style="font-family: Arial, sans-serif; background-color: #f9f9f9; padding: 20px; line-height: 1.6;">
+        <div style="max-width: 600px; margin: auto; background: #ffffff; border: 1px solid #e0e0e0; border-radius: 8px;">
+          <div style="background-color: #16a34a; color: #ffffff; padding: 15px 20px; border-top-left-radius: 8px; border-top-right-radius: 8px;">
+            <h2 style="margin: 0; font-size: 20px;">New Donation Intent</h2>
+          </div>
+          <div style="padding: 20px; color: #333;">
+            <p>Someone has filled the "Donate Now" form on the website. Please follow up with them.</p>
+            <table style="width: 100%; border-collapse: collapse;">
+              ${row("Name", `${name} ${lastname}`)}
+              ${row("Email", email)}
+              ${row("Address", address)}
+              ${row("Amount", `$${amount}`)}
+            </table>
+          </div>
+          <div style="background-color: #f0f0f0; padding: 10px 20px; text-align: center; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;">
+            <p style="margin: 0; font-size: 12px; color: #555;">© 2025 Jamia Fahm-ul-uloom. All rights reserved.</p>
+          </div>
+        </div>
+      </div>`,
+  });
+}
+
 // The invite link opens the website home page, which shows a popup
 // with the session details and the real "Join Google Meet" button.
 // Used in the email button and also returned to the admin for WhatsApp sharing.

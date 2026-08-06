@@ -19,12 +19,14 @@ function CourseTwo() {
     const location = useLocation();
   
     useEffect(() => {
+      if (location.hash) {
+        const el = document.getElementById(location.hash.replace("#", ""));
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+          return;
+        }
+      }
       window.scrollTo(0, 0);
-    //   AOS.init({
-    //     duration: 1000, // Animation duration in ms
-    //     easing: 'ease', // Easing function
-    //     once: true,     // Animation will only happen once
-    //   });  // Scrolls to the top of the page
     }, [location]);  // This runs every time the route changes
   
     return null;

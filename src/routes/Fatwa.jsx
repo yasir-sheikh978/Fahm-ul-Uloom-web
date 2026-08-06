@@ -4,6 +4,7 @@ import Nab from "../compunentIndex/nabs";
 import Slider from "../compunentIndex/Slider";
 import Footer from "../compunentIndex/Footer";
 import Form from "../compunentFatwa/FatwaForm";
+import MuftiIntro from "../compunentFatwa/MuftiIntro";
 import Whatsapp from "../compunentIndex/Whatsapp";
 
 import "flowbite";
@@ -15,6 +16,7 @@ function CourseOne() {
       <Nab />
       <Slider />
 
+      <MuftiIntro />
       <Form />
 
       <Footer />

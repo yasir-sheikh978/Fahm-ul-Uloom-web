@@ -9,6 +9,7 @@ import Nab from "../compunentIndex/nabs";
 import Footer from "../compunentIndex/Footer";
 import OurVision from "../components/OurVision/OurVision";
 import Whatsapp from "../compunentIndex/Whatsapp";
+import BankDetails from "../components/Donation/BankDetails";
 
 // import Overveiwcounter from "../components/Overveiwcounter/Overveiwcounter";
 import VideoBanner from "../components/VideoBanner/VideoBanner";
@@ -38,6 +39,7 @@ export const App = () => {
         <Whatsapp />
       <Nab />
       <Hero/>
+      <BankDetails/>
       {/* <Overveiwcounter/> */}
       <OurVision/>
       <Bannersection/>

@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import emailjs from 'emailjs-com';
 import imageCompression from "browser-image-compression";
-// import { CgNametag } from "react-icons/cg";
+import { FaUser, FaEnvelope, FaPhone, FaPaperclip } from "react-icons/fa6";
 
 const CustomForm = () => {
   const [name, setName] = useState('');
@@ -101,79 +101,100 @@ const CustomForm = () => {
   };
 
   return (
-    <div className="w-[85vw] sm:w-[70vw] mx-auto p-8 my-10 bg-gray-200 rounded-lg shadow-lg">
-      <h2 className="text-2xl font-bold text-center text-blue-600 mb-6">Ask Your Quetion</h2>
-      <form onSubmit={handleSubmit} className="space-y-4">
+    <div className="bg-gray-200 pb-12 px-4">
+    <div className="w-full sm:w-[70vw] md:w-[550px] mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden">
+      <div className="bg-blue-950 px-6 py-5">
+        <h2 className="text-2xl font-bold text-white">Ask Your Question</h2>
+        <p className="text-blue-200 text-sm mt-1">
+          We'll get back to you within 10 days, in sha Allah.
+        </p>
+      </div>
+      <form onSubmit={handleSubmit} className="p-6 space-y-4">
         <div>
           <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">Name</label>
-          <input
-            type="text"
-            id="name"
-            placeholder='Enter Your Name'
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-            className="w-[100%] p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
-          />
+          <div className="relative">
+            <FaUser className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm" />
+            <input
+              type="text"
+              id="name"
+              placeholder='Enter Your Name'
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+              className="w-full pl-9 pr-3 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
         </div>
 
         <div>
           <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-          <input
-            type="email"
-            id="email"
-            placeholder='Enter Your Email'
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-            className="w-[100%] p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
-          />
-        </div>
-        
-        <div>
-          <label htmlFor="phoneNumber" className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
-          <input
-            type="number"
-            id="phoneNumber"
-            value={phoneNumber}
-            onChange={(e) => setPhoneNumber(e.target.value)}
-            required
-            placeholder="Please enter WhatsApp number"
-            className="w-[100%] p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
-          />
+          <div className="relative">
+            <FaEnvelope className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm" />
+            <input
+              type="email"
+              id="email"
+              placeholder='Enter Your Email'
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+              className="w-full pl-9 pr-3 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
         </div>
 
         <div>
-          <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
+          <label htmlFor="phoneNumber" className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+          <div className="relative">
+            <FaPhone className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-sm" />
+            <input
+              type="number"
+              id="phoneNumber"
+              value={phoneNumber}
+              onChange={(e) => setPhoneNumber(e.target.value)}
+              required
+              placeholder="Please enter WhatsApp number"
+              className="w-full pl-9 pr-3 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            />
+          </div>
+        </div>
+
+        <div>
+          <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Your Question</label>
           <textarea
             id="message"
             rows="5"
             value={message}
-            placeholder='Ask Your Question'
+            placeholder='Ask your question in detail...'
             onChange={(e) => setMessage(e.target.value)}
             required
-            className="w-[100%] p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
-        <h1 className='text-center'>
-          Or
-        </h1>
+
+        <div className="flex items-center gap-3 text-gray-400">
+          <div className="flex-1 h-px bg-gray-200"></div>
+          <span className="text-xs font-semibold uppercase tracking-wide">Optional</span>
+          <div className="flex-1 h-px bg-gray-200"></div>
+        </div>
+
         <div>
-          <label htmlFor="img" className="block text-sm font-medium text-gray-700 mb-1">Img</label>
+          <label htmlFor="img" className="flex items-center gap-2 text-sm font-medium text-gray-700 mb-1">
+            <FaPaperclip className="text-gray-400" />
+            Attach an image (e.g. a screenshot related to your question)
+          </label>
           <input
             id="img"
             type='file'
             accept="image/*"
             onChange={handleImageChange}
             ref={fileInputRef}
-            
-            className="w-[100%] p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+            className="w-full p-3 border border-gray-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
         </div>
-        
+
         <button
           type="submit"
-          className="w-[100%] bg-blue-500 text-white py-3 rounded-md hover:bg-blue-600 transition duration-200"
+          className="w-[100%] bg-blue-950 text-white py-3 rounded-lg font-semibold hover:bg-blue-800 transition duration-200 shadow-lg shadow-blue-950/20"
           disabled={loading}
         >
           {loading ? (
@@ -200,6 +221,7 @@ const CustomForm = () => {
           )}
         </button>
       </form>
+    </div>
     </div>
   );
 };

@@ -15,18 +15,8 @@ import Promotion from '../componentHome/Promotion'
 import ClassInvitePopup from '../componentHome/ClassInvitePopup'
 import NamaazCoursePopup from '../componentHome/NamaazCoursePopup'
 import 'flowbite';
-import AOS from "aos";
 
 function Index(){
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-    });
-  }, []);
-
-  
-
- 
     const ScrollToTop = () => {
         const location = useLocation();
       

@@ -40,4 +40,18 @@ router.get("/", requireAdmin, async (req, res) => {
   }
 });
 
+// DELETE /api/students/:id — admin only
+router.delete("/:id", requireAdmin, async (req, res) => {
+  try {
+    const deleted = await Student.findByIdAndDelete(req.params.id);
+    if (!deleted) {
+      return res.status(404).json({ error: "Student not found" });
+    }
+    res.json({ success: true });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: "Failed to delete student" });
+  }
+});
+
 export default router;

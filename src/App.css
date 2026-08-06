@@ -14,14 +14,6 @@ justify-content: center !important;
 }
 
 
-.bg{
-    background-image: url('https://t3.ftcdn.net/jpg/07/43/14/40/360_F_743144079_BymKchowczuqp1vXNr8dweCEBUvetsMi.jpg');
-    background-repeat: no-repeat;
-    background-size: cover    ;
-    background-position: center;
-    background-attachment: fixed;
-
-}
 .BG{
     background-image: url('./assets/home/bg.jpg');
     background-repeat: no-repeat;

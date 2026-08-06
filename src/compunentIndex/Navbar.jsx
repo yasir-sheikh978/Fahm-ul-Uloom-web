@@ -58,7 +58,9 @@ export default function Navbarr() {
      data-aos-duration="2000"
           className="bg-blue-950 text-white hover:bg-blue-800 rounded-lg   my-2 p-2 font-semibold uppercase "
         >
-          hadith
+          <a href="https://sunnah.com/bukhari" target="blank">
+            hadith
+          </a>
         </button>
         <button
           data-aos="flip-left"

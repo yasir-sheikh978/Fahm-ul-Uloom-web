@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 // lg:items-start lg:text-left 
 
 const bgstyle = {
-  backgroundImage: `url(https://cdn.arabsstock.com/uploads/images/141912/image-141912-luminous-decorative-metal-lantern-bowl-full-dates-next-it-thumbnail.webp)`,
+  backgroundImage: `linear-gradient(rgba(10, 15, 40, 0.75), rgba(10, 15, 40, 0.75)), url(${Heroimage})`,
   backgroundSize: "cover",
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
@@ -35,10 +35,10 @@ const Hero = () => {
     <div style={bgstyle}>
       <div className="min-h-[650px] md:min-h-[750px] pt-3 pb-10 md:pt-48">
         <div className="container">
-          <div className="grid gird-cols-1 lg:grid-cols-2 items-center gap-12 text-amber-50">
+          <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12 text-amber-50">
             {/* hero text section */}
             <div className=" flex flex-col items-center text-center gap-5 lg-max-w-[450px]">
-              <motion.h1 variants={FadeUp(0.2)} initial="initial" animate="animate" className="text-5xl  lg:text-7xl font-bold">"We need your donation for spreading Islam"</motion.h1>
+              <motion.h1 variants={FadeUp(0.2)} initial="initial" animate="animate" className="text-3xl sm:text-4xl lg:text-6xl font-bold text-white drop-shadow-lg">"We need your donation for spreading Islam"</motion.h1>
               {/* <motion.p variants={FadeUp(0.4)} initial="initial" animate="animate">
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad atque quas accusantium tenetur ut nostrum, autem dignissimos aut amet nemo explicabo beatae exercitationem. Inventore.
               </motion.p> */}

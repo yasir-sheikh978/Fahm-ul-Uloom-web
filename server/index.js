@@ -5,7 +5,7 @@ import { connectDB } from "./db.js";
 import authRoutes from "./routes/auth.js";
 import studentRoutes from "./routes/students.js";
 import meetingRoutes from "./routes/meetings.js";
-import { sendRegistrationEmails } from "./mailer.js";
+import { sendRegistrationEmails, sendDonationIntentEmail } from "./mailer.js";
 
 const app = express();
 
@@ -40,6 +40,25 @@ app.post("/email", async (req, res) => {
   } catch (error) {
     console.error("Error sending emails:", error);
     res.status(500).json({ success: false, message: "Failed to send emails." });
+  }
+});
+
+// Donation intent notification — no payment gateway is wired up yet, this
+// just emails the admin so they can follow up while the donor transfers
+// manually via Easypaisa/Bank (shown on the donation page).
+app.post("/api/donations/intent", async (req, res) => {
+  try {
+    const { name, lastname, email, address, amount } = req.body || {};
+    if (!name || !email || !amount) {
+      return res
+        .status(400)
+        .json({ success: false, message: "name, email and amount are required" });
+    }
+    await sendDonationIntentEmail({ name, lastname, email, address, amount });
+    res.status(200).json({ success: true, message: "Donation intent received!" });
+  } catch (error) {
+    console.error("Error sending donation intent email:", error);
+    res.status(500).json({ success: false, message: "Failed to send notification." });
   }
 });
 

@@ -7,7 +7,7 @@ const Bannersection = () => {
     const Navigate = useNavigate();
 
     const doo = () => {
-        Navigate('./courseone');
+        Navigate('/courseone#short-courses');
     };
 
     return (
