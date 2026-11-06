@@ -36,7 +36,7 @@ function Index(){
        <div>
         <ScrollToTop />
         <ClassInvitePopup />
-        <NamaazCoursePopup />
+        {/* <NamaazCoursePopup /> */}
         {/* <Promotion /> */}
 
    
