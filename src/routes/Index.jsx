@@ -14,6 +14,7 @@ import Long from '../componentHome/long'
 import Promotion from '../componentHome/Promotion'
 import ClassInvitePopup from '../componentHome/ClassInvitePopup'
 import NamaazCoursePopup from '../componentHome/NamaazCoursePopup'
+import IslamicBankingPopup from '../componentHome/IslamicBankingPopup'
 import 'flowbite';
 
 function Index(){
@@ -37,6 +38,7 @@ function Index(){
         <ScrollToTop />
         <ClassInvitePopup />
         {/* <NamaazCoursePopup /> */}
+        <IslamicBankingPopup />
         {/* <Promotion /> */}
 
    
